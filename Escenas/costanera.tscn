@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://700kl1fr0622"]
+
+[ext_resource type="PackedScene" uid="uid://buovotbaulf4o" path="res://Assets/Costanera/Costanera.glb" id="1_k283u"]
+
+[node name="Costanera" type="Node3D"]
+
+[node name="Costanera" parent="." instance=ExtResource("1_k283u")]
+
+[node name="Bandera" parent="Costanera/ESCALERAS DEL REGATAS" index="0"]
+lod_bias = 0.5
+visibility_range_end = 300.0
+
+[node name="CartelRico" parent="Costanera/ESCALERAS DEL REGATAS" index="2"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="Edificios" parent="Costanera/ESCALERAS DEL REGATAS" index="3"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[editable path="Costanera"]

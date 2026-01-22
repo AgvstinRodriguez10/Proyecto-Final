@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://c0pkqpdadxqa7"]
+
+[ext_resource type="PackedScene" uid="uid://oxxsms5fe8t7" path="res://Escenas/Cuadras/Cuadra-1/b_mitre_400___350.tscn" id="1_vbwru"]
+[ext_resource type="PackedScene" uid="uid://dk7hwxp4sitgn" path="res://Escenas/Cuadras/Cuadra-2/b_mitre_350___300.tscn" id="2_87odv"]
+[ext_resource type="PackedScene" uid="uid://ds4liltga5xr3" path="res://Escenas/Cuadras/Cuadra-3/b_mitre_300__250.tscn" id="3_vbwru"]
+[ext_resource type="PackedScene" uid="uid://c1fhid86heqhv" path="res://Escenas/Cuadras/Cuadra-4/b_mitre_250___200.tscn" id="4_xyd0c"]
+[ext_resource type="PackedScene" uid="uid://dtrvcqtkhtju1" path="res://Escenas/Cuadras/Cuadra-5/b_mitre_200___150.tscn" id="5_0wxlc"]
+[ext_resource type="PackedScene" uid="uid://diubi06d2lk1r" path="res://Escenas/Cuadras/Cuadra-6/b_mitre_150___100.tscn" id="6_0wxlc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_foa6o"]
+size = Vector3(22.5234, 0.344727, 802.618)
+
+[node name="SanNicolas" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_mask = 18
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.953125, -0.165787, 329.646)
+shape = SubResource("BoxShape3D_foa6o")
+
+[node name="B Mitre 400 - 350" parent="." instance=ExtResource("1_vbwru")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.38848, 0, 63.4807)
+
+[node name="B Mitre 350 - 300" parent="." instance=ExtResource("2_87odv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 0.15, -1.865)
+
+[node name="B Mitre 300 - 250" parent="." instance=ExtResource("3_vbwru")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.06, -0.01, -0.61)
+
+[node name="B Mitre 250 - 200" parent="." instance=ExtResource("4_xyd0c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9, 0.15, 30.4)
+
+[node name="B Mitre 200 - 150" parent="." instance=ExtResource("5_0wxlc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0, -2.4)
+
+[node name="B Mitre 150 - 100" parent="." instance=ExtResource("6_0wxlc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4, 0, 40.85)

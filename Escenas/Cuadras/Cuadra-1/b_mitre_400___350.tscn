@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://oxxsms5fe8t7"]
+
+[ext_resource type="PackedScene" uid="uid://fnceu85p6usg" path="res://Escenas/Calles/CuadraDarsenaIzquierda.tscn" id="1_f4xt1"]
+[ext_resource type="Script" uid="uid://dtig38d0hbtgl" path="res://Script/Edificios/Optimization.gd" id="2_bv3i7"]
+[ext_resource type="PackedScene" uid="uid://bck8hrwgvbaml" path="res://Escenas/Cuadras/Cuadra-1/Cuadra-1-Derecha.tscn" id="2_f4xt1"]
+[ext_resource type="Script" uid="uid://c6g2ucoaqbk1p" path="res://Script/Edificios/AutomaticScript.gd" id="4_1kwn3"]
+[ext_resource type="PackedScene" uid="uid://b6at45iing2jp" path="res://Escenas/Cuadras/Cuadra-1/Cuadra-1-Izquierda.tscn" id="4_bv3i7"]
+
+[node name="B Mitre 400 - 350" type="Node3D"]
+
+[node name="Calles" type="Node3D" parent="."]
+
+[node name="CuadraDarsenaDerecha" parent="Calles" instance=ExtResource("1_f4xt1")]
+script = ExtResource("2_bv3i7")
+delay_off = 2.0
+
+[node name="Edificios" type="Node3D" parent="."]
+
+[node name="Cuadra-1-Derecha" parent="Edificios" instance=ExtResource("2_f4xt1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9181, 0, -50.5504)
+script = ExtResource("4_1kwn3")
+
+[node name="Cuadra-1-Izquierda" parent="Edificios" instance=ExtResource("4_bv3i7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 24.6196, -0.772987, 18.115)
+script = ExtResource("4_1kwn3")

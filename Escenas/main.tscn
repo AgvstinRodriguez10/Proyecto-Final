@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://be7usem7eilfm"]
+
+[ext_resource type="PackedScene" uid="uid://c0pkqpdadxqa7" path="res://Escenas/san_nicolas.tscn" id="1_6lbni"]
+[ext_resource type="PackedScene" uid="uid://balf5bk056eec" path="res://Escenas/plaza.tscn" id="2_vt1rs"]
+[ext_resource type="PackedScene" uid="uid://700kl1fr0622" path="res://Escenas/costanera.tscn" id="3_0kh0y"]
+[ext_resource type="PackedScene" uid="uid://bg2ova3uojcc0" path="res://Escenas/Character/nica.tscn" id="4_7xwpo"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7xwpo"]
+
+[sub_resource type="Sky" id="Sky_2ia52"]
+sky_material = SubResource("ProceduralSkyMaterial_7xwpo")
+
+[sub_resource type="Environment" id="Environment_crgrh"]
+background_mode = 2
+sky = SubResource("Sky_2ia52")
+
+[node name="Main" type="Node3D"]
+
+[node name="SanNicolas" parent="." instance=ExtResource("1_6lbni")]
+transform = Transform3D(-2, 0, -3.019916e-07, 0, 2, 0, 3.019916e-07, 0, -2, 0, 0, 0)
+
+[node name="Plaza" parent="." instance=ExtResource("2_vt1rs")]
+transform = Transform3D(6.4, 0, 0, 0, 6.4, 0, 0, 0, 6.4, -102.455795, 3.8146973e-06, -1324.6892)
+
+[node name="Costanera" parent="." instance=ExtResource("3_0kh0y")]
+transform = Transform3D(-1.04907336e-07, 0, -2.4, 0, 2.4, 0, 2.4, 0, -1.04907336e-07, -202.58432, -11.20667, -1559.0029)
+
+[node name="CameraFocus" type="Marker3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="CameraFocus"]
+transform = Transform3D(1, 0, 0, 0, 0.91711575, 0.39862102, 0, -0.39862102, 0.91711575, 0, 5.788969, 4.114911)
+environment = SubResource("Environment_crgrh")
+
+[node name="Nica" parent="." instance=ExtResource("4_7xwpo")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.76747704, -0.099744774, -0.6332694, 0.63236856, -0.044473104, 0.77339023, -0.105305046, -0.99401873, 0.028943356, 0, 0, 0)
+shadow_enabled = true
+shadow_bias = 0.2
+shadow_normal_bias = 10.0
+shadow_reverse_cull_face = true

@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://bit740wudpjvn"]
+
+[ext_resource type="PackedScene" uid="uid://cyrywx1i6bkpa" path="res://Escenas/Cuadras/Cuadra-6/Izquierda/Edificio-1.tscn" id="1_27hxt"]
+[ext_resource type="PackedScene" uid="uid://4s16g524wv2y" path="res://Escenas/Cuadras/Cuadra-6/Izquierda/Edificio-2.tscn" id="2_kkvdy"]
+[ext_resource type="PackedScene" uid="uid://cuimkcoe2id86" path="res://Escenas/Cuadras/Cuadra-6/Izquierda/Edificio-3.tscn" id="3_srv3h"]
+[ext_resource type="PackedScene" uid="uid://cc7b087ra8m3p" path="res://Escenas/Cuadras/Cuadra-6/Izquierda/Edificio-4.tscn" id="4_scpp6"]
+
+[node name="Izq" type="Node3D"]
+
+[node name="Edificio-1" parent="." instance=ExtResource("1_27hxt")]
+
+[node name="Edificio-2" parent="." instance=ExtResource("2_kkvdy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.48228, 0, -23.9163)
+
+[node name="Edificio-3" parent="." instance=ExtResource("3_srv3h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.54822, 0.310519, -46.4872)
+
+[node name="Edificio-4" parent="." instance=ExtResource("4_scpp6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.70662, 0, -62.7065)

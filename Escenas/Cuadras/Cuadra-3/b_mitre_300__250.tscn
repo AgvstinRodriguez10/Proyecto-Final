@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ds4liltga5xr3"]
+
+[ext_resource type="PackedScene" uid="uid://b0l8w12a7j2dk" path="res://Escenas/Calles/CuadraDobleDarsena.tscn" id="1_srweq"]
+[ext_resource type="PackedScene" uid="uid://dtjelpgivn3fn" path="res://Escenas/Cuadras/Cuadra-3/Edificio-3-Derecha.tscn" id="2_ufpe3"]
+[ext_resource type="Script" uid="uid://c6g2ucoaqbk1p" path="res://Script/Edificios/AutomaticScript.gd" id="3_sdc4l"]
+[ext_resource type="PackedScene" uid="uid://c2yieig30ds78" path="res://Escenas/Cuadras/Cuadra-3/Edificio-3-Izquierda.tscn" id="4_ufpe3"]
+
+[node name="B Mitre 300- 250" type="Node3D"]
+
+[node name="Calles" type="Node3D" parent="."]
+
+[node name="CuadraSanNicolasDarsenas" parent="Calles" instance=ExtResource("1_srweq")]
+transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, -3.3327, 0, 267.954)
+
+[node name="Edificios" type="Node3D" parent="."]
+
+[node name="Edificio-3-Derecha" parent="Edificios" instance=ExtResource("2_ufpe3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.14456, 0, 216.356)
+script = ExtResource("3_sdc4l")
+
+[node name="Edificio-3-Izquierda" parent="Edificios" instance=ExtResource("4_ufpe3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.3529, 0, 292.476)
+script = ExtResource("3_sdc4l")
