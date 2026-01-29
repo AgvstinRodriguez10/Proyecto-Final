@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://balf5bk056eec"]
+[gd_scene load_steps=26 format=4 uid="uid://balf5bk056eec"]
 
 [ext_resource type="PackedScene" uid="uid://c25aytjirlka" path="res://Assets/Plaza/Plaza.glb" id="1_5m6p0"]
 [ext_resource type="Texture2D" uid="uid://bn25ktpbfy6r0" path="res://Assets/Plaza/Plaza_Poliigon_ConcretePaversSquare_7100_BaseColor.jpg" id="2_qewuc"]
@@ -10,6 +10,15 @@
 [ext_resource type="Material" uid="uid://byjbe6gaxosyw" path="res://Resource/Calle.tres" id="8_sfw6y"]
 [ext_resource type="Material" uid="uid://bu2p08bu48p1t" path="res://Resource/Vereda.tres" id="9_myb6b"]
 [ext_resource type="PackedScene" uid="uid://hpa8kjche2t0" path="res://Assets/Plaza/Objetos/Banco.glb" id="10_sfw6y"]
+[ext_resource type="PackedScene" uid="uid://bp201cegww04f" path="res://Assets/EDIFICIOS/Plaza/A/edificio 1.fbx" id="11_myb6b"]
+[ext_resource type="PackedScene" uid="uid://cyhtixiv5yliv" path="res://Assets/EDIFICIOS/Plaza/A/edificio 2.fbx" id="12_2rngn"]
+[ext_resource type="PackedScene" uid="uid://dnjqp70nvqwxb" path="res://Assets/EDIFICIOS/Plaza/A/edificio 3.glb" id="13_e4uow"]
+[ext_resource type="PackedScene" uid="uid://cfwwcee2nylnu" path="res://Assets/EDIFICIOS/Plaza/A/edificio 4.fbx" id="14_h37jv"]
+[ext_resource type="PackedScene" uid="uid://cn0jorsrvagge" path="res://Assets/EDIFICIOS/Plaza/B/edificio 1.fbx" id="15_2iwxa"]
+[ext_resource type="PackedScene" uid="uid://1q2pxq15ouif" path="res://Assets/EDIFICIOS/Plaza/B/edificio 2.fbx" id="16_y4bvj"]
+[ext_resource type="PackedScene" uid="uid://d21dyoe8o3uqr" path="res://Assets/EDIFICIOS/Plaza/B/edificio 3.fbx" id="17_lshnb"]
+[ext_resource type="PackedScene" uid="uid://cc0goxoaev0ui" path="res://Assets/EDIFICIOS/Plaza/C/edificio 1.fbx" id="18_lshnb"]
+[ext_resource type="PackedScene" uid="uid://b3l2siot8juh" path="res://Assets/EDIFICIOS/Plaza/C/edificio 2.fbx" id="19_owiik"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qewuc"]
 resource_name = "Camino"
@@ -374,4 +383,171 @@ transform = Transform3D(1.3113415e-08, 0, -0.14999999, 0, 0.14999999, 0, 0.14999
 [node name="Banco12" parent="Bancos" instance=ExtResource("10_sfw6y")]
 transform = Transform3D(1.3113415e-08, 0, -0.14999999, 0, 0.14999999, 0, 0.14999999, 0, 1.3113415e-08, -9.720612, 0, 4.9888678)
 
+[node name="Edificios" type="Node3D" parent="."]
+
+[node name="A" type="Node3D" parent="Edificios"]
+
+[node name="edificio 1" parent="Edificios/A" instance=ExtResource("11_myb6b")]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 19.197266, 0.19491482, 10.81681)
+
+[node name="BASE" parent="Edificios/A/edificio 1/OpticaPeña" index="0"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="Carteles" parent="Edificios/A/edificio 1/OpticaPeña" index="1"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="Ventanas y Puertas" parent="Edificios/A/edificio 1/OpticaPeña" index="2"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="edificio 2" parent="Edificios/A" instance=ExtResource("12_2rngn")]
+transform = Transform3D(-2.6226834e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.6226834e-08, 19.25538, 0.32571936, 4.131502)
+
+[node name="ADD" parent="Edificios/A/edificio 2/Bartolome+LaMira" index="0"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="1" parent="Edificios/A/edificio 2/Bartolome+LaMira/ADD" index="0"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="BARTOLOME" parent="Edificios/A/edificio 2/Bartolome+LaMira" index="1"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="DEC LA MIRA" parent="Edificios/A/edificio 2/Bartolome+LaMira" index="2"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="LA MIRA" parent="Edificios/A/edificio 2/Bartolome+LaMira" index="3"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="VENTANAS Y PUERTAS" parent="Edificios/A/edificio 2/Bartolome+LaMira" index="4"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="edificio 3" parent="Edificios/A" instance=ExtResource("13_e4uow")]
+transform = Transform3D(-0.7, 0, -1.0569706e-07, 0, 0.7, 0, 1.0569706e-07, 0, -0.7, 21.745256, 0, -2.5601048)
+
+[node name="Edificio" parent="Edificios/A/edificio 3/edificio_galeria" index="0"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="edificio 4" parent="Edificios/A" instance=ExtResource("14_h37jv")]
+transform = Transform3D(-1.9670125e-08, 0, -0.45, 0, 0.45, 0, 0.45, 0, -1.9670125e-08, 19.057787, 0, -10.980053)
+
+[node name="ADD" parent="Edificios/A/edificio 4/Catedral" index="0"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="BASE" parent="Edificios/A/edificio 4/Catedral" index="1"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="SUELO" parent="Edificios/A/edificio 4/Catedral" index="2"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="SUELO2" parent="Edificios/A/edificio 4/Catedral" index="3"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="TORRES" parent="Edificios/A/edificio 4/Catedral" index="4"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="VENTANAS Y PUERTAS" parent="Edificios/A/edificio 4/Catedral" index="5"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="B" type="Node3D" parent="Edificios"]
+
+[node name="edificio 1" parent="Edificios/B" instance=ExtResource("15_2iwxa")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 10.210695, 0.38376057, -18.57224)
+
+[node name="BASE" parent="Edificios/B/edificio 1/Escuela" index="0"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="Muro + Puertas" parent="Edificios/B/edificio 1/Escuela" index="1"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="Suelo2" parent="Edificios/B/edificio 1/Escuela" index="2"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="Ventanas y Puertas" parent="Edificios/B/edificio 1/Escuela" index="3"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="edificio 2" parent="Edificios/B" instance=ExtResource("16_y4bvj")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -6.911014, 0.2868998, -18.803038)
+
+[node name="BASE" parent="Edificios/B/edificio 2/EdificioCareta-recareta" index="0"]
+visibility_range_end = 300.0
+
+[node name="Ventanas y Puertas" parent="Edificios/B/edificio 2/EdificioCareta-recareta/BASE" index="0"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="edificio 3" parent="Edificios/B" instance=ExtResource("17_lshnb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.84232, 0.5368676, -20.850557)
+
+[node name="ABAJO" parent="Edificios/B/edificio 3/EdificioTradicional" index="0"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="ARRIBA" parent="Edificios/B/edificio 3/EdificioTradicional" index="1"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="Ventanas" parent="Edificios/B/edificio 3/EdificioTradicional" index="2"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="C" type="Node3D" parent="Edificios"]
+
+[node name="edificio 1" parent="Edificios/C" instance=ExtResource("18_lshnb")]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -19.619816, 0, -8.541526)
+
+[node name="BASE" parent="Edificios/C/edificio 1/Edificio-plaza-b" index="0"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="Ventanas y Puertas" parent="Edificios/C/edificio 1/Edificio-plaza-b" index="1"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="edificio 2" parent="Edificios/C" instance=ExtResource("19_owiik")]
+transform = Transform3D(-0.2, 0, 3.019916e-08, 0, 0.2, 0, -3.019916e-08, 0, -0.2, -19.457846, -0.15242863, -0.89325523)
+
+[node name="Base" parent="Edificios/C/edificio 2/Casa-Duplicable-V4/BASE" index="0"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="Ventanas y Puertas" parent="Edificios/C/edificio 2/Casa-Duplicable-V4/BASE/Base" index="0"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="Base2" parent="Edificios/C/edificio 2/Casa-Duplicable-V4/BASE2" index="0"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
+[node name="Ventanas y Puertas2" parent="Edificios/C/edificio 2/Casa-Duplicable-V4/BASE2/Base2" index="0"]
+lod_bias = 0.001
+visibility_range_end = 300.0
+
 [editable path="Plaza"]
+[editable path="Edificios/A/edificio 1"]
+[editable path="Edificios/A/edificio 2"]
+[editable path="Edificios/A/edificio 3"]
+[editable path="Edificios/A/edificio 4"]
+[editable path="Edificios/B/edificio 1"]
+[editable path="Edificios/B/edificio 2"]
+[editable path="Edificios/B/edificio 3"]
+[editable path="Edificios/C/edificio 1"]
+[editable path="Edificios/C/edificio 2"]
