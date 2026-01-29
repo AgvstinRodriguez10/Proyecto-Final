@@ -4,10 +4,12 @@ class_name BasicCharacter
 var animationPlayer: AnimationPlayer
 var is_movie_idle : bool = false
 var is_movie : bool = false
-var velocity_z = 375
-const JUMP_VELOCITY: float = 10.0  # Jump strength
+var velocity_forward:float = 0
+var current_velocity_forward: float = 0
+const JUMP_VELOCITY: float = 3.0  # Jump strength
+var current_jump_velocity: float = 0
 
-const GRAVITY: float = 24.0  # Gravity strength
+const GRAVITY: float = 5.4  # Gravity strength
 
 enum STATES  {
 	IDLE,
@@ -20,9 +22,19 @@ var eje_local_x:Vector3
 
 var currentState:STATES = STATES.FALL
 
+var rayCastSuelo := RayCast3D.new()
+
 func _ready() -> void:
 	position = position
 	eje_local_x = global_transform.basis.x.normalized()
+	
+	# Agregamos el raycast por codigo
+	rayCastSuelo.name = "RayoAlSuelo"
+	rayCastSuelo.position = Vector3(0, 1, 0)
+	rayCastSuelo.target_position = Vector3(0, -1.0, 0)
+	rayCastSuelo.add_exception(self)
+	rayCastSuelo.enabled = true
+	add_child(rayCastSuelo)
 
 func animationController(delta):
 	match currentState:
@@ -33,32 +45,33 @@ func animationController(delta):
 				currentState = STATES.RUN
 		STATES.RUN:
 			animationPlayer.play("anim_run")
-			movingToForward(delta)
 			if is_movie_idle:
 				currentState = STATES.IDLE
-			elif !is_on_floor():
+			elif !estaTocandoSuelo():
 				currentState = STATES.FALL
 
 func movingToForward(delta: float):
-	# Almacena la direccion local de donde mira el modelo
-	var forward_direction = -global_transform.basis.z.normalized()
-	# Aplica velocidad hacia el frente, independientemente de donde mire
-	var move_vector = forward_direction * velocity_z * delta
-	
-	velocity = move_vector
+	current_velocity_forward = velocity_forward
 
 func gravityApply(delta: float):
 	# ///GRAVEDAD/// #
-	if not is_on_floor() and is_movie_idle == false:
-		velocity.y -= GRAVITY * delta
+	if not estaTocandoSuelo() and !is_movie_idle:
+		# Si no esta tocando el suelo y no esta en idle, cae...
+		#velocity.y -= GRAVITY * delta
+		current_jump_velocity = lerpf(current_jump_velocity, 0, GRAVITY * delta)
+		position.y = current_jump_velocity
+		print("cae")
 	else:
-		velocity.y = 0
+		current_jump_velocity = 0
 
 func stopMove():
-	velocity = Vector3.ZERO
+	current_velocity_forward = 0
 
 func is_movie_change():
 	is_movie = !is_movie
 
 func actualizar_eje_local():
 	eje_local_x = global_transform.basis.x.normalized()
+	
+func estaTocandoSuelo() -> bool:
+	return rayCastSuelo.is_colliding()

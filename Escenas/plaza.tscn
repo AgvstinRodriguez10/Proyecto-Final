@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://balf5bk056eec"]
+[gd_scene load_steps=27 format=4 uid="uid://balf5bk056eec"]
 
 [ext_resource type="PackedScene" uid="uid://c25aytjirlka" path="res://Assets/Plaza/Plaza.glb" id="1_5m6p0"]
 [ext_resource type="Texture2D" uid="uid://bn25ktpbfy6r0" path="res://Assets/Plaza/Plaza_Poliigon_ConcretePaversSquare_7100_BaseColor.jpg" id="2_qewuc"]
@@ -19,6 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://d21dyoe8o3uqr" path="res://Assets/EDIFICIOS/Plaza/B/edificio 3.fbx" id="17_lshnb"]
 [ext_resource type="PackedScene" uid="uid://cc0goxoaev0ui" path="res://Assets/EDIFICIOS/Plaza/C/edificio 1.fbx" id="18_lshnb"]
 [ext_resource type="PackedScene" uid="uid://b3l2siot8juh" path="res://Assets/EDIFICIOS/Plaza/C/edificio 2.fbx" id="19_owiik"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lshnb"]
+size = Vector3(43.687256, 0.4588623, 43.45288)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qewuc"]
 resource_name = "Camino"
@@ -333,6 +336,12 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jfox4")
 
 [node name="Plaza" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1925149, 0)
+shape = SubResource("BoxShape3D_lshnb")
 
 [node name="Plaza" parent="." instance=ExtResource("1_5m6p0")]
 

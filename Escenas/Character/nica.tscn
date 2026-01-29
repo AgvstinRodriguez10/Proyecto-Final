@@ -1,8 +1,8 @@
 [gd_scene load_steps=28 format=4 uid="uid://bg2ova3uojcc0"]
 
-[ext_resource type="Texture2D" uid="uid://ciisboix2d5rn" path="res://Assets/Characters/Nica-v1_BakeTexture.png" id="1_q3bkr"]
-[ext_resource type="Script" uid="uid://y4wufecgt0gg" path="res://Script/Characters/nica.gd" id="1_r8wu8"]
-[ext_resource type="Texture2D" uid="uid://deod2mgc8pwqt" path="res://Assets/Characters/Nica-v1_Vincha_texture_Mesa de trabajo 1.png" id="2_r8wu8"]
+[ext_resource type="Texture2D" uid="uid://bqv7wo2rno67s" path="res://Assets/Characters/Nica-v1_BakeTexture.png" id="1_q3bkr"]
+[ext_resource type="Script" uid="uid://bash4fgg1rqui" path="res://Script/Characters/nica.gd" id="1_r8wu8"]
+[ext_resource type="Texture2D" uid="uid://c47qj58mdyhhi" path="res://Assets/Characters/Nica-v1_Vincha_texture_Mesa de trabajo 1.png" id="2_r8wu8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_um7xc"]
 resource_name = "Piel"

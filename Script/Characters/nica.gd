@@ -4,7 +4,7 @@ class_name Player
 @onready var camera_focus: Marker3D = $"../CameraFocus"
 
 const LANES: Array = [-2, 0, 2]  # Lane positions on x-axis
-const dist_beetween_lanes = 2
+const dist_beetween_lanes = 5
 var lateral_free_position := Vector3.ZERO
 
 # Calculamos posición deseada para la cámara
@@ -13,8 +13,8 @@ var camera_distance = -3 #-1.0
 
 # Va de 0 a 2 para enumerar las lineas
 var target_lane: int = 1
-var velocity_y
-var baseVelocity
+#var velocity_y
+#var baseVelocity
 
 # Velocidad con la que cambia de carriles
 const velociti_change_line:float = 0.5
@@ -26,7 +26,7 @@ var collideR : bool = false
 var life_plus : bool = false
 var life = 3
 var snficha = 0
-var speedMax:float
+#var speedMax:float
 
 # Timer para la duracion de los powerups
 var durationPowerUp:float = 0.0
@@ -50,11 +50,15 @@ var frontalCamDuration = 7
 
 var posPostGiro:Vector3
 
+var puntoMovil:PathFollow3D
+
 func _ready() -> void:
 	super._ready()
 	animationPlayer = $"Nica-v1_0/AnimationPlayer"
-	baseVelocity = velocity_z
-	speedMax = velocity_z + (velocity_z * percentSpeedUp / 100)
+	velocity_forward = 30
+	#baseVelocity = velocity_z
+	#speedMax = velocity_z + (velocity_z * percentSpeedUp / 100)
+	puntoMovil = $".."
 
 func _physics_process(delta: float) -> void:
 	#print(collideL)
@@ -73,11 +77,14 @@ func _physics_process(delta: float) -> void:
 		collideR = false
 		
 	if currentState == STATES.RUN && !is_movie:
+		puntoMovil.progress += velocity_forward * delta
 		lateralController()
 		
 		# ///LOGICA DE SALTO/// #
 		if Input.is_action_pressed("Saltar"):
 			currentState = STATES.JUMP
+			current_jump_velocity = JUMP_VELOCITY
+			print(position.y)
 		if Input.is_key_label_pressed(KEY_M):
 			#esto deberia cambiar una vez tengamos cuando se activa, llamando directamente a la funcion siguiente
 			changeVisionCam()
@@ -92,9 +99,9 @@ func _physics_process(delta: float) -> void:
 			currentPowerUp = POWERUPSTATE.NOTHING
 			powerUpActive()
 
-	camera_follow(delta)
+	#camera_follow(delta)
 	animationController(delta)
-	move_and_slide()
+	#move_and_slide()
 
 func lateralController():
 	if Input.is_action_just_pressed("Derecha") and collideR == false:
@@ -118,16 +125,19 @@ func animationController(delta:float):
 	match currentState:
 		STATES.JUMP:
 			animationPlayer.play("anim_jump")
-			velocity.y = JUMP_VELOCITY
-			if velocity.y > 0:
+			position.y = move_toward(position.y, current_jump_velocity, delta)
+			if position.y >= JUMP_VELOCITY - 1:
 				currentState = STATES.FALL
+				
 		STATES.FALL:
 			gravityApply(delta)
-			if is_on_floor():
+			#if is_on_floor():
+			if estaTocandoSuelo():
 				currentState = STATES.RUN
+				
 		STATES.HIT:
 			animationPlayer.play("anim_hitt")
-			velocity_z = baseVelocity * 0.5
+			current_velocity_forward = velocity_forward * 0.5
 			movingToForward(delta)
 			gravityApply(delta)
 
@@ -188,16 +198,19 @@ func camera_follow(delta:float):
 	var current_cam_pos = camera_focus.position
 
 	# Si el personaje está en el aire y subiendo, no actualizar Y
-	if not is_on_floor() and velocity.y > 0:
+	#if not is_on_floor() and velocity.y > 0:
+	if not estaTocandoSuelo() and velocity.y > 0:
 		target_position.y = current_cam_pos.y
 	# Pero si está bajando (por caída o escalera), permitir que la cámara lo siga
-	elif not is_on_floor() and velocity.y < 0:
+	#elif not is_on_floor() and velocity.y < 0:
+	elif not estaTocandoSuelo() and velocity.y < 0:
 		# Suavizamos el descenso
 		var vertical_gap = current_cam_pos.y - target_position.y
 		var descent_speed = clamp(vertical_gap * 3.0, 1.0, 10.0)
 		target_position.y = lerp(current_cam_pos.y, target_position.y, delta * descent_speed)
 	# Si está en el suelo, seguirlo normalmente
-	elif is_on_floor():
+	#elif is_on_floor():
+	elif estaTocandoSuelo():
 		target_position.y = lerp(current_cam_pos.y, target_position.y, delta * 30)
 
 	# Interpolar toda la posición suavemente
@@ -214,9 +227,11 @@ func powerUpActive():
 	match currentPowerUp:
 		POWERUPSTATE.NOTHING:
 			#reinicia todos los valores
-			velocity_z = baseVelocity
+			#velocity_z = baseVelocity
+			current_velocity_forward = velocity_forward
 		POWERUPSTATE.SPEEDUP:
-			velocity_z = speedMax
+			#velocity_z = speedMax
+			current_velocity_forward = velocity_forward * 2
 			durationPowerUp += powerUpDuration.SPEEDUP
 		POWERUPSTATE.ABOSRBCOIN:
 			durationPowerUp = powerUpDuration.ABOSRBCOIN
@@ -225,7 +240,8 @@ func is_hitt_change():
 	# resetea el ishit y setea el estado segun su accion actual 
 	if is_hitt:
 		is_hitt = false
-		velocity_z = baseVelocity
+		#velocity_z = baseVelocity
+		current_velocity_forward = velocity_forward
 	if velocity.y < 0:
 		currentState = STATES.FALL
 	else:
@@ -256,7 +272,8 @@ func _on_giro_costanera_body_entered(body: Node3D) -> void:
 
 func AnimacionGiro(objetoAAnimar: String, animPlayer:AnimationPlayer):
 	if objetoAAnimar == "Nica":
-		velocity_z = baseVelocity
+		#velocity_z = baseVelocity
+		current_velocity_forward = velocity_forward
 		animPlayer.play("Giro")
 
 func _on_timer_coll_r_timeout() -> void:

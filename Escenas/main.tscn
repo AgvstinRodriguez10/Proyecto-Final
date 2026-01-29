@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://be7usem7eilfm"]
+[gd_scene load_steps=9 format=3 uid="uid://be7usem7eilfm"]
 
 [ext_resource type="PackedScene" uid="uid://c0pkqpdadxqa7" path="res://Escenas/san_nicolas.tscn" id="1_6lbni"]
 [ext_resource type="PackedScene" uid="uid://balf5bk056eec" path="res://Escenas/plaza.tscn" id="2_vt1rs"]
@@ -14,6 +14,13 @@ sky_material = SubResource("ProceduralSkyMaterial_7xwpo")
 background_mode = 2
 sky = SubResource("Sky_2ia52")
 
+[sub_resource type="Curve3D" id="Curve3D_7xwpo"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1222.052, 0, 0, 0, 0, 0, 0, -203.441, 0, -1426.033),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
 [node name="Main" type="Node3D"]
 
 [node name="SanNicolas" parent="." instance=ExtResource("1_6lbni")]
@@ -26,12 +33,12 @@ transform = Transform3D(6.4, 0, 0, 0, 6.4, 0, 0, 0, 6.4, -102.455795, 3.8146973e
 transform = Transform3D(-1.04907336e-07, 0, -2.4, 0, 2.4, 0, 2.4, 0, -1.04907336e-07, -202.58432, -11.20667, -1559.0029)
 
 [node name="CameraFocus" type="Marker3D" parent="."]
+visible = false
 
 [node name="Camera3D" type="Camera3D" parent="CameraFocus"]
 transform = Transform3D(1, 0, 0, 0, 0.91711575, 0.39862102, 0, -0.39862102, 0.91711575, 0, 5.788969, 4.114911)
+visible = false
 environment = SubResource("Environment_crgrh")
-
-[node name="Nica" parent="." instance=ExtResource("4_7xwpo")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.76747704, -0.099744774, -0.6332694, 0.63236856, -0.044473104, 0.77339023, -0.105305046, -0.99401873, 0.028943356, 0, 0, 0)
@@ -39,3 +46,14 @@ shadow_enabled = true
 shadow_bias = 0.2
 shadow_normal_bias = 10.0
 shadow_reverse_cull_face = true
+
+[node name="CaminoPrincipal" type="Path3D" parent="."]
+curve = SubResource("Curve3D_7xwpo")
+
+[node name="PuntoMovible" type="PathFollow3D" parent="CaminoPrincipal"]
+
+[node name="Nica" parent="CaminoPrincipal/PuntoMovible" instance=ExtResource("4_7xwpo")]
+
+[node name="Camera3D" type="Camera3D" parent="CaminoPrincipal/PuntoMovible"]
+transform = Transform3D(1, 0, 0, 0, 0.9594617, 0.28183913, 0, -0.28183913, 0.9594617, 0, 5.3864226, 4.2577353)
+current = true
