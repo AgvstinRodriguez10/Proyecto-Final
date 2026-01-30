@@ -61,7 +61,6 @@ func _ready() -> void:
 	puntoMovil = $".."
 
 func _physics_process(delta: float) -> void:
-	#print(collideL)
 	if $RayCastLeft.is_colliding():
 		collideL = true
 		$"TimerColl-L".start()
@@ -257,24 +256,6 @@ func lostLife(dmg:int):
 func collectSnFicha():
 	if life < 3:
 		snficha += 1
-
-func _on_giro_body_entered(body: Node3D) -> void:
-	AnimacionGiro(body.name, $"../Giro/AnimationPlayer")
-	posPostGiro = $"../Giro/posPostGiro".global_position
-
-func _on_giro_escalinata_body_entered(body: Node3D) -> void:
-	AnimacionGiro(body.name, $"../GiroEscalinata/AnimationPlayer")
-	posPostGiro = $"../GiroEscalinata/posPostGiro".global_position
-
-func _on_giro_costanera_body_entered(body: Node3D) -> void:
-	AnimacionGiro(body.name, $"../GiroCostanera/AnimationPlayer")
-	posPostGiro = Vector3.ZERO
-
-func AnimacionGiro(objetoAAnimar: String, animPlayer:AnimationPlayer):
-	if objetoAAnimar == "Nica":
-		#velocity_z = baseVelocity
-		current_velocity_forward = velocity_forward
-		animPlayer.play("Giro")
 
 func _on_timer_coll_r_timeout() -> void:
 	collideR = false
