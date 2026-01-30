@@ -55,5 +55,5 @@ curve = SubResource("Curve3D_7xwpo")
 [node name="Nica" parent="CaminoPrincipal/PuntoMovible" instance=ExtResource("4_7xwpo")]
 
 [node name="Camera3D" type="Camera3D" parent="CaminoPrincipal/PuntoMovible"]
-transform = Transform3D(1, 0, 0, 0, 0.9594617, 0.28183913, 0, -0.28183913, 0.9594617, 0, 5.3864226, 4.2577353)
+transform = Transform3D(1, 0, 0, 0, 0.9177684, 0.3971158, 0, -0.3971158, 0.9177684, 0, 7.027391, 5.4350615)
 current = true

@@ -1,6 +1,5 @@
 extends BasicCharacter
 class_name Player
-#@onready var animation_nica: AnimationPlayer = $"Nica-v1_0/AnimationPlayer"
 #@onready var camera_focus: Marker3D = $"../CameraFocus"
 @onready var camera_focus: Camera3D = $"../Camera3D"
 
@@ -59,24 +58,13 @@ func _ready() -> void:
 	velocity_forward = 30
 	#baseVelocity = velocity_z
 	#speedMax = velocity_z + (velocity_z * percentSpeedUp / 100)
+	
+	# Variable que contiene al punto que se mueve en el Path
 	puntoMovil = $".."
 
 func _physics_process(delta: float) -> void:
 	# Esto checkea que los colissionadores laterales no choquen contra nada
 	collisionLateralCheck()
-	
-	if currentState != STATES.IDLE && !is_movie:
-		puntoMovil.progress += velocity_forward * delta
-		# Esto hace que si la camara se invierte, los controles laterales tambien, para tener el control de ambos casos de vision
-		lateralController()
-		
-		# ///LOGICA DE SALTO/// #
-		if Input.is_action_pressed("Saltar"):
-			currentState = STATES.JUMP
-			current_jump_velocity = JUMP_VELOCITY
-		if Input.is_key_label_pressed(KEY_M):
-			#esto deberia cambiar una vez tengamos cuando se activa, llamando directamente a la funcion siguiente
-			changeVisionCam()
 	
 	# Temporizador de los power up
 	if currentPowerUp != POWERUPSTATE.NOTHING:
@@ -87,11 +75,10 @@ func _physics_process(delta: float) -> void:
 			durationPowerUp = 0
 			currentPowerUp = POWERUPSTATE.NOTHING
 			powerUpActive()
-
-	#camera_follow(delta)
-	animationController(delta)
-	#move_and_slide()
 	
+	# Aplicamos Gravedad (y posible salto)
+	gravityApply(delta)
+
 func collisionLateralCheck():
 	if $RayCastLeft.is_colliding():
 		collideL = true
@@ -124,25 +111,14 @@ func lateralController():
 			target_lane -= 1 # maximo 0
 			changeLine(0.5)
 
-func animationController(delta:float):
-	super.animationController(delta)
-	match currentState:
-		STATES.JUMP:
-			animationPlayer.play("anim_jump")
-			#position.y = move_toward(position.y, current_jump_velocity, delta)
-			if position.y >= JUMP_VELOCITY - 1:
-				currentState = STATES.FALL
-				
-		STATES.FALL:
-			#gravityApply(delta)
-			if estaTocandoSuelo():
-				currentState = STATES.RUN
-				
-		STATES.HIT:
-			animationPlayer.play("anim_hitt")
-			#current_velocity_forward = velocity_forward * 0.5
-			#movingToForward(delta)
-			#gravityApply(delta)
+#func animationController(delta:float):
+	#super.animationController(delta)
+	#match currentState:
+		#STATES.HIT:
+			#animationPlayer.play("anim_hitt")
+			##current_velocity_forward = velocity_forward * 0.5
+			##movingToForward(delta)
+			##gravityApply(delta)
 
 func changeVisionCam():
 	#a probar cuando la camara gire en la plaza
@@ -182,48 +158,45 @@ func changeLine(dire) -> void:
 
 		await get_tree().process_frame
 
-func camera_follow(delta:float):
-	# Obtenemos el eje local del personaje
-	var forward_dir = global_transform.basis.z.normalized()
-	var up_dir = global_transform.basis.y.normalized()
-	var right_dir = global_transform.basis.x.normalized()
-
-	# Actualizamos la posición sin el componente lateral (usamos proyección)
-	# Le quitamos el componente de X (right_dir)
-	var world_pos = position
-	var lateral_component = right_dir * (world_pos - lateral_free_position).dot(right_dir)
-	lateral_free_position = world_pos - lateral_component
-	
-	# La cámara mira al personaje
-	#camera_focus.rotation = -camera_focus.rotation.lerp(rotation, 0 * delta)
-	
-	# Calculamos la posición destino del camera_focus
-	var target_position = lateral_free_position - forward_dir * camera_distance + up_dir * camera_height
-
-	# Limitar el seguimiento en Y para que no suba cuando el personaje salta
-	var current_cam_pos = camera_focus.position
-
-	# Si el personaje está en el aire y subiendo, no actualizar Y
-	#if not is_on_floor() and velocity.y > 0:
-	if not estaTocandoSuelo() and velocity.y > 0:
-		target_position.y = current_cam_pos.y
-	# Pero si está bajando (por caída o escalera), permitir que la cámara lo siga
-	#elif not is_on_floor() and velocity.y < 0:
-	elif not estaTocandoSuelo() and velocity.y < 0:
-		# Suavizamos el descenso
-		var vertical_gap = current_cam_pos.y - target_position.y
-		var descent_speed = clamp(vertical_gap * 3.0, 1.0, 10.0)
-		target_position.y = lerp(current_cam_pos.y, target_position.y, delta * descent_speed)
-	# Si está en el suelo, seguirlo normalmente
-	#elif is_on_floor():
-	elif estaTocandoSuelo():
-		target_position.y = lerp(current_cam_pos.y, target_position.y, delta * 30)
-
-	# Interpolar toda la posición suavemente
-	camera_focus.position = camera_focus.position.lerp(target_position, 5 * delta)
-
-func reset_target_line():
-	target_lane = 1
+#func camera_follow(delta:float):
+	## Obtenemos el eje local del personaje
+	#var forward_dir = global_transform.basis.z.normalized()
+	#var up_dir = global_transform.basis.y.normalized()
+	#var right_dir = global_transform.basis.x.normalized()
+#
+	## Actualizamos la posición sin el componente lateral (usamos proyección)
+	## Le quitamos el componente de X (right_dir)
+	#var world_pos = position
+	#var lateral_component = right_dir * (world_pos - lateral_free_position).dot(right_dir)
+	#lateral_free_position = world_pos - lateral_component
+	#
+	## La cámara mira al personaje
+	##camera_focus.rotation = -camera_focus.rotation.lerp(rotation, 0 * delta)
+	#
+	## Calculamos la posición destino del camera_focus
+	#var target_position = lateral_free_position - forward_dir * camera_distance + up_dir * camera_height
+#
+	## Limitar el seguimiento en Y para que no suba cuando el personaje salta
+	#var current_cam_pos = camera_focus.position
+#
+	## Si el personaje está en el aire y subiendo, no actualizar Y
+	##if not is_on_floor() and velocity.y > 0:
+	#if not estaTocandoSuelo() and velocity.y > 0:
+		#target_position.y = current_cam_pos.y
+	## Pero si está bajando (por caída o escalera), permitir que la cámara lo siga
+	##elif not is_on_floor() and velocity.y < 0:
+	#elif not estaTocandoSuelo() and velocity.y < 0:
+		## Suavizamos el descenso
+		#var vertical_gap = current_cam_pos.y - target_position.y
+		#var descent_speed = clamp(vertical_gap * 3.0, 1.0, 10.0)
+		#target_position.y = lerp(current_cam_pos.y, target_position.y, delta * descent_speed)
+	## Si está en el suelo, seguirlo normalmente
+	##elif is_on_floor():
+	#elif estaTocandoSuelo():
+		#target_position.y = lerp(current_cam_pos.y, target_position.y, delta * 30)
+#
+	## Interpolar toda la posición suavemente
+	#camera_focus.position = camera_focus.position.lerp(target_position, 5 * delta)
 
 func setPower(power:POWERUPSTATE):
 	currentPowerUp = power
@@ -243,19 +216,19 @@ func powerUpActive():
 			durationPowerUp = powerUpDuration.ABOSRBCOIN
 
 func is_hitt_change():
-	# resetea el ishit y setea el estado segun su accion actual 
+	# resetea el is_hit y setea el estado segun su accion actual 
 	if is_hitt:
 		is_hitt = false
 		#velocity_z = baseVelocity
 		current_velocity_forward = velocity_forward
-	if velocity.y < 0:
-		currentState = STATES.FALL
-	else:
-		currentState = STATES.RUN
+	#if velocity.y < 0:
+		#currentState = STATES.FALL
+	#else:
+		#currentState = STATES.RUN
 
 func lostLife(dmg:int):
 	is_hitt = true
-	currentState = STATES.HIT
+	#currentState = STATES.HIT
 	life -= dmg
 	if life <= 0:
 		get_tree().change_scene_to_file("res://Scenes/World/MenuInicial.tscn")
@@ -269,10 +242,3 @@ func _on_timer_coll_r_timeout() -> void:
 
 func _on_timer_coll_l_timeout() -> void:
 	collideL = false
-
-func actualizar_eje_local():
-	super()
-	if posPostGiro != Vector3.ZERO:
-		#position = posPostGiro
-		position = lerp(position, posPostGiro, 1) 
-	reset_target_line()

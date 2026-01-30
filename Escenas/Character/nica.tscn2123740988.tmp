@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://bg2ova3uojcc0"]
+[gd_scene load_steps=33 format=4 uid="uid://bg2ova3uojcc0"]
 
 [ext_resource type="Texture2D" uid="uid://bqv7wo2rno67s" path="res://Assets/Characters/Nica-v1_BakeTexture.png" id="1_q3bkr"]
 [ext_resource type="Script" uid="uid://bash4fgg1rqui" path="res://Script/Characters/nica.gd" id="1_r8wu8"]
@@ -8,7 +8,6 @@
 [ext_resource type="Script" uid="uid://crqhhfnr11jau" path="res://Script/Characters/PlayerStateRun.gd" id="6_guxvl"]
 [ext_resource type="Script" uid="uid://dj3txcv3so8n7" path="res://Script/Characters/PlayerStateJumping.gd" id="7_gnnsv"]
 [ext_resource type="Script" uid="uid://d2pvnmvjwu4hm" path="res://Script/Characters/PlayerStateFalling.gd" id="8_guxvl"]
-[ext_resource type="Script" uid="uid://cppd6tffinj6b" path="res://Script/Characters/PlayerStateHitting.gd" id="9_e8rxf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_um7xc"]
 resource_name = "Piel"
@@ -3087,9 +3086,6 @@ script = ExtResource("7_gnnsv")
 
 [node name="PlayerStateFalling" type="Node" parent="StateMachine"]
 script = ExtResource("8_guxvl")
-
-[node name="PlayerStateHitting" type="Node" parent="StateMachine"]
-script = ExtResource("9_e8rxf")
 
 [connection signal="timeout" from="TimerColl-R" to="." method="_on_timer_coll_r_timeout"]
 [connection signal="timeout" from="TimerColl-L" to="." method="_on_timer_coll_l_timeout"]
