@@ -1,7 +1,8 @@
 extends BasicCharacter
 class_name Player
 #@onready var animation_nica: AnimationPlayer = $"Nica-v1_0/AnimationPlayer"
-@onready var camera_focus: Marker3D = $"../CameraFocus"
+#@onready var camera_focus: Marker3D = $"../CameraFocus"
+@onready var camera_focus: Camera3D = $"../Camera3D"
 
 const LANES: Array = [-2, 0, 2]  # Lane positions on x-axis
 const dist_beetween_lanes = 5
@@ -61,29 +62,18 @@ func _ready() -> void:
 	puntoMovil = $".."
 
 func _physics_process(delta: float) -> void:
-	if $RayCastLeft.is_colliding():
-		collideL = true
-		$"TimerColl-L".start()
-	else:
-		#$"TimerColl-L".stop()
-		collideL = false
-		
-	if $RayCastRigth.is_colliding():
-		collideR = true
-		$"TimerColl-R".start()
-	else:
-		#$"TimerColl -R".stop()
-		collideR = false
-		
-	if currentState == STATES.RUN && !is_movie:
+	# Esto checkea que los colissionadores laterales no choquen contra nada
+	collisionLateralCheck()
+	
+	if currentState != STATES.IDLE && !is_movie:
 		puntoMovil.progress += velocity_forward * delta
+		# Esto hace que si la camara se invierte, los controles laterales tambien, para tener el control de ambos casos de vision
 		lateralController()
 		
 		# ///LOGICA DE SALTO/// #
 		if Input.is_action_pressed("Saltar"):
 			currentState = STATES.JUMP
 			current_jump_velocity = JUMP_VELOCITY
-			print(position.y)
 		if Input.is_key_label_pressed(KEY_M):
 			#esto deberia cambiar una vez tengamos cuando se activa, llamando directamente a la funcion siguiente
 			changeVisionCam()
@@ -101,6 +91,21 @@ func _physics_process(delta: float) -> void:
 	#camera_follow(delta)
 	animationController(delta)
 	#move_and_slide()
+	
+func collisionLateralCheck():
+	if $RayCastLeft.is_colliding():
+		collideL = true
+		$"TimerColl-L".start()
+	else:
+		#$"TimerColl-L".stop()
+		collideL = false
+		
+	if $RayCastRigth.is_colliding():
+		collideR = true
+		$"TimerColl-R".start()
+	else:
+		#$"TimerColl -R".stop()
+		collideR = false
 
 func lateralController():
 	if Input.is_action_just_pressed("Derecha") and collideR == false:
@@ -124,21 +129,20 @@ func animationController(delta:float):
 	match currentState:
 		STATES.JUMP:
 			animationPlayer.play("anim_jump")
-			position.y = move_toward(position.y, current_jump_velocity, delta)
+			#position.y = move_toward(position.y, current_jump_velocity, delta)
 			if position.y >= JUMP_VELOCITY - 1:
 				currentState = STATES.FALL
 				
 		STATES.FALL:
-			gravityApply(delta)
-			#if is_on_floor():
+			#gravityApply(delta)
 			if estaTocandoSuelo():
 				currentState = STATES.RUN
 				
 		STATES.HIT:
 			animationPlayer.play("anim_hitt")
-			current_velocity_forward = velocity_forward * 0.5
-			movingToForward(delta)
-			gravityApply(delta)
+			#current_velocity_forward = velocity_forward * 0.5
+			#movingToForward(delta)
+			#gravityApply(delta)
 
 func changeVisionCam():
 	#a probar cuando la camara gire en la plaza
@@ -146,10 +150,12 @@ func changeVisionCam():
 	var initialDegs = rad_to_deg(camera_focus.rotation.y)
 	var target_degs = initialDegs - 180
 	var currentDegs = 0
+	var positionZ = camera_focus.position.z
 	
 	if !frontalCamIsActive:
 		frontalCamIsActive = true
-		camera_distance = 4.0
+		#camera_distance = 4.0
+		camera_focus.position.z = -positionZ - 2
 		while(currentDegs > target_degs):
 			currentDegs += target_degs/20
 			camera_focus.rotation.y = deg_to_rad(currentDegs)
@@ -163,6 +169,7 @@ func changeVisionCam():
 			await get_tree().create_timer(0).timeout
 		
 		camera_distance = -4.0
+		camera_focus.position.z = positionZ
 		frontalCamIsActive = false
 
 func changeLine(dire) -> void:

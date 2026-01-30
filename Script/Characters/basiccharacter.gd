@@ -1,6 +1,7 @@
 extends CharacterBody3D
 class_name BasicCharacter
 
+
 var animationPlayer: AnimationPlayer
 var is_movie_idle : bool = false
 var is_movie : bool = false
@@ -18,6 +19,7 @@ enum STATES  {
 	FALL,
 	HIT
 }
+
 var eje_local_x:Vector3
 
 var currentState:STATES = STATES.FALL
@@ -60,7 +62,6 @@ func gravityApply(delta: float):
 		#velocity.y -= GRAVITY * delta
 		current_jump_velocity = lerpf(current_jump_velocity, 0, GRAVITY * delta)
 		position.y = current_jump_velocity
-		print("cae")
 	else:
 		current_jump_velocity = 0
 
@@ -72,6 +73,6 @@ func is_movie_change():
 
 func actualizar_eje_local():
 	eje_local_x = global_transform.basis.x.normalized()
-	
+
 func estaTocandoSuelo() -> bool:
 	return rayCastSuelo.is_colliding()
