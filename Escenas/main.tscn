@@ -16,10 +16,10 @@ sky = SubResource("Sky_2ia52")
 
 [sub_resource type="Curve3D" id="Curve3D_7xwpo"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1222.052, 0, 0, 0, 0, 0, 0, -203.441, 0, -1426.033),
-"tilts": PackedFloat32Array(0, 0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.705, 0, -2.44, 0, 0, -1214.056, 0.63, 0, 2.11, -1.82, 0, -5.085, -0.025680065, 0, -1223.8127, 0, 0, 0, 0, 0, 0, -23.01417, 0, -1245.9712, 0, 0, 0, 0, 0, 0, -203.441, 0, -1426.033, 0, 0, -0.08, 0, 0, 0, -203.441, 0, -1465.745, 0, 0, 0, 0, 0, 0, -203.441, -8.770834, -1475.0282, 0, 0, 0, 0, 0, 0, -203.441, -8.771163, -1491.4224, 0, 0, 0, 0, 0, 0, -203.441, -13.485807, -1495.7615),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
-point_count = 3
+point_count = 9
 
 [node name="Main" type="Node3D"]
 
@@ -51,6 +51,7 @@ shadow_reverse_cull_face = true
 curve = SubResource("Curve3D_7xwpo")
 
 [node name="PuntoMovible" type="PathFollow3D" parent="CaminoPrincipal"]
+transform = Transform3D(0.9999976, 0, 0, 0, 0.99999875, 0, 0, 0, 0.99999636, 0, 0, 0)
 
 [node name="Nica" parent="CaminoPrincipal/PuntoMovible" instance=ExtResource("4_7xwpo")]
 
