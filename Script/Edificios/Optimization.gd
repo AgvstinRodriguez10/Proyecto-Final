@@ -5,7 +5,7 @@ extends Node3D
 
 @export var lod_bias: float = 0.5
 @export var visibility_range: float = 300
-@export var delay_off: float = 15 # segundos antes de desactivar
+@export var delay_off: float = 20 # segundos antes de desactivar
 
 @onready var mesh: MeshInstance3D = $Plane
 var notifier: VisibleOnScreenNotifier3D = null
