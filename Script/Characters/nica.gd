@@ -13,8 +13,6 @@ var camera_distance = -3 #-1.0
 
 # Va de 0 a 2 para enumerar las lineas
 var target_lane: int = 1
-#var velocity_y
-#var baseVelocity
 
 # Velocidad con la que cambia de carriles
 const velociti_change_line:float = 0.5
@@ -27,6 +25,9 @@ var life_plus : bool = false
 var life = 3
 var snficha = 0
 #var speedMax:float
+
+var States:PlayerStatesNames = PlayerStatesNames.new()
+var AnimStrings:PlayerAnimations = PlayerAnimations.new()
 
 # Timer para la duracion de los powerups
 var durationPowerUp:float = 0.0
@@ -220,11 +221,7 @@ func is_hitt_change():
 	if is_hitt:
 		is_hitt = false
 		#velocity_z = baseVelocity
-		current_velocity_forward = velocity_forward
-	#if velocity.y < 0:
-		#currentState = STATES.FALL
-	#else:
-		#currentState = STATES.RUN
+		#current_velocity_forward = velocity_forward
 
 func lostLife(dmg:int):
 	is_hitt = true

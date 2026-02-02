@@ -32,15 +32,12 @@ func movingToForward(delta: float):
 	
 func jump():
 	y_velocity = jump_force
-	print("salto")
 
 func gravityApply(delta: float):
 	# Aplicar gravedad
 	y_velocity -= gravity * delta
-	
 	# Mover en Y
 	position.y += y_velocity * delta
-	
 	# Piso con RayCast
 	if estaTocandoSuelo() and y_velocity < 0:
 		position.y = 0

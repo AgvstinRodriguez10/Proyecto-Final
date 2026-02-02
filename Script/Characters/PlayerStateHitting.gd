@@ -1,1 +1,10 @@
-extends StateBase
+extends PlayerStateBase
+
+func on_process(delta: float) -> void:
+	super(delta)
+	player.animationPlayer.play(player.AnimStrings.hitt)
+	player.lost_life()
+	if player.estaTocandoSuelo():
+		state_machine.change_to(player.States.running)
+	elif player.y_velocity < 0:
+		state_machine.change_to(player.States.falling)
