@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://sh51nj3ah1jb"]
+
+[ext_resource type="Script" uid="uid://do24wervay1m6" path="res://Script/Obstaculos/valla.gd" id="1_0ust0"]
+[ext_resource type="PackedScene" uid="uid://buhdf51ryn3eq" path="res://Assets/Obstaculos/Valla.glb" id="1_ny21l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ust0"]
+size = Vector3(1.508, 0.979, 0.071)
+
+[node name="Valla" type="Node3D"]
+script = ExtResource("1_0ust0")
+show_distance = 300.0
+
+[node name="Valla" parent="." instance=ExtResource("1_ny21l")]
+transform = Transform3D(-1.3113416e-07, 0, 3, 0, 3, 0, -3, 0, -1.3113416e-07, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5419087, 0)
+shape = SubResource("BoxShape3D_0ust0")
