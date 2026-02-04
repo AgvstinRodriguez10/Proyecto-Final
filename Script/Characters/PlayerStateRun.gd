@@ -14,6 +14,7 @@ func on_process(delta: float) -> void:
 		state_machine.change_to(player.States.idle)
 	elif player.y_velocity < 0:
 		state_machine.change_to(player.States.falling)
+		
 func on_input():
 	if Input.is_action_just_pressed("Saltar"):
 		state_machine.change_to(player.States.jumping)

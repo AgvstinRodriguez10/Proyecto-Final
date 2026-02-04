@@ -6,17 +6,18 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_0ust0"]
 size = Vector3(1.508, 0.979, 0.071)
 
-[node name="Valla" type="Node3D"]
+[node name="Valla" type="Node3D" groups=["Obstaculo"]]
 script = ExtResource("1_0ust0")
-show_distance = 300.0
 
 [node name="Valla" parent="." instance=ExtResource("1_ny21l")]
 transform = Transform3D(-1.3113416e-07, 0, 3, 0, 3, 0, -3, 0, -1.3113416e-07, 0, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="Area3D" type="Area3D" parent="."]
 collision_layer = 8
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5419087, 0)
 shape = SubResource("BoxShape3D_0ust0")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

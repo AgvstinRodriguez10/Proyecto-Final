@@ -8,3 +8,6 @@ var player: Player:
 
 func on_process(delta: float) -> void:
 	player.puntoMovil.progress += player.velocity_forward * delta
+	
+	if player.is_hitt:
+		state_machine.change_to(player.States.hitting)

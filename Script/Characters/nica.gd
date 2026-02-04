@@ -56,7 +56,7 @@ var puntoMovil:PathFollow3D
 func _ready() -> void:
 	super._ready()
 	animationPlayer = $"Nica-v1_0/AnimationPlayer"
-	velocity_forward = 30
+	velocity_forward = 20
 	#baseVelocity = velocity_z
 	#speedMax = velocity_z + (velocity_z * percentSpeedUp / 100)
 	
@@ -118,8 +118,6 @@ func lateralController():
 		#STATES.HIT:
 			#animationPlayer.play("anim_hitt")
 			##current_velocity_forward = velocity_forward * 0.5
-			##movingToForward(delta)
-			##gravityApply(delta)
 
 func changeVisionCam():
 	#a probar cuando la camara gire en la plaza
@@ -216,19 +214,12 @@ func powerUpActive():
 		POWERUPSTATE.ABOSRBCOIN:
 			durationPowerUp = powerUpDuration.ABOSRBCOIN
 
-func is_hitt_change():
-	# resetea el is_hit y setea el estado segun su accion actual 
-	if is_hitt:
-		is_hitt = false
-		#velocity_z = baseVelocity
-		#current_velocity_forward = velocity_forward
-
 func lostLife(dmg:int):
 	is_hitt = true
-	#currentState = STATES.HIT
+	
 	life -= dmg
 	if life <= 0:
-		get_tree().change_scene_to_file("res://Scenes/World/MenuInicial.tscn")
+		get_tree().change_scene_to_file("res://Escenas/main.tscn")
 
 func collectSnFicha():
 	if life < 3:

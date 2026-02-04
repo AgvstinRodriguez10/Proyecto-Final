@@ -58,5 +58,3 @@ transform = Transform3D(0.9999976, 0, 0, 0, 0.99999875, 0, 0, 0, 0.99999636, 0, 
 [node name="Camera3D" type="Camera3D" parent="CaminoPrincipal/PuntoMovible"]
 transform = Transform3D(1, 0, 0, 0, 0.9177684, 0.3971158, 0, -0.3971158, 0.9177684, 0, 7.027391, 5.4350615)
 current = true
-
-[node name="Obstaculos" type="Node" parent="."]
