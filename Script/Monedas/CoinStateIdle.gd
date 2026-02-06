@@ -1,42 +1,44 @@
 extends CoinStateBase
 
-var posInitial: Vector3
-var idleDistUp = .8
-var targetHeight
+#@export var pickup_distance := 2.0
+@export var check_interval := 1
 
+var _timer: Timer
+var player
 
-enum ANIM_STATE {
-	IDLE_DOWN,
-	IDLE_UP
-}
-var currentAnimState := ANIM_STATE.IDLE_UP
+func start():
+	player = coin.player
+	coin.visible = true
+	start_checks()
 
-func _ready() -> void:
-	posInitial = coin.ModelAnimatable.position
-	targetHeight = posInitial.y + idleDistUp
+func end():
+	if _timer:
+		_timer.stop()
+		_timer.queue_free()
+		_timer = null
 
 func on_process(delta: float) -> void:
-	match currentAnimState:
-		ANIM_STATE.IDLE_UP:
-			animationCoinsUp(delta)
-			animRotator(delta)
-		ANIM_STATE.IDLE_DOWN:
-			animationCoinsDown(delta)
-			animRotator(delta)
+	# Animamos la moneada para que rote
+	#coin.ModelAnimatable.rotate_y(lerp(0, 2, delta * 2))
+	coin.ModelAnimatable.rotate_y(delta * 2.0)
 
-func animationCoinsUp(delta:float):
-	#definido en el ready:
-	#targetHeight = posInitial.y + idleDistUp
-	if(coin.ModelAnimatable.position.y < targetHeight - 0.1):
-		coin.ModelAnimatable.position.y = lerpf(coin.ModelAnimatable.position.y, targetHeight, delta * 2.2)
-	else:
-		currentAnimState = ANIM_STATE.IDLE_DOWN
+func start_checks():
+	if _timer:
+		return
+	
+	_timer = Timer.new()
+	_timer.wait_time = check_interval
+	_timer.autostart = true
+	_timer.one_shot = false
+	add_child(_timer)
+	_timer.timeout.connect(_check_logic)
 
-func animationCoinsDown(delta:float):
-	if(coin.ModelAnimatable.position.y > posInitial.y + 0.05):
-		coin.ModelAnimatable.position.y = lerpf(coin.ModelAnimatable.position.y, posInitial.y, delta * 2)
-	else:
-		currentAnimState = ANIM_STATE.IDLE_UP
+func _check_logic():
+	if not is_instance_valid(player):
+		return
 
-func animRotator(delta:float):
-	coin.ModelAnimatable.rotate_y(lerp(0, 2, delta * 2))
+	var dist_sq := coin.global_position.distance_squared_to(player.global_position)
+
+	# 1️⃣ Demasiado lejos → borrar
+	if dist_sq >= get_show_distance_sq():
+		coin.queue_free()

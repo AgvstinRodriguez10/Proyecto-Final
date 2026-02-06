@@ -1,12 +1,26 @@
-[gd_scene load_steps=9 format=3 uid="uid://ippnpcty674w"]
+[gd_scene load_steps=12 format=3 uid="uid://ippnpcty674w"]
 
 [ext_resource type="Script" uid="uid://x1p5qxf1841h" path="res://Script/Monedas/CoinBase.gd" id="1_1q0uj"]
 [ext_resource type="PackedScene" uid="uid://ct12d75a4hctu" path="res://Assets/Monedas/EcoFicha.fbx" id="1_euhe5"]
 [ext_resource type="PackedScene" uid="uid://el6x1xeirv7" path="res://Escenas/Resource/state_machine.tscn" id="2_3njb4"]
+[ext_resource type="Shader" uid="uid://m1y2w11bk343" path="res://Script/Shaders/coinAnimation.gdshader" id="3_41fei"]
 [ext_resource type="Script" uid="uid://blbpmhjxh2rpr" path="res://Script/Monedas/CoinStateHidden.gd" id="4_04qqt"]
+[ext_resource type="Texture2D" uid="uid://disrkkecy8xov" path="res://Assets/Monedas/EcoFicha.png" id="4_n04a5"]
 [ext_resource type="Script" uid="uid://cuchy16x5ivyg" path="res://Script/Monedas/CoinStateIdle.gd" id="5_5je58"]
 [ext_resource type="Script" uid="uid://chckywnrkjb2j" path="res://Script/Monedas/CoinStatePushUp.gd" id="6_4wrtb"]
 [ext_resource type="Script" uid="uid://del6e2b7cpv1d" path="res://Script/Monedas/CoinStatePushDown.gd" id="7_ce3h0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rid0r"]
+render_priority = 0
+shader = ExtResource("3_41fei")
+shader_parameter/albedo_texture = ExtResource("4_n04a5")
+shader_parameter/albedo_color = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.7
+shader_parameter/roughness = 0.1
+shader_parameter/specular = 0.5
+shader_parameter/amplitude = 0.03
+shader_parameter/speed = 2.0
+shader_parameter/phase_offset = 0.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_euhe5"]
 size = Vector3(0.81933594, 0.82092285, 0.15234375)
@@ -17,6 +31,9 @@ ModelAnimatable = NodePath("EcoFicha")
 
 [node name="EcoFicha" parent="." instance=ExtResource("1_euhe5")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+
+[node name="Circle" parent="EcoFicha" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_rid0r")
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_layer = 16
@@ -40,3 +57,5 @@ script = ExtResource("6_4wrtb")
 
 [node name="CoinStatePushDown" type="Node" parent="StateMachine"]
 script = ExtResource("7_ce3h0")
+
+[editable path="EcoFicha"]

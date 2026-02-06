@@ -1,38 +1,35 @@
 extends CoinStateBase
 
-var player
-@export var show_distance := 100.0
-@export var hide_distance := 102.0
-@export var check_interval := 1
-var _is_visible := false
+#@export var show_distance := 100.0
+@export var check_interval := 1.0
 
-func _ready():
-	player = get_tree().get_first_node_in_group("Player")
-	if coin.visible:
-		coin.visible = false
+var player
+var _timer: Timer
+
+func start():
+	player = coin.player
+	coin.visible = false
 	start_distance_check()
 
-func start_distance_check():
-	var timer := Timer.new()
-	timer.wait_time = check_interval
-	timer.one_shot = false
-	timer.autostart = true
-	add_child(timer)
-	timer.timeout.connect(_update_visibility)
+func end():
+	if _timer:
+		_timer.stop()
+		_timer.queue_free()
+		_timer = null
 
-func _update_visibility():
+func start_distance_check():
+	_timer = Timer.new()
+	_timer.wait_time = check_interval
+	_timer.one_shot = false
+	_timer.autostart = true
+	add_child(_timer)
+	_timer.timeout.connect(_check_distance)
+
+func _check_distance():
 	if not is_instance_valid(player):
 		return
 
 	var dist_sq := coin.global_position.distance_squared_to(player.global_position)
 
-	if not _is_visible and dist_sq <= show_distance * show_distance:
-		_set_visible(true)
+	if dist_sq <= get_show_distance_sq():
 		state_machine.change_to("CoinStateIdle")
-	elif _is_visible and dist_sq >= hide_distance * hide_distance:
-		_set_visible(false)
-
-func _set_visible(value: bool):
-	_is_visible = value
-	if coin:
-		coin.visible = value

@@ -43,6 +43,7 @@ func _update_visibility():
 		_set_visible(true)
 	elif _is_visible and dist_sq >= hide_distance * hide_distance:
 		_set_visible(false)
+		fade_out()
 		#print("se oculta ", dist_sq)
 
 func _set_visible(value: bool):
