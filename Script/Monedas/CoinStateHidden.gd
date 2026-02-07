@@ -1,6 +1,5 @@
 extends CoinStateBase
 
-#@export var show_distance := 100.0
 @export var check_interval := 1.0
 
 var player

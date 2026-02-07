@@ -112,13 +112,6 @@ func lateralController():
 			target_lane -= 1 # maximo 0
 			changeLine(0.5)
 
-#func animationController(delta:float):
-	#super.animationController(delta)
-	#match currentState:
-		#STATES.HIT:
-			#animationPlayer.play("anim_hitt")
-			##current_velocity_forward = velocity_forward * 0.5
-
 func changeVisionCam():
 	#a probar cuando la camara gire en la plaza
 	#actualmente esto se esta ejecutando con una tecla, revisar

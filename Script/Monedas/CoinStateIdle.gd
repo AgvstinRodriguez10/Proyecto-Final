@@ -1,7 +1,8 @@
 extends CoinStateBase
 
 #@export var pickup_distance := 2.0
-@export var check_interval := 1
+@export var check_interval := 1.0
+@export var velocity_rotate := 2.5
 
 var _timer: Timer
 var player
@@ -19,8 +20,7 @@ func end():
 
 func on_process(delta: float) -> void:
 	# Animamos la moneada para que rote
-	#coin.ModelAnimatable.rotate_y(lerp(0, 2, delta * 2))
-	coin.ModelAnimatable.rotate_y(delta * 2.0)
+	coin.ModelAnimatable.rotate_y(delta * velocity_rotate)
 
 func start_checks():
 	if _timer:
@@ -42,3 +42,8 @@ func _check_logic():
 	# 1️⃣ Demasiado lejos → borrar
 	if dist_sq >= get_show_distance_sq():
 		coin.queue_free()
+
+
+func _on_area_3d_body_entered(body: Player) -> void:
+	if body == coin.player:
+		state_machine.change_to("CoinStatePushUp")

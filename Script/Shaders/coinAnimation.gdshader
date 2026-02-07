@@ -13,7 +13,7 @@ uniform float roughness = 0.1;
 uniform float specular = 0.5;
 
 // === ANIMACIÓN ===
-uniform float amplitude = 0.03;
+uniform float amplitude = 0.02;
 uniform float speed = 2.0;
 uniform float phase_offset = 0.0;
 

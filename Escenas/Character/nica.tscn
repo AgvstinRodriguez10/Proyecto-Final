@@ -453,6 +453,21 @@ bind/40/name = &"mixamorig_RightToe_End"
 bind/40/bone = -1
 bind/40/pose = Transform3D(98.1537, 14.2496, -12.733, -12.7088, -1.08853, -99.1832, -14.2717, 98.9735, 0.74245, -38.0515, -47.747, 10.2889)
 
+[sub_resource type="Animation" id="Animation_e8rxf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Armature/Skeleton3D/Base_001:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="Animation" id="Animation_ylbd6"]
 resource_name = "anim_run"
 length = 0.6667
@@ -2728,21 +2743,6 @@ tracks/62/path = NodePath("Armature/Skeleton3D:mixamorig_RightToeBase")
 tracks/62/interp = 1
 tracks/62/loop_wrap = true
 tracks/62/keys = PackedFloat32Array(0, 1, 0.640071, -0.0426646, -0.0263804, 0.766676, 0.0333333, 1, 0.640071, -0.0426646, -0.0263804, 0.766676, 0.0666667, 1, 0.748356, -0.0785183, -0.0712085, 0.654773, 0.1, 1, 0.605896, -0.0838997, -0.0250879, 0.79071, 0.133333, 1, 0.41656, -0.0326431, 0.0140986, 0.908413, 0.166667, 1, 0.411776, -0.0324183, 0.0148993, 0.910586, 0.233333, 1, 0.411373, -0.0323994, 0.0149666, 0.910768, 0.266667, 1, 0.409238, -0.032299, 0.0153232, 0.911727, 0.3, 1, 0.414225, -0.0325335, 0.0144897, 0.909478, 0.366667, 1, 0.413127, -0.0324819, 0.0146733, 0.909976, 0.4, 1, 0.412655, -0.0324597, 0.0147524, 0.91019, 0.433333, 1, 0.418835, -0.0327499, 0.0137168, 0.907368, 0.466667, 1, 0.41962, -0.0327867, 0.013585, 0.907006, 0.5, 1, 0.537686, -0.0382008, -0.00702492, 0.84225, 0.533333, 1, 0.574506, -0.039834, -0.0138068, 0.817414, 0.566667, 1, 0.431931, -0.0333626, 0.0115096, 0.901216, 0.6, 1, 0.465393, -0.0349154, 0.00578547, 0.884397, 0.633333, 1, 0.537718, -0.0382023, -0.00703071, 0.84223, 0.666667, 1, 0.640071, -0.0426646, -0.0263804, 0.766676)
-
-[sub_resource type="Animation" id="Animation_e8rxf"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Armature/Skeleton3D/Base_001:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6dykr"]
 _data = {

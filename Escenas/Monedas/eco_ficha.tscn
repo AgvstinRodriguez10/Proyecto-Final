@@ -23,7 +23,7 @@ shader_parameter/speed = 2.0
 shader_parameter/phase_offset = 0.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_euhe5"]
-size = Vector3(0.81933594, 0.82092285, 0.15234375)
+size = Vector3(0.81933594, 1.0466309, 0.15234375)
 
 [node name="EcoFicha" type="Node3D" node_paths=PackedStringArray("ModelAnimatable")]
 script = ExtResource("1_1q0uj")
@@ -40,7 +40,7 @@ collision_layer = 16
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3899585, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.72906005, 0)
 shape = SubResource("BoxShape3D_euhe5")
 
 [node name="StateMachine" parent="." node_paths=PackedStringArray("default_state") instance=ExtResource("2_3njb4")]
@@ -54,8 +54,12 @@ script = ExtResource("5_5je58")
 
 [node name="CoinStatePushUp" type="Node" parent="StateMachine"]
 script = ExtResource("6_4wrtb")
+pull_up_distance = 2.0
+pull_up_speed = 7.0
 
 [node name="CoinStatePushDown" type="Node" parent="StateMachine"]
 script = ExtResource("7_ce3h0")
+
+[connection signal="body_entered" from="Area3D" to="StateMachine/CoinStateIdle" method="_on_area_3d_body_entered"]
 
 [editable path="EcoFicha"]
