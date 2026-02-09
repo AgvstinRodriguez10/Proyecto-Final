@@ -12,3 +12,5 @@ class_name CoinBase extends Node3D
 
 @export var coinSound: AudioStream
 @onready var collision: CollisionShape3D = $Area3D/CollisionShape3D
+
+@export var coin_type: CoinTypes.ListTypesCoin

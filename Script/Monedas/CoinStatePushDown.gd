@@ -41,7 +41,7 @@ func on_process(delta: float) -> void:
 
 func _finalize_pickup():
 	coin.hide()
-
+	target.get_coin(coin.coin_type)
 	if coin.coinSound and coin.coinSound.playing:
 		await coin.coinSound.finished
 

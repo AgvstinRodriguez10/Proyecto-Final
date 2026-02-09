@@ -190,6 +190,18 @@ func changeLine(dire) -> void:
 	## Interpolar toda la posición suavemente
 	#camera_focus.position = camera_focus.position.lerp(target_position, 5 * delta)
 
+func get_coin(type_coin: CoinTypes.ListTypesCoin):
+	if type_coin == null:
+		print("tipo de coin incorrecta", type_coin)
+		return
+	match type_coin:
+		CoinTypes.ListTypesCoin.EcoFicha:
+			print("agarro ecoficha")
+		CoinTypes.ListTypesCoin.SNFicha:
+			print("agarro snficha")
+		CoinTypes.ListTypesCoin.YaguiFicha:
+			print("agarro yaguificha")
+
 func setPower(power:POWERUPSTATE):
 	currentPowerUp = power
 	powerUpActive()
@@ -209,7 +221,7 @@ func powerUpActive():
 
 func lostLife(dmg:int):
 	is_hitt = true
-	
+
 	life -= dmg
 	if life <= 0:
 		get_tree().change_scene_to_file("res://Escenas/main.tscn")
