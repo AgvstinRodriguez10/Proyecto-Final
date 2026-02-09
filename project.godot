@@ -15,6 +15,9 @@ run/main_scene="uid://be7usem7eilfm"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[filesystem]
+
+import/blender/enabled=false
 [gui]
 
 theme/custom="uid://dx4vikt7f65nj"

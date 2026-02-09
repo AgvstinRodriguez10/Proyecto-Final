@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c0pkqpdadxqa7"]
+[gd_scene load_steps=10 format=3 uid="uid://c0pkqpdadxqa7"]
 
 [ext_resource type="PackedScene" uid="uid://oxxsms5fe8t7" path="res://Escenas/Cuadras/Cuadra-1/b_mitre_400___350.tscn" id="1_vbwru"]
 [ext_resource type="PackedScene" uid="uid://dk7hwxp4sitgn" path="res://Escenas/Cuadras/Cuadra-2/b_mitre_350___300.tscn" id="2_87odv"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://c1fhid86heqhv" path="res://Escenas/Cuadras/Cuadra-4/b_mitre_250___200.tscn" id="4_xyd0c"]
 [ext_resource type="PackedScene" uid="uid://dtrvcqtkhtju1" path="res://Escenas/Cuadras/Cuadra-5/b_mitre_200___150.tscn" id="5_0wxlc"]
 [ext_resource type="PackedScene" uid="uid://diubi06d2lk1r" path="res://Escenas/Cuadras/Cuadra-6/b_mitre_150___100.tscn" id="6_0wxlc"]
+[ext_resource type="PackedScene" uid="uid://sh51nj3ah1jb" path="res://Escenas/Obstaculos/valla.tscn" id="7_ykf1x"]
+[ext_resource type="PackedScene" uid="uid://ippnpcty674w" path="res://Escenas/Monedas/eco_ficha.tscn" id="8_fdxyp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_foa6o"]
 size = Vector3(22.5234, 0.344727, 802.618)
@@ -36,3 +38,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0, -2.4)
 
 [node name="B Mitre 150 - 100" parent="." instance=ExtResource("6_0wxlc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4, 0, 40.85)
+
+[node name="Obstaculos" type="Node3D" parent="."]
+
+[node name="Valla" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 183.70123)
+
+[node name="Valla5" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 124.14697)
+
+[node name="Valla4" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 77.16018)
+
+[node name="Valla2" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 183.7015)
+
+[node name="Valla6" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 89.570114)
+
+[node name="Valla3" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 183.7015)
+
+[node name="Monedas" type="Node3D" parent="."]
+
+[node name="EcoFicha" parent="Monedas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 40)
+
+[node name="EcoFicha2" parent="Monedas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 105.095245)
