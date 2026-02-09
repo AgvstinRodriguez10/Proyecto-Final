@@ -191,16 +191,21 @@ func changeLine(dire) -> void:
 	#camera_focus.position = camera_focus.position.lerp(target_position, 5 * delta)
 
 func get_coin(type_coin: CoinTypes.ListTypesCoin):
-	if type_coin == null:
-		print("tipo de coin incorrecta", type_coin)
+	if !type_coin:
+		print("tipo de coin incorrecta: ", type_coin)
 		return
 	match type_coin:
 		CoinTypes.ListTypesCoin.EcoFicha:
 			print("agarro ecoficha")
 		CoinTypes.ListTypesCoin.SNFicha:
 			print("agarro snficha")
+			collectSnFicha()
 		CoinTypes.ListTypesCoin.YaguiFicha:
 			print("agarro yaguificha")
+			lostLife(1)
+		CoinTypes.ListTypesCoin.RDFicha:
+			print("agarro rdficha")
+			setPower(POWERUPSTATE.SPEEDUP)
 
 func setPower(power:POWERUPSTATE):
 	currentPowerUp = power

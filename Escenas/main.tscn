@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://be7usem7eilfm"]
+[gd_scene load_steps=15 format=3 uid="uid://be7usem7eilfm"]
 
 [ext_resource type="PackedScene" uid="uid://c0pkqpdadxqa7" path="res://Escenas/san_nicolas.tscn" id="1_6lbni"]
 [ext_resource type="Script" uid="uid://csd5oih1wy128" path="res://Script/GUI/label.gd" id="1_ktoa8"]
@@ -106,3 +106,5 @@ transform = Transform3D(0.9999976, 0, 0, 0, 0.99999875, 0, 0, 0, 0.99999636, 0, 
 [node name="Camera3D" type="Camera3D" parent="CaminoPrincipal/PuntoMovible"]
 transform = Transform3D(1.0000024, 0, 0, 0, 0.9177699, 0.39711556, 0, -0.3971165, 0.9177721, 0, 7.027391, 7.8078723)
 current = true
+
+[connection signal="timeout" from="Label/Timer" to="Label" method="_on_timer_timeout"]

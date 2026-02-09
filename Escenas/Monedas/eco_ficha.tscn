@@ -28,6 +28,7 @@ size = Vector3(0.81933594, 1.0466309, 0.15234375)
 [node name="EcoFicha" type="Node3D" node_paths=PackedStringArray("ModelAnimatable")]
 script = ExtResource("1_1q0uj")
 ModelAnimatable = NodePath("EcoFicha")
+coin_type = 1
 
 [node name="EcoFicha" parent="." instance=ExtResource("1_euhe5")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
