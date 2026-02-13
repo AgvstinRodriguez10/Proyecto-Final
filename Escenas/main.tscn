@@ -36,6 +36,12 @@ point_count = 9
 
 [node name="Main" type="Node3D"]
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.76747704, -0.09974475, -0.63326937, 0.63236856, -0.044473086, 0.7733901, -0.105305046, -0.99401873, 0.02894337, 0, 0, 0)
+light_bake_mode = 1
+shadow_enabled = true
+directional_shadow_mode = 0
+
 [node name="Label" type="CanvasLayer" parent="."]
 process_mode = 3
 script = ExtResource("1_ktoa8")
@@ -88,13 +94,6 @@ transform = Transform3D(1, 0, 0, 0, 0.91711575, 0.39862102, 0, -0.39862102, 0.91
 visible = false
 environment = SubResource("Environment_crgrh")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.76747704, -0.099744774, -0.6332694, 0.63236856, -0.044473104, 0.77339023, -0.105305046, -0.99401873, 0.028943356, 0, 0, 0)
-shadow_enabled = true
-shadow_bias = 0.2
-shadow_normal_bias = 10.0
-shadow_reverse_cull_face = true
-
 [node name="CaminoPrincipal" type="Path3D" parent="."]
 curve = SubResource("Curve3D_7xwpo")
 
@@ -106,3 +105,5 @@ transform = Transform3D(0.9999976, 0, 0, 0, 0.99999875, 0, 0, 0, 0.99999636, 0, 
 [node name="Camera3D" type="Camera3D" parent="CaminoPrincipal/PuntoMovible"]
 transform = Transform3D(1.0000024, 0, 0, 0, 0.9177699, 0.39711556, 0, -0.3971165, 0.9177721, 0, 7.027391, 7.8078723)
 current = true
+
+[connection signal="timeout" from="Label/Timer" to="Label" method="_on_timer_timeout"]
