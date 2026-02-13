@@ -1,6 +1,59 @@
-[gd_scene load_steps=2 format=3 uid="uid://700kl1fr0622"]
+[gd_scene load_steps=9 format=4 uid="uid://700kl1fr0622"]
 
 [ext_resource type="PackedScene" uid="uid://buovotbaulf4o" path="res://Assets/Costanera/Costanera.glb" id="1_k283u"]
+[ext_resource type="PackedScene" uid="uid://ctffdhacj4d75" path="res://Escenas/Objetos/Luz/luz_de_pared.tscn" id="2_lo2ox"]
+[ext_resource type="PackedScene" uid="uid://ci0wswrhx76d8" path="res://Escenas/Objetos/Luz/luz_suelo.tscn" id="3_ut0a1"]
+[ext_resource type="Shader" uid="uid://5vvrcak7pcvv" path="res://Resource/Shader/LuzSuelo.gdshader" id="4_radj1"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6xv5a"]
+_surfaces = [{
+"aabb": AABB(-2, -0.005, -2, 4, 0.01, 4),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("AAAAwArXo7sAAABAAAAAwArXo7sAAADAAAAAwArXozsAAADAAAAAQArXo7sAAADAAAAAwArXo7sAAADAAAAAwArXo7sAAABAAAAAwArXozsAAADAAAAAwArXo7sAAADAAAAAQArXo7sAAADAAAAAwArXozsAAADAAAAAwArXozsAAABAAAAAwArXo7sAAABAAAAAwArXo7sAAABAAAAAwArXozsAAABAAAAAQArXozsAAABAAAAAQArXozsAAABAAAAAwArXozsAAABAAAAAwArXozsAAADAAAAAwArXo7sAAABAAAAAQArXo7sAAABAAAAAQArXo7sAAADAAAAAQArXozsAAABAAAAAQArXo7sAAABAAAAAwArXo7sAAABAAAAAQArXo7sAAADAAAAAQArXo7sAAABAAAAAQArXozsAAABAAAAAQArXo7sAAADAAAAAQArXozsAAADAAAAAwArXozsAAADAAAAAwArXozsAAADAAAAAQArXozsAAADAAAAAQArXozsAAABAAAAAQArXozsAAABAAAAAQArXozsAAADAAAAAQArXo7sAAADAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_my22t"]
+render_priority = 0
+shader = ExtResource("4_radj1")
+shader_parameter/light_color = Color(1, 0.9, 0.7, 1)
+shader_parameter/intensity = 0.3
+shader_parameter/alpha_strength = 0.3
+shader_parameter/radius = 1.0
+shader_parameter/softness = 0.4
+shader_parameter/light_offset = Vector3(0, 0, -1.5)
+shader_parameter/dust_density = 14.0
+shader_parameter/dust_size = 0.08
+shader_parameter/dust_speed = 25.0
+shader_parameter/dust_intensity = 0.6
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3hedo"]
+_surfaces = [{
+"aabb": AABB(-2, -0.005, -2, 4, 0.01, 4),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("AAAAwArXo7sAAABAAAAAwArXo7sAAADAAAAAwArXozsAAADAAAAAQArXo7sAAADAAAAAwArXo7sAAADAAAAAwArXo7sAAABAAAAAwArXozsAAADAAAAAwArXo7sAAADAAAAAQArXo7sAAADAAAAAwArXozsAAADAAAAAwArXozsAAABAAAAAwArXo7sAAABAAAAAwArXo7sAAABAAAAAwArXozsAAABAAAAAQArXozsAAABAAAAAQArXozsAAABAAAAAwArXozsAAABAAAAAwArXozsAAADAAAAAwArXo7sAAABAAAAAQArXo7sAAABAAAAAQArXo7sAAADAAAAAQArXozsAAABAAAAAQArXo7sAAABAAAAAwArXo7sAAABAAAAAQArXo7sAAADAAAAAQArXo7sAAABAAAAAQArXozsAAABAAAAAQArXo7sAAADAAAAAQArXozsAAADAAAAAwArXozsAAADAAAAAwArXozsAAADAAAAAQArXozsAAADAAAAAQArXozsAAABAAAAAQArXozsAAABAAAAAQArXozsAAADAAAAAQArXo7sAAADAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i6puo"]
+render_priority = 0
+shader = ExtResource("4_radj1")
+shader_parameter/light_color = Color(1, 0.9, 0.7, 1)
+shader_parameter/intensity = 0.3
+shader_parameter/alpha_strength = 0.3
+shader_parameter/radius = 1.0
+shader_parameter/softness = 0.4
+shader_parameter/light_offset = Vector3(0, 0, -1.5)
+shader_parameter/dust_density = 14.0
+shader_parameter/dust_size = 0.08
+shader_parameter/dust_speed = 25.0
+shader_parameter/dust_intensity = 0.6
 
 [node name="Costanera" type="Node3D"]
 
@@ -18,4 +71,110 @@ visibility_range_end = 300.0
 lod_bias = 0.001
 visibility_range_end = 300.0
 
+[node name="FalsaLuzPared" type="Node3D" parent="Costanera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7341733, 0)
+
+[node name="LuzDePared" parent="Costanera/FalsaLuzPared" instance=ExtResource("2_lo2ox")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -8.097808, -1.3924494, -4.566847)
+
+[node name="LuzDePared2" parent="Costanera/FalsaLuzPared" instance=ExtResource("2_lo2ox")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3.097808, -1.3924494, -4.566847)
+
+[node name="LuzDePared3" parent="Costanera/FalsaLuzPared" instance=ExtResource("2_lo2ox")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 1.9021921, -1.3924494, -4.566847)
+
+[node name="LuzDePared4" parent="Costanera/FalsaLuzPared" instance=ExtResource("2_lo2ox")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 6.902192, -1.3924494, -4.566847)
+
+[node name="LuzDePared5" parent="Costanera/FalsaLuzPared" instance=ExtResource("2_lo2ox")]
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 6.902192, -1.3924494, 5.352134)
+
+[node name="LuzDePared6" parent="Costanera/FalsaLuzPared" instance=ExtResource("2_lo2ox")]
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 1.9021921, -1.3924494, 5.3521347)
+
+[node name="LuzDePared7" parent="Costanera/FalsaLuzPared" instance=ExtResource("2_lo2ox")]
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, -3.097808, -1.3924494, 5.3521347)
+
+[node name="LuzDePared8" parent="Costanera/FalsaLuzPared" instance=ExtResource("2_lo2ox")]
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, -8.097808, -1.3924494, 5.352135)
+
+[node name="LuzDePared9" parent="Costanera/FalsaLuzPared" instance=ExtResource("2_lo2ox")]
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 14.569, 0.967, 5.352)
+
+[node name="LuzDePared10" parent="Costanera/FalsaLuzPared" instance=ExtResource("2_lo2ox")]
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 23.569, 2.806, 5.352)
+
+[node name="LuzDePared11" parent="Costanera/FalsaLuzPared" instance=ExtResource("2_lo2ox")]
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 31.569, 4.1568108, 5.352)
+
+[node name="LuzDePared12" parent="Costanera/FalsaLuzPared" instance=ExtResource("2_lo2ox")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 31.569, 4.2616444, -4.489)
+
+[node name="LuzDePared13" parent="Costanera/FalsaLuzPared" instance=ExtResource("2_lo2ox")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 23.56886, 2.8064494, -4.489203)
+
+[node name="LuzDePared14" parent="Costanera/FalsaLuzPared" instance=ExtResource("2_lo2ox")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 14.569, 0.96682453, -4.489)
+
+[node name="FalsaLuzSuelo" type="Node3D" parent="Costanera"]
+
+[node name="LuzSuelo" parent="Costanera/FalsaLuzSuelo" instance=ExtResource("3_ut0a1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.112777, -4.999037, -2.648573)
+
+[node name="LuzSuelo2" parent="Costanera/FalsaLuzSuelo" instance=ExtResource("3_ut0a1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1127768, -4.999037, -2.648573)
+
+[node name="LuzSuelo3" parent="Costanera/FalsaLuzSuelo" instance=ExtResource("3_ut0a1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8872232, -4.999037, -2.648573)
+
+[node name="LuzSuelo4" parent="Costanera/FalsaLuzSuelo" instance=ExtResource("3_ut0a1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8872232, -4.999037, -2.648573)
+
+[node name="LuzSuelo5" parent="Costanera/FalsaLuzSuelo" instance=ExtResource("3_ut0a1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.576264, -2.946169, -2.648573)
+
+[node name="LuzSuelo6" parent="Costanera/FalsaLuzSuelo" instance=ExtResource("3_ut0a1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.592825, -0.9599776, -2.648573)
+
+[node name="LuzSuelo7" parent="Costanera/FalsaLuzSuelo" instance=ExtResource("3_ut0a1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.592825, 1.0473418, -2.648573)
+
+[node name="SueloReflejo" parent="Costanera/FalsaLuzSuelo/LuzSuelo7" index="0"]
+mesh = SubResource("ArrayMesh_6xv5a")
+surface_material_override/0 = SubResource("ShaderMaterial_my22t")
+
+[node name="LuzSuelo8" parent="Costanera/FalsaLuzSuelo" instance=ExtResource("3_ut0a1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 31.592825, 1.0473418, 3.43335)
+
+[node name="SueloReflejo" parent="Costanera/FalsaLuzSuelo/LuzSuelo8" index="0"]
+mesh = SubResource("ArrayMesh_3hedo")
+surface_material_override/0 = SubResource("ShaderMaterial_i6puo")
+
+[node name="LuzSuelo9" parent="Costanera/FalsaLuzSuelo" instance=ExtResource("3_ut0a1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 23.592825, -0.9969523, 3.43335)
+
+[node name="LuzSuelo10" parent="Costanera/FalsaLuzSuelo" instance=ExtResource("3_ut0a1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.592825, -2.980894, 3.43335)
+
+[node name="LuzSuelo11" parent="Costanera/FalsaLuzSuelo" instance=ExtResource("3_ut0a1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.879406, -5.004572, 3.43335)
+
+[node name="LuzSuelo12" parent="Costanera/FalsaLuzSuelo" instance=ExtResource("3_ut0a1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.879406, -5.004572, 3.43335)
+
+[node name="LuzSuelo13" parent="Costanera/FalsaLuzSuelo" instance=ExtResource("3_ut0a1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.120594, -5.004572, 3.43335)
+
+[node name="LuzSuelo14" parent="Costanera/FalsaLuzSuelo" instance=ExtResource("3_ut0a1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.120594, -5.004572, 3.43335)
+
+[node name="LuzAmbiente" type="Node3D" parent="Costanera"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Costanera/LuzAmbiente"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7226031, 0)
+light_energy = 1.8
+omni_range = 16.453487
+
 [editable path="Costanera"]
+[editable path="Costanera/FalsaLuzSuelo/LuzSuelo7"]
+[editable path="Costanera/FalsaLuzSuelo/LuzSuelo8"]
