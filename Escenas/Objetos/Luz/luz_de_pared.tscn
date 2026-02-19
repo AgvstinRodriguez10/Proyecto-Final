@@ -39,7 +39,7 @@ shader_parameter/cone_angle = 1.0
 shader_parameter/cone_softness = 1.6
 shader_parameter/fade_power = 2.0
 shader_parameter/mote_density = 12.0
-shader_parameter/mote_size = 0.08
+shader_parameter/mote_size = 0.07
 shader_parameter/mote_speed = 0.4
 shader_parameter/mote_intensity = 1.8
 

@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://gruu5234vhv1" path="res://Assets/Fonts/kagenobold-v4816.otf" id="2_1md0r"]
 [ext_resource type="PackedScene" uid="uid://balf5bk056eec" path="res://Escenas/plaza.tscn" id="2_vt1rs"]
 [ext_resource type="PackedScene" uid="uid://700kl1fr0622" path="res://Escenas/costanera.tscn" id="3_0kh0y"]
-[ext_resource type="Animation" uid="uid://cr5j6pxmx8gnc" path="res://Resource/label.res" id="3_n3qho"]
+[ext_resource type="Animation" uid="uid://cr5j6pxmx8gnc" path="res://Resource/Saves/label.res" id="3_n3qho"]
 [ext_resource type="PackedScene" uid="uid://bg2ova3uojcc0" path="res://Escenas/Character/nica.tscn" id="4_7xwpo"]
 [ext_resource type="PackedScene" uid="uid://ch6dpvy84f11e" path="res://Escenas/GUI/pause_menu.tscn" id="4_l8mww"]
 
@@ -39,7 +39,7 @@ point_count = 9
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.76747704, -0.09974475, -0.63326937, 0.63236856, -0.044473086, 0.7733901, -0.105305046, -0.99401873, 0.02894337, 0, 0, 0)
 light_bake_mode = 1
-shadow_enabled = true
+shadow_reverse_cull_face = true
 directional_shadow_mode = 0
 
 [node name="Label" type="CanvasLayer" parent="."]

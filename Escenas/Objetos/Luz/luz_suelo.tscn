@@ -22,9 +22,9 @@ shader_parameter/alpha_strength = 0.3
 shader_parameter/radius = 1.15
 shader_parameter/softness = 0.4
 shader_parameter/light_offset = Vector3(0, 0, -1.5)
-shader_parameter/dust_density = 14.0
+shader_parameter/dust_density = 150.0
 shader_parameter/dust_size = 0.08
-shader_parameter/dust_speed = 25.0
+shader_parameter/dust_speed = 30.0
 shader_parameter/dust_intensity = 0.6
 
 [node name="LuzSuelo" type="Node3D"]
