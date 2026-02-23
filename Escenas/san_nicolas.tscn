@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c0pkqpdadxqa7"]
+[gd_scene load_steps=11 format=3 uid="uid://c0pkqpdadxqa7"]
 
 [ext_resource type="PackedScene" uid="uid://oxxsms5fe8t7" path="res://Escenas/Cuadras/Cuadra-1/b_mitre_400___350.tscn" id="1_vbwru"]
 [ext_resource type="PackedScene" uid="uid://dk7hwxp4sitgn" path="res://Escenas/Cuadras/Cuadra-2/b_mitre_350___300.tscn" id="2_87odv"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://diubi06d2lk1r" path="res://Escenas/Cuadras/Cuadra-6/b_mitre_150___100.tscn" id="6_0wxlc"]
 [ext_resource type="PackedScene" uid="uid://sh51nj3ah1jb" path="res://Escenas/Obstaculos/valla.tscn" id="7_ykf1x"]
 [ext_resource type="PackedScene" uid="uid://ippnpcty674w" path="res://Escenas/Monedas/eco_ficha.tscn" id="8_fdxyp"]
+[ext_resource type="PackedScene" uid="uid://btjvsqojclj4m" path="res://Escenas/Objetos/FarolCalle.tscn" id="9_bmck3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_foa6o"]
 size = Vector3(22.5234, 0.344727, 802.618)
@@ -66,3 +67,37 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 40)
 
 [node name="EcoFicha2" parent="Monedas" instance=ExtResource("8_fdxyp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 105.095245)
+
+[node name="FalsaLuzCalle" type="Node3D" parent="."]
+
+[node name="Ligth" parent="FalsaLuzCalle" instance=ExtResource("9_bmck3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8457212, 0, 524.6343)
+
+[node name="Ligth2" parent="FalsaLuzCalle" instance=ExtResource("9_bmck3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1542788, 0, 541.6343)
+
+[node name="Ligth3" parent="FalsaLuzCalle" instance=ExtResource("9_bmck3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8457212, 0, 562.6343)
+
+[node name="Ligth4" parent="FalsaLuzCalle" instance=ExtResource("9_bmck3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3134966, 0, 585.86176)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="FalsaLuzCalle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.52934456, 9.625255, 534.37964)
+light_energy = 10.0
+shadow_enabled = true
+omni_range = 36.090145
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="FalsaLuzCalle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.52934456, 8.946202, 551.8967)
+light_energy = 10.0
+shadow_enabled = true
+omni_range = 36.090145
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="FalsaLuzCalle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.52934456, 8.946202, 576.8967)
+light_energy = 10.0
+shadow_enabled = true
+omni_range = 36.090145
+
+[node name="FarolSinLuz" type="Node3D" parent="."]

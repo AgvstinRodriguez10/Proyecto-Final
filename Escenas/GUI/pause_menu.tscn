@@ -8,6 +8,9 @@ font = ExtResource("2_uexdh")
 font_size = 50
 shadow_color = Color(0.05882353, 0.29411766, 0.5803922, 1)
 
+[sub_resource type="Animation" id="Animation_7bm32"]
+length = 0.001
+
 [sub_resource type="Animation" id="Animation_a3sli"]
 resource_name = "animPause"
 tracks/0/type = "value"
@@ -50,9 +53,6 @@ tracks/2/keys = {
 "method": &"grab_focus"
 }]
 }
-
-[sub_resource type="Animation" id="Animation_7bm32"]
-length = 0.001
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ou2xg"]
 _data = {
