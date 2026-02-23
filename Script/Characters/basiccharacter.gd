@@ -29,7 +29,7 @@ func _ready() -> void:
 
 #func movingToForward(delta: float):
 	#current_velocity_forward = velocity_forward
-	
+
 func jump():
 	y_velocity = jump_force
 
