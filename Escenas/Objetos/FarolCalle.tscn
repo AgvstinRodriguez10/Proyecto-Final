@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=4 uid="uid://btjvsqojclj4m"]
+
+[ext_resource type="ArrayMesh" uid="uid://dnqr1yewyjqhl" path="res://Resource/Meshs/FarolCalle.tres" id="1_c7g74"]
+[ext_resource type="Shader" uid="uid://diel2ir8ste4u" path="res://Resource/Shader/LuzSueloVersionFarol.gdshader" id="1_lato8"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lato8"]
+_surfaces = [{
+"aabb": AABB(-8, -0.05, -8, 16, 0.1, 16),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("AAAAwc3MTL0AAABBAAAAwc3MTL0AAADBAAAAwc3MTD0AAADBAAAAQc3MTL0AAADBAAAAwc3MTL0AAADBAAAAwc3MTL0AAABBAAAAwc3MTD0AAADBAAAAwc3MTL0AAADBAAAAQc3MTL0AAADBAAAAwc3MTD0AAADBAAAAwc3MTD0AAABBAAAAwc3MTL0AAABBAAAAwc3MTL0AAABBAAAAwc3MTD0AAABBAAAAQc3MTD0AAABBAAAAQc3MTD0AAABBAAAAwc3MTD0AAABBAAAAwc3MTD0AAADBAAAAwc3MTL0AAABBAAAAQc3MTL0AAABBAAAAQc3MTL0AAADBAAAAQc3MTD0AAABBAAAAQc3MTL0AAABBAAAAwc3MTL0AAABBAAAAQc3MTL0AAADBAAAAQc3MTL0AAABBAAAAQc3MTD0AAABBAAAAQc3MTL0AAADBAAAAQc3MTD0AAADBAAAAwc3MTD0AAADBAAAAwc3MTD0AAADBAAAAQc3MTD0AAADBAAAAQc3MTD0AAABBAAAAQc3MTD0AAABBAAAAQc3MTD0AAADBAAAAQc3MTL0AAADBAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c7g74"]
+render_priority = 0
+shader = ExtResource("1_lato8")
+shader_parameter/light_color = Color(1, 1, 1, 1)
+shader_parameter/radius = 10.0
+shader_parameter/intensity = 0.05
+shader_parameter/breathe_strength = 0.06
+shader_parameter/breathe_speed = 0.6
+shader_parameter/dust_density = 3.5
+shader_parameter/dust_size = 0.06
+shader_parameter/dust_speed = 3.0
+shader_parameter/dust_strength = 0.25
+
+[node name="Ligth" type="Node3D"]
+
+[node name="Circle" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+mesh = ExtResource("1_c7g74")
+skeleton = NodePath("")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+visible = false
+size = Vector3(16, 0.1, 16)
+
+[node name="Test" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_lato8")
+surface_material_override/0 = SubResource("ShaderMaterial_c7g74")

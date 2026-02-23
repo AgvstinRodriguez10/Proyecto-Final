@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=4 uid="uid://ci0wswrhx76d8"]
+
+[ext_resource type="Shader" uid="uid://5vvrcak7pcvv" path="res://Resource/Shader/LuzSuelo.gdshader" id="1_yhu3g"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o3wxe"]
+_surfaces = [{
+"aabb": AABB(-2, -0.005, -2, 4, 0.01, 4),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("AAAAwArXo7sAAABAAAAAwArXo7sAAADAAAAAwArXozsAAADAAAAAQArXo7sAAADAAAAAwArXo7sAAADAAAAAwArXo7sAAABAAAAAwArXozsAAADAAAAAwArXo7sAAADAAAAAQArXo7sAAADAAAAAwArXozsAAADAAAAAwArXozsAAABAAAAAwArXo7sAAABAAAAAwArXo7sAAABAAAAAwArXozsAAABAAAAAQArXozsAAABAAAAAQArXozsAAABAAAAAwArXozsAAABAAAAAwArXozsAAADAAAAAwArXo7sAAABAAAAAQArXo7sAAABAAAAAQArXo7sAAADAAAAAQArXozsAAABAAAAAQArXo7sAAABAAAAAwArXo7sAAABAAAAAQArXo7sAAADAAAAAQArXo7sAAABAAAAAQArXozsAAABAAAAAQArXo7sAAADAAAAAQArXozsAAADAAAAAwArXozsAAADAAAAAwArXozsAAADAAAAAQArXozsAAADAAAAAQArXozsAAABAAAAAQArXozsAAABAAAAAQArXozsAAADAAAAAQArXo7sAAADAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qbcyg"]
+render_priority = 0
+shader = ExtResource("1_yhu3g")
+shader_parameter/light_color = Color(1, 0.9, 0.7, 1)
+shader_parameter/intensity = 0.3
+shader_parameter/alpha_strength = 0.3
+shader_parameter/radius = 1.15
+shader_parameter/softness = 0.4
+shader_parameter/light_offset = Vector3(0, 0, -1.5)
+shader_parameter/dust_density = 150.0
+shader_parameter/dust_size = 0.08
+shader_parameter/dust_speed = 30.0
+shader_parameter/dust_intensity = 0.6
+
+[node name="LuzSuelo" type="Node3D"]
+
+[node name="SueloReflejo" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_o3wxe")
+surface_material_override/0 = SubResource("ShaderMaterial_qbcyg")
