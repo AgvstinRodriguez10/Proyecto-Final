@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://be7usem7eilfm"]
+[gd_scene load_steps=18 format=3 uid="uid://be7usem7eilfm"]
 
 [ext_resource type="PackedScene" uid="uid://c0pkqpdadxqa7" path="res://Escenas/san_nicolas.tscn" id="1_6lbni"]
 [ext_resource type="Script" uid="uid://csd5oih1wy128" path="res://Script/GUI/label.gd" id="1_ktoa8"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bg2ova3uojcc0" path="res://Escenas/Character/nica.tscn" id="4_7xwpo"]
 [ext_resource type="PackedScene" uid="uid://ch6dpvy84f11e" path="res://Escenas/GUI/pause_menu.tscn" id="4_l8mww"]
 [ext_resource type="ArrayMesh" uid="uid://dnqr1yewyjqhl" path="res://Resource/Meshs/FarolCalle.tres" id="9_1md0r"]
+[ext_resource type="Script" uid="uid://hvchutnmp4k8" path="res://Script/MMeshInstancerController/multi_instance_controller.gd" id="10_n3qho"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_b1m0k"]
 font = ExtResource("2_1md0r")
@@ -37,7 +38,9 @@ point_count = 9
 
 [sub_resource type="MultiMesh" id="MultiMesh_n3qho"]
 transform_format = 1
+instance_count = 6
 mesh = ExtResource("9_1md0r")
+buffer = PackedFloat32Array(1, 0, 0, 10.092613, 0, 1, 0, 0, 0, 0, 1, -20.46158, 1, 0, 0, 10.092613, 0, 1, 0, 0, 0, 0, 1, -68.56581, 1, 0, 0, -10.907387, 0, 1, 0, 0, 0, 0, 1, -106.74416, 1, 0, 0, -10.907387, 0, 1, 0, 0, 0, 0, 1, -152.74417, 1, 0, 0, 10.092613, 0, 1, 0, 0, 0, 0, 1, -174.74417, 1, 0, 0, 10.092613, 0, 1, 0, 0, 0, 0, 1, -224.96727)
 
 [node name="Main" type="Node3D"]
 
@@ -114,10 +117,10 @@ current = true
 [node name="MarkFarol" type="Node3D" parent="."]
 
 [node name="Marker3D" type="Marker3D" parent="MarkFarol"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.092613, 0, -20.744164)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.092613, 0, -20.46158)
 
 [node name="Marker3D2" type="Marker3D" parent="MarkFarol"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.092613, 0, -69.74416)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.092613, 0, -68.56581)
 
 [node name="Marker3D3" type="Marker3D" parent="MarkFarol"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.907387, 0, -106.74416)
@@ -128,7 +131,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.907387, 0, -152.74417)
 [node name="Marker3D5" type="Marker3D" parent="MarkFarol"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.092613, 0, -174.74417)
 
-[node name="FarolMultiInstance" type="MultiMeshInstance3D" parent="."]
+[node name="Marker3D6" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.092613, 0, -224.96727)
+
+[node name="FarolMultiInstance" type="MultiMeshInstance3D" parent="." node_paths=PackedStringArray("markers_parent")]
 multimesh = SubResource("MultiMesh_n3qho")
+script = ExtResource("10_n3qho")
+markers_parent = NodePath("../MarkFarol")
 
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_timer_timeout"]
