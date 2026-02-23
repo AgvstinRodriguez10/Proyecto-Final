@@ -27,9 +27,9 @@ func _ready() -> void:
 	rayCastSuelo.enabled = true
 	add_child(rayCastSuelo)
 
-func movingToForward(delta: float):
-	current_velocity_forward = velocity_forward
-	
+#func movingToForward(delta: float):
+	#current_velocity_forward = velocity_forward
+
 func jump():
 	y_velocity = jump_force
 

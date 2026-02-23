@@ -1,5 +1,12 @@
 class_name CoinBase extends Node3D
 
+# Para crear una coin nueva, se duplcia alguna existente.
+# Se le setea el modelo en el inspector para el control base
+# Se puede modificar la distancia de renderizado
+# Se puede (o no) setear un sonido
+# Y se elije de la lista el tipo de coin, en caso de necesitar uno nuevo se debe agregar en la lsita de "CoinTypes.gd"
+# Por ultimo se debe agregar al modelo el shader de animacion y volver a colocar en el inspector de las propiedades de shader la textura del modelo
+
 ## Asignar modelo a animar sin las colisiones
 @export var ModelAnimatable: Node3D
 
