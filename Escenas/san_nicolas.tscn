@@ -85,14 +85,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3134966, 0, 585.86176)
 [node name="OmniLight3D" type="OmniLight3D" parent="FalsaLuzCalle"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.52934456, 9.625255, 534.37964)
 light_energy = 10.0
+shadow_enabled = true
 omni_range = 36.090145
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="FalsaLuzCalle"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.52934456, 8.946202, 551.8967)
 light_energy = 10.0
+shadow_enabled = true
 omni_range = 36.090145
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="FalsaLuzCalle"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.52934456, 8.946202, 576.8967)
 light_energy = 10.0
+shadow_enabled = true
 omni_range = 36.090145
+
+[node name="FarolSinLuz" type="Node3D" parent="."]
