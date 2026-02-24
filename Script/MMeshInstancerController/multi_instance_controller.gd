@@ -33,4 +33,5 @@ func setup_multimesh():
 	multimesh.instance_count = markers.size()
 
 	for i in range(markers.size()):
-		multimesh.set_instance_transform(i, markers[i].global_transform)
+		if markers[i] is Marker3D:
+			multimesh.set_instance_transform(i, markers[i].global_transform)
