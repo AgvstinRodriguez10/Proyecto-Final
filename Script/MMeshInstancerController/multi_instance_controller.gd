@@ -4,6 +4,7 @@ extends MultiMeshInstance3D
 ## Setear el padre de los markers a usar, recordar reiniciar la escena
 @export var markers_parent: Node3D
 
+## Activa esto para que se actualice la posicion con respecto a su marker
 @export var refresh_editor:bool = false
 
 var _last_count := -1
