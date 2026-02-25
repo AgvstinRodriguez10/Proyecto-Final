@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://balf5bk056eec"]
+[gd_scene load_steps=26 format=4 uid="uid://balf5bk056eec"]
 
 [ext_resource type="PackedScene" uid="uid://c25aytjirlka" path="res://Assets/Plaza/Plaza.glb" id="1_5m6p0"]
 [ext_resource type="Texture2D" uid="uid://bn25ktpbfy6r0" path="res://Assets/Plaza/Plaza_Poliigon_ConcretePaversSquare_7100_BaseColor.jpg" id="2_qewuc"]
@@ -9,7 +9,6 @@
 [ext_resource type="Material" uid="uid://vwaon663gvi1" path="res://Resource/Saves/Reja.tres" id="7_qewuc"]
 [ext_resource type="Material" uid="uid://byjbe6gaxosyw" path="res://Resource/Saves/Calle.tres" id="8_sfw6y"]
 [ext_resource type="Material" uid="uid://bu2p08bu48p1t" path="res://Resource/Saves/Vereda.tres" id="9_myb6b"]
-[ext_resource type="PackedScene" uid="uid://hpa8kjche2t0" path="res://Assets/Plaza/Objetos/Banco.glb" id="10_sfw6y"]
 [ext_resource type="PackedScene" uid="uid://bp201cegww04f" path="res://Assets/EDIFICIOS/Plaza/A/edificio 1.fbx" id="11_myb6b"]
 [ext_resource type="PackedScene" uid="uid://cyhtixiv5yliv" path="res://Assets/EDIFICIOS/Plaza/A/edificio 2.fbx" id="12_2rngn"]
 [ext_resource type="PackedScene" uid="uid://dnjqp70nvqwxb" path="res://Assets/EDIFICIOS/Plaza/A/edificio 3.glb" id="13_e4uow"]
@@ -351,47 +350,6 @@ mesh = SubResource("ArrayMesh_myb6b")
 
 [node name="Calle" parent="Plaza" index="1"]
 mesh = SubResource("ArrayMesh_3ilmw")
-
-[node name="Bancos" type="Node3D" parent="."]
-
-[node name="Banco" parent="Bancos" instance=ExtResource("10_sfw6y")]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -5.5225387, 0, 9.749172)
-
-[node name="Banco2" parent="Bancos" instance=ExtResource("10_sfw6y")]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 5.4774613, 0, 9.749172)
-
-[node name="Banco3" parent="Bancos" instance=ExtResource("10_sfw6y")]
-transform = Transform3D(-0.10606601, 0, 0.10606601, 0, 0.14999999, 0, -0.10606601, 0, -0.10606601, 5.1435075, 0, 6.4538584)
-
-[node name="Banco4" parent="Bancos" instance=ExtResource("10_sfw6y")]
-transform = Transform3D(0.10606602, 0, -0.106066, 0, 0.14999999, 0, 0.106066, 0, 0.10606602, 2.758617, 0, 1.5649011)
-
-[node name="Banco13" parent="Bancos" instance=ExtResource("10_sfw6y")]
-transform = Transform3D(0.10606602, 0, -0.106066, 0, 0.14999999, 0, 0.106066, 0, 0.10606602, 2.758617, 0, 1.5649011)
-
-[node name="Banco5" parent="Bancos" instance=ExtResource("10_sfw6y")]
-transform = Transform3D(-0.106066, 0, 0.10606601, 0, 0.14999999, 0, -0.10606601, 0, -0.106066, -2.7898116, 0, -1.6641917)
-
-[node name="Banco6" parent="Bancos" instance=ExtResource("10_sfw6y")]
-transform = Transform3D(0.10606602, 0, -0.106066, 0, 0.14999999, 0, 0.106066, 0, 0.10606602, -5.060095, 0, -6.164058)
-
-[node name="Banco7" parent="Bancos" instance=ExtResource("10_sfw6y")]
-transform = Transform3D(0, 0, 0.14999999, 0, 0.14999999, 0, -0.14999999, 0, 0, 9.72987, 0, 4.3251433)
-
-[node name="Banco8" parent="Bancos" instance=ExtResource("10_sfw6y")]
-transform = Transform3D(0, 0, 0.14999999, 0, 0.14999999, 0, -0.14999999, 0, 0, 9.72987, 0, -3.6748567)
-
-[node name="Banco9" parent="Bancos" instance=ExtResource("10_sfw6y")]
-transform = Transform3D(-0.14999999, 0, -6.556708e-09, 0, 0.14999999, 0, 6.556708e-09, 0, -0.14999999, 5.1265926, 0, -9.790156)
-
-[node name="Banco10" parent="Bancos" instance=ExtResource("10_sfw6y")]
-transform = Transform3D(-0.14999999, 0, -6.556708e-09, 0, 0.14999999, 0, 6.556708e-09, 0, -0.14999999, -5.8734074, 0, -9.790156)
-
-[node name="Banco11" parent="Bancos" instance=ExtResource("10_sfw6y")]
-transform = Transform3D(1.3113415e-08, 0, -0.14999999, 0, 0.14999999, 0, 0.14999999, 0, 1.3113415e-08, -9.720612, 0, -6.0111322)
-
-[node name="Banco12" parent="Bancos" instance=ExtResource("10_sfw6y")]
-transform = Transform3D(1.3113415e-08, 0, -0.14999999, 0, 0.14999999, 0, 0.14999999, 0, 1.3113415e-08, -9.720612, 0, 4.9888678)
 
 [node name="Edificios" type="Node3D" parent="."]
 

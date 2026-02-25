@@ -71,16 +71,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 105.095245)
 [node name="FalsaLuzCalle" type="Node3D" parent="."]
 
 [node name="Ligth" parent="FalsaLuzCalle" instance=ExtResource("9_bmck3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8457212, 0, 524.6343)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1, 0, 525.15607)
 
 [node name="Ligth2" parent="FalsaLuzCalle" instance=ExtResource("9_bmck3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1542788, 0, 541.6343)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1, 0, 541.19)
 
 [node name="Ligth3" parent="FalsaLuzCalle" instance=ExtResource("9_bmck3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8457212, 0, 562.6343)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1, 0, 565.2092)
 
 [node name="Ligth4" parent="FalsaLuzCalle" instance=ExtResource("9_bmck3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3134966, 0, 585.86176)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1, 0, 589.16516)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="FalsaLuzCalle"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.52934456, 9.625255, 534.37964)

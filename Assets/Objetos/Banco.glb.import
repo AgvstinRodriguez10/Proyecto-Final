@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://hpa8kjche2t0"
-path="res://.godot/imported/Banco.glb-e74f7246eda3148821c72e8f632e1ead.scn"
+uid="uid://iemwv877nv07"
+path="res://.godot/imported/Banco.glb-fd3c0f4e65e81454de5b724de87d6112.scn"
 
 [deps]
 
-source_file="res://Assets/Plaza/Objetos/Banco.glb"
-dest_files=["res://.godot/imported/Banco.glb-e74f7246eda3148821c72e8f632e1ead.scn"]
+source_file="res://Assets/Objetos/Banco.glb"
+dest_files=["res://.godot/imported/Banco.glb-fd3c0f4e65e81454de5b724de87d6112.scn"]
 
 [params]
 

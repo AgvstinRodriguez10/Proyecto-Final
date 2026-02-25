@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://be7usem7eilfm"]
+[gd_scene load_steps=22 format=3 uid="uid://be7usem7eilfm"]
 
 [ext_resource type="PackedScene" uid="uid://c0pkqpdadxqa7" path="res://Escenas/san_nicolas.tscn" id="1_6lbni"]
 [ext_resource type="Script" uid="uid://csd5oih1wy128" path="res://Script/GUI/label.gd" id="1_ktoa8"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://ch6dpvy84f11e" path="res://Escenas/GUI/pause_menu.tscn" id="4_l8mww"]
 [ext_resource type="ArrayMesh" uid="uid://dnqr1yewyjqhl" path="res://Resource/Meshs/FarolCalle.tres" id="9_1md0r"]
 [ext_resource type="Script" uid="uid://hvchutnmp4k8" path="res://Script/MMeshInstancerController/multi_instance_controller.gd" id="10_n3qho"]
+[ext_resource type="ArrayMesh" uid="uid://bo2rls0pboqwo" path="res://Resource/Meshs/Bala.tres" id="11_l8mww"]
+[ext_resource type="ArrayMesh" uid="uid://deve3ju60qbgd" path="res://Resource/Meshs/Banco.tres" id="12_b1m0k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_b1m0k"]
 font = ExtResource("2_1md0r")
@@ -38,9 +40,21 @@ point_count = 9
 
 [sub_resource type="MultiMesh" id="MultiMesh_n3qho"]
 transform_format = 1
-instance_count = 6
+instance_count = 26
 mesh = ExtResource("9_1md0r")
-buffer = PackedFloat32Array(1, 0, 0, 10.092613, 0, 1, 0, 0, 0, 0, 1, -20.46158, 1, 0, 0, 10.092613, 0, 1, 0, 0, 0, 0, 1, -68.56581, 1, 0, 0, -10.907387, 0, 1, 0, 0, 0, 0, 1, -106.74416, 1, 0, 0, -10.907387, 0, 1, 0, 0, 0, 0, 1, -152.74417, 1, 0, 0, 10.092613, 0, 1, 0, 0, 0, 0, 1, -174.74417, 1, 0, 0, 10.092613, 0, 1, 0, 0, 0, 0, 1, -224.96727)
+buffer = PackedFloat32Array(1, 0, 0, 8.2, 0, 1, 0, 0, 0, 0, 1, -23.184143, 1, 0, 0, 8.2, 0, 1, 0, 0, 0, 0, 1, -71.40277, 1, 0, 0, -8.2, 0, 1, 0, 0, 0, 0, 1, -103.220695, 1, 0, 0, -8.2, 0, 1, 0, 0, 0, 0, 1, -151.17947, 1, 0, 0, 8.2, 0, 1, 0, 0, 0, 0, 1, -182.74417, 1, 0, 0, 8.2, 0, 1, 0, 0, 0, 0, 1, -223.13728, 1, 0, 0, -8.2, 0, 1, 0, 0, 0, 0, 1, -239.444, 1, 0, 0, 8.2, 0, 1, 0, 0, 0, 0, 1, -271.1802, 1, 0, 0, 8.2, 0, 1, 0, 0, 0, 0, 1, -311.13907, 1, 0, 0, -8.2, 0, 1, 0, 0, 0, 0, 1, -343.355, 1, 0, 0, 8.2, 0, 1, 0, 0, 0, 0, 1, -378.4023, 1, 0, 0, -8.2, 0, 1, 0, 0, 0, 0, 1, -435.0863, 1, 0, 0, 8.2, 0, 1, 0, 0, 0, 0, 1, -467.08527, 1, 0, 0, -8.2, 0, 1, 0, 0, 0, 0, 1, -515.1201, 1, 0, 0, 8.2, 0, 1, 0, 0, 0, 0, 1, -547.00024, 1, 0, 0, -8.2, 0, 1, 0, 0, 0, 0, 1, -593.9619, 1, 0, 0, -8.2, 0, 1, 0, 0, 0, 0, 1, -643.0205, 1, 0, 0, 8.2, 0, 1, 0, 0, 0, 0, 1, -674.7089, 1, 0, 0, 8.2, 0, 1, 0, 0, 0, 0, 1, -718.8366, 1, 0, 0, 8.2, 0, 1, 0, 0, 0, 0, 1, -780.1296, 1, 0, 0, -8.2, 0, 1, 0, 0, 0, 0, 1, -796.7497, 1, 0, 0, -8.2, 0, 1, 0, 0, 0, 0, 1, -841.355, 1, 0, 0, 8.2, 0, 1, 0, 0, 0, 0, 1, -873.6864, 1, 0, 0, -8.2, 0, 1, 0, 0, 0, 0, 1, -905.43604, 1, 0, 0, 8.2, 0, 1, 0, 0, 0, 0, 1, -953.4176, 1, 0, 0, -8.2, 0, 1, 0, 0, 0, 0, 1, -1001.38184)
+
+[sub_resource type="MultiMesh" id="MultiMesh_l8mww"]
+transform_format = 1
+instance_count = 90
+mesh = ExtResource("11_l8mww")
+buffer = PackedFloat32Array(12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -23.253887, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -39.253887, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -55.253887, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -71.25389, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -87.25389, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -119.25389, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -135.25389, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -166.91687, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -182.69449, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -223.69449, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -311.2284, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -327.2284, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -359.2284, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -378.2284, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -394.12344, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -419.12344, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -451.12344, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -467.00323, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -483.00323, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -499.00323, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -531.00323, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -547.0429, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -562.76404, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -577.76404, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -626.76404, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -718.76404, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -734.76404, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -780.76404, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -825.76404, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -857.3641, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -873.3641, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -889.3641, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -921.3641, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -937.3641, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -953.34283, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -969.34283, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -985.34283, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -1034.3428, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -1066.3428, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -1082.3428, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -1098.3428, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -1114.3428, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -1146.3428, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -1162.3428, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -1178.3428, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -1194.3428, 12, 0, 0, -8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -1209.3428, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -39.254, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -55.254, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -135.65381, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -151.65381, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -166.65381, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -239.65381, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -255.65381, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -291.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -327.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -343.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -359.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -393.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -418.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -434.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -451.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -482.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -562.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -577.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -593.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -642.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -658.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -690.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -706.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -734.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -758.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -796.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -825.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -841.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -856.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -889.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -905.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -921.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -937.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -969.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -985.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -1000.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -1033.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -1049.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -1065.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -1097.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -1161.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -1193.6538, 12, 0, 0, 8.2, 0, -5.2453663e-07, 12, 0.211, 0, -12, -5.2453663e-07, -1209.6538)
+
+[sub_resource type="MultiMesh" id="MultiMesh_nyv6x"]
+transform_format = 1
+instance_count = 18
+mesh = ExtResource("12_b1m0k")
+buffer = PackedFloat32Array(0.1, 0, 0, -134.73755, 0, 0.1, 0, 0.5223004, 0, 0, 0.1, -1261.3236, 0.1, 0, 0, -104.745705, 0, 0.1, 0, 0.5223004, 0, 0, 0.1, -1261.3236, 0.1, 0, 0, -65.745705, 0, 0.1, 0, 0.5223004, 0, 0, 0.1, -1261.3236, -4.371139e-09, 0, 0.1, -39.796356, 0, 0.1, 0, 0.5223004, -0.1, 0, -4.371139e-09, -1290.2568, -4.371139e-09, 0, 0.1, -39.796356, 0, 0.1, 0, 0.5223004, -0.1, 0, -4.371139e-09, -1327.2568, -4.371139e-09, 0, 0.1, -39.796356, 0, 0.1, 0, 0.5223004, -0.1, 0, -4.371139e-09, -1369.2568, -0.1, 0, -8.742278e-09, -69.17601, 0, 0.1, 0, 0.5223004, 8.742278e-09, 0, -0.1, -1387.4747, -0.1, 0, -8.742278e-09, -102.17601, 0, 0.1, 0, 0.5223004, 8.742278e-09, 0, -0.1, -1387.4747, -0.1, 0, -8.742278e-09, -144.17601, 0, 0.1, 0, 0.5223004, 8.742278e-09, 0, -0.1, -1387.4747, -0.1, 0, -8.742278e-09, -144.17601, 0, 0.1, 0, 0.5223004, 8.742278e-09, 0, -0.1, -1387.4747, 1.1924881e-09, 0, -0.1, -165.17601, 0, 0.1, 0, 0.5223004, 0.1, 0, 1.1924881e-09, -1360.4747, 1.1924881e-09, 0, -0.1, -165.17601, 0, 0.1, 0, 0.5223004, 0.1, 0, 1.1924881e-09, -1322.0553, 1.1924881e-09, 0, -0.1, -165.17601, 0, 0.1, 0, 0.5223004, 0.1, 0, 1.1924881e-09, -1284.4747, 0.07071068, 0, 0.07071068, -138.70082, 0, 0.1, 0, 0.5223004, -0.07071068, 0, 0.07071068, -1296.6611, 0.07071068, 0, 0.07071068, -91.70082, 0, 0.1, 0, 0.5223004, -0.07071068, 0, 0.07071068, -1344.6611, 0.07071068, 0, 0.07071068, -63.70082, 0, 0.1, 0, 0.5223004, -0.07071068, 0, 0.07071068, -1372.6611, -0.07071068, 0, -0.07071068, -73.42265, 0, 0.1, 0, 0.5223004, 0.07071068, 0, -0.07071068, -1345.0604, -0.07071068, 0, -0.07071068, -112.42265, 0, 0.1, 0, 0.5223004, 0.07071068, 0, -0.07071068, -1305.0604)
 
 [node name="Main" type="Node3D"]
 
@@ -99,7 +113,6 @@ visible = false
 
 [node name="Camera3D" type="Camera3D" parent="CameraFocus"]
 transform = Transform3D(1, 0, 0, 0, 0.91711575, 0.39862102, 0, -0.39862102, 0.91711575, 0, 5.788969, 4.114911)
-visible = false
 environment = SubResource("Environment_crgrh")
 
 [node name="CaminoPrincipal" type="Path3D" parent="."]
@@ -117,26 +130,425 @@ current = true
 [node name="MarkFarol" type="Node3D" parent="."]
 
 [node name="Marker3D" type="Marker3D" parent="MarkFarol"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.092613, 0, -20.46158)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2, 0, -23.184143)
 
 [node name="Marker3D2" type="Marker3D" parent="MarkFarol"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.092613, 0, -68.56581)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2, 0, -71.40277)
 
 [node name="Marker3D3" type="Marker3D" parent="MarkFarol"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.907387, 0, -106.74416)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.2, 0, -103.220695)
 
 [node name="Marker3D4" type="Marker3D" parent="MarkFarol"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.907387, 0, -152.74417)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.2, 0, -151.17947)
 
 [node name="Marker3D5" type="Marker3D" parent="MarkFarol"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.092613, 0, -174.74417)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2, 0, -182.74417)
 
 [node name="Marker3D6" type="Marker3D" parent="MarkFarol"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.092613, 0, -224.96727)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2, 0, -223.13728)
+
+[node name="Marker3D7" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.2, 0, -239.444)
+
+[node name="Marker3D8" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2, 0, -271.1802)
+
+[node name="Marker3D9" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2, 0, -311.13907)
+
+[node name="Marker3D10" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.2, 0, -343.355)
+
+[node name="Marker3D11" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2, 0, -378.4023)
+
+[node name="Marker3D12" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.2, 0, -435.0863)
+
+[node name="Marker3D13" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2, 0, -467.08527)
+
+[node name="Marker3D14" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.2, 0, -515.1201)
+
+[node name="Marker3D15" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2, 0, -547.00024)
+
+[node name="Marker3D16" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.2, 0, -593.9619)
+
+[node name="Marker3D17" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.2, 0, -643.0205)
+
+[node name="Marker3D19" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2, 0, -674.7089)
+
+[node name="Marker3D20" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2, 0, -718.8366)
+
+[node name="Marker3D21" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2, 0, -780.1296)
+
+[node name="Marker3D22" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.2, 0, -796.7497)
+
+[node name="Marker3D23" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.2, 0, -841.355)
+
+[node name="Marker3D24" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2, 0, -873.6864)
+
+[node name="Marker3D25" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.2, 0, -905.43604)
+
+[node name="Marker3D26" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2, 0, -953.4176)
+
+[node name="Marker3D28" type="Marker3D" parent="MarkFarol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.2, 0, -1001.38184)
+
+[node name="MarkBalas" type="Node3D" parent="."]
+
+[node name="BalasLeft" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -23.253887)
+
+[node name="BalasLeft2" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -39.253887)
+
+[node name="BalasLeft3" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -55.253887)
+
+[node name="BalasLeft4" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -71.25389)
+
+[node name="BalasLeft5" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -87.25389)
+
+[node name="BalasLeft6" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -119.25389)
+
+[node name="BalasLeft7" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -135.25389)
+
+[node name="BalasLeft8" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -166.91687)
+
+[node name="BalasLeft9" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -182.69449)
+
+[node name="BalasLeft10" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -223.69449)
+
+[node name="BalasLeft11" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -311.2284)
+
+[node name="BalasLeft12" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -327.2284)
+
+[node name="BalasLeft13" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -359.2284)
+
+[node name="BalasLeft14" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -378.2284)
+
+[node name="BalasLeft15" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -394.12344)
+
+[node name="BalasLeft16" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -419.12344)
+
+[node name="BalasLeft17" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -451.12344)
+
+[node name="BalasLeft18" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -467.00323)
+
+[node name="BalasLeft19" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -483.00323)
+
+[node name="BalasLeft20" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -499.00323)
+
+[node name="BalasLeft21" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -531.00323)
+
+[node name="BalasLeft22" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -547.0429)
+
+[node name="BalasLeft23" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -562.76404)
+
+[node name="BalasLeft24" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -577.76404)
+
+[node name="BalasLeft25" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -626.76404)
+
+[node name="BalasLeft26" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -718.76404)
+
+[node name="BalasLeft27" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -734.76404)
+
+[node name="BalasLeft28" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -780.76404)
+
+[node name="BalasLeft29" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -825.76404)
+
+[node name="BalasLeft30" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -857.3641)
+
+[node name="BalasLeft31" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -873.3641)
+
+[node name="BalasLeft32" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -889.3641)
+
+[node name="BalasLeft33" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -921.3641)
+
+[node name="BalasLeft34" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -937.3641)
+
+[node name="BalasLeft35" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -953.34283)
+
+[node name="BalasLeft36" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -969.34283)
+
+[node name="BalasLeft37" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -985.34283)
+
+[node name="BalasLeft38" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -1034.3428)
+
+[node name="BalasLeft39" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -1066.3428)
+
+[node name="BalasLeft40" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -1082.3428)
+
+[node name="BalasLeft41" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -1098.3428)
+
+[node name="BalasLeft42" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -1114.3428)
+
+[node name="BalasLeft43" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -1146.3428)
+
+[node name="BalasLeft44" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -1162.3428)
+
+[node name="BalasLeft45" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -1178.3428)
+
+[node name="BalasLeft46" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -1194.3428)
+
+[node name="BalasLeft47" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -1209.3428)
+
+[node name="BalasRigth" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -39.254)
+
+[node name="BalasRigth2" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -55.254)
+
+[node name="BalasRigth3" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -135.65381)
+
+[node name="BalasRigth4" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -151.65381)
+
+[node name="BalasRigth5" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -166.65381)
+
+[node name="BalasRigth6" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -239.65381)
+
+[node name="BalasRigth7" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -255.65381)
+
+[node name="BalasRigth8" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -291.6538)
+
+[node name="BalasRigth9" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -327.6538)
+
+[node name="BalasRigth10" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -343.6538)
+
+[node name="BalasRigth11" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -359.6538)
+
+[node name="BalasRigth12" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -393.6538)
+
+[node name="BalasRigth13" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -418.6538)
+
+[node name="BalasRigth14" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -434.6538)
+
+[node name="BalasRigth15" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -451.6538)
+
+[node name="BalasRigth16" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -482.6538)
+
+[node name="BalasRigth17" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -562.6538)
+
+[node name="BalasRigth18" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -577.6538)
+
+[node name="BalasRigth19" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -593.6538)
+
+[node name="BalasRigth20" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -642.6538)
+
+[node name="BalasRigth21" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -658.6538)
+
+[node name="BalasRigth22" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -690.6538)
+
+[node name="BalasRigth23" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -706.6538)
+
+[node name="BalasRigth24" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -734.6538)
+
+[node name="BalasRigth25" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -758.6538)
+
+[node name="BalasRigth26" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -796.6538)
+
+[node name="BalasRigth27" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -825.6538)
+
+[node name="BalasRigth28" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -841.6538)
+
+[node name="BalasRigth29" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -856.6538)
+
+[node name="BalasRigth30" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -889.6538)
+
+[node name="BalasRigth31" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -905.6538)
+
+[node name="BalasRigth32" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -921.6538)
+
+[node name="BalasRigth33" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -937.6538)
+
+[node name="BalasRigth34" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -969.6538)
+
+[node name="BalasRigth35" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -985.6538)
+
+[node name="BalasRigth36" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -1000.6538)
+
+[node name="BalasRigth37" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -1033.6538)
+
+[node name="BalasRigth38" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -1049.6538)
+
+[node name="BalasRigth39" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -1065.6538)
+
+[node name="BalasRigth40" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -1097.6538)
+
+[node name="BalasRigth41" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -1161.6538)
+
+[node name="BalasRigth42" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -1193.6538)
+
+[node name="BalasRigth43" type="Marker3D" parent="MarkBalas"]
+transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, 8.2, 0.211, -1209.6538)
+
+[node name="MarkBancos" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97.99122, 0.047272682, -1334.3596)
+
+[node name="Marker3D" type="Marker3D" parent="MarkBancos"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -36.74633, 0.47502774, 73.03601)
+
+[node name="Marker3D2" type="Marker3D" parent="MarkBancos"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -6.754486, 0.47502774, 73.03601)
+
+[node name="Marker3D3" type="Marker3D" parent="MarkBancos"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 32.245514, 0.47502774, 73.03601)
+
+[node name="Marker3D4" type="Marker3D" parent="MarkBancos"]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 58.194862, 0.47502774, 44.102783)
+
+[node name="Marker3D5" type="Marker3D" parent="MarkBancos"]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 58.194862, 0.47502774, 7.102783)
+
+[node name="Marker3D6" type="Marker3D" parent="MarkBancos"]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 58.194862, 0.47502774, -34.897217)
+
+[node name="Marker3D7" type="Marker3D" parent="MarkBancos"]
+transform = Transform3D(-0.1, 0, -8.742278e-09, 0, 0.1, 0, 8.742278e-09, 0, -0.1, 28.815208, 0.47502774, -53.115112)
+
+[node name="Marker3D8" type="Marker3D" parent="MarkBancos"]
+transform = Transform3D(-0.1, 0, -8.742278e-09, 0, 0.1, 0, 8.742278e-09, 0, -0.1, -4.1847916, 0.47502774, -53.115112)
+
+[node name="Marker3D9" type="Marker3D" parent="MarkBancos"]
+transform = Transform3D(-0.1, 0, -8.742278e-09, 0, 0.1, 0, 8.742278e-09, 0, -0.1, -46.18479, 0.47502774, -53.115112)
+
+[node name="Marker3D10" type="Marker3D" parent="MarkBancos"]
+transform = Transform3D(-0.1, 0, -8.742278e-09, 0, 0.1, 0, 8.742278e-09, 0, -0.1, -46.18479, 0.47502774, -53.115112)
+
+[node name="Marker3D11" type="Marker3D" parent="MarkBancos"]
+transform = Transform3D(1.1924881e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, 1.1924881e-09, -67.18479, 0.47502774, -26.115112)
+
+[node name="Marker3D12" type="Marker3D" parent="MarkBancos"]
+transform = Transform3D(1.1924881e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, 1.1924881e-09, -67.18479, 0.47502774, 12.304321)
+
+[node name="Marker3D13" type="Marker3D" parent="MarkBancos"]
+transform = Transform3D(1.1924881e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, 1.1924881e-09, -67.18479, 0.47502774, 49.884888)
+
+[node name="Marker3D14" type="Marker3D" parent="MarkBancos"]
+transform = Transform3D(0.07071068, 0, 0.07071068, 0, 0.1, 0, -0.07071068, 0, 0.07071068, -40.709602, 0.47502774, 37.698486)
+
+[node name="Marker3D15" type="Marker3D" parent="MarkBancos"]
+transform = Transform3D(0.07071068, 0, 0.07071068, 0, 0.1, 0, -0.07071068, 0, 0.07071068, 6.2903976, 0.47502774, -10.301514)
+
+[node name="Marker3D16" type="Marker3D" parent="MarkBancos"]
+transform = Transform3D(0.07071068, 0, 0.07071068, 0, 0.1, 0, -0.07071068, 0, 0.07071068, 34.290398, 0.47502774, -38.301514)
+
+[node name="Marker3D17" type="Marker3D" parent="MarkBancos"]
+transform = Transform3D(-0.07071068, 0, -0.07071068, 0, 0.1, 0, 0.07071068, 0, -0.07071068, 24.568565, 0.47502774, -10.700806)
+
+[node name="Marker3D18" type="Marker3D" parent="MarkBancos"]
+transform = Transform3D(-0.07071068, 0, -0.07071068, 0, 0.1, 0, 0.07071068, 0, -0.07071068, -14.431435, 0.47502774, 29.299194)
 
 [node name="FarolMultiInstance" type="MultiMeshInstance3D" parent="." node_paths=PackedStringArray("markers_parent")]
 multimesh = SubResource("MultiMesh_n3qho")
 script = ExtResource("10_n3qho")
 markers_parent = NodePath("../MarkFarol")
+
+[node name="BalasMultiInstance" type="MultiMeshInstance3D" parent="." node_paths=PackedStringArray("markers_parent")]
+multimesh = SubResource("MultiMesh_l8mww")
+script = ExtResource("10_n3qho")
+markers_parent = NodePath("../MarkBalas")
+
+[node name="BancosMultiInstance" type="MultiMeshInstance3D" parent="." node_paths=PackedStringArray("markers_parent")]
+multimesh = SubResource("MultiMesh_nyv6x")
+script = ExtResource("10_n3qho")
+markers_parent = NodePath("../MarkBancos")
 
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_timer_timeout"]
