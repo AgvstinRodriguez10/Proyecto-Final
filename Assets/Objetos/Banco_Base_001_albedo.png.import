@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cutfnojgn52gt"
-path.s3tc="res://.godot/imported/Banco_wood_planks_diff_4k.jpg-093976a61784061136f112e39296c52b.s3tc.ctex"
-path.etc2="res://.godot/imported/Banco_wood_planks_diff_4k.jpg-093976a61784061136f112e39296c52b.etc2.ctex"
+uid="uid://cxke60fw28vdh"
+path.s3tc="res://.godot/imported/Banco_Base_001_albedo.png-c2e6f1427a2be3513d326a5959c237fc.s3tc.ctex"
+path.etc2="res://.godot/imported/Banco_Base_001_albedo.png-c2e6f1427a2be3513d326a5959c237fc.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "75651c21afd617636b9fcc21bbe54637"
+"md5": "cdfe1e49226a125664db8d36e298524e"
 }
 
 [deps]
 
-source_file="res://Assets/Plaza/Objetos/Banco_wood_planks_diff_4k.jpg"
-dest_files=["res://.godot/imported/Banco_wood_planks_diff_4k.jpg-093976a61784061136f112e39296c52b.s3tc.ctex", "res://.godot/imported/Banco_wood_planks_diff_4k.jpg-093976a61784061136f112e39296c52b.etc2.ctex"]
+source_file="res://Assets/Objetos/Banco_Base_001_albedo.png"
+dest_files=["res://.godot/imported/Banco_Base_001_albedo.png-c2e6f1427a2be3513d326a5959c237fc.s3tc.ctex", "res://.godot/imported/Banco_Base_001_albedo.png-c2e6f1427a2be3513d326a5959c237fc.etc2.ctex"]
 
 [params]
 
