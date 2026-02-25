@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://be7usem7eilfm"]
+[gd_scene load_steps=23 format=3 uid="uid://be7usem7eilfm"]
 
 [ext_resource type="PackedScene" uid="uid://c0pkqpdadxqa7" path="res://Escenas/san_nicolas.tscn" id="1_6lbni"]
 [ext_resource type="Script" uid="uid://csd5oih1wy128" path="res://Script/GUI/label.gd" id="1_ktoa8"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bg2ova3uojcc0" path="res://Escenas/Character/nica.tscn" id="4_7xwpo"]
 [ext_resource type="PackedScene" uid="uid://ch6dpvy84f11e" path="res://Escenas/GUI/pause_menu.tscn" id="4_l8mww"]
 [ext_resource type="ArrayMesh" uid="uid://dnqr1yewyjqhl" path="res://Resource/Meshs/FarolCalle.tres" id="9_1md0r"]
+[ext_resource type="PackedScene" uid="uid://dai7o6323i5yk" path="res://Escenas/Character/yagui.tscn" id="9_nyv6x"]
 [ext_resource type="Script" uid="uid://hvchutnmp4k8" path="res://Script/MMeshInstancerController/multi_instance_controller.gd" id="10_n3qho"]
 [ext_resource type="ArrayMesh" uid="uid://bo2rls0pboqwo" path="res://Resource/Meshs/Bala.tres" id="11_l8mww"]
 [ext_resource type="ArrayMesh" uid="uid://deve3ju60qbgd" path="res://Resource/Meshs/Banco.tres" id="12_b1m0k"]
@@ -33,10 +34,10 @@ sky = SubResource("Sky_2ia52")
 
 [sub_resource type="Curve3D" id="Curve3D_7xwpo"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.705, 0, -2.44, 0, 0, -1214.056, 0.63, 0, 2.11, -1.82, 0, -5.085, -0.025680065, 0, -1223.8127, 0, 0, 0, 0, 0, 0, -23.01417, 0, -1245.9712, 0, 0, 0, 0, 0, 0, -203.441, 0, -1426.033, 0, 0, -0.08, 0, 0, 0, -203.441, 0, -1465.745, 0, 0, 0, 0, 0, 0, -203.441, -8.770834, -1475.0282, 0, 0, 0, 0, 0, 0, -203.441, -8.771163, -1491.4224, 0, 0, 0, 0, 0, 0, -203.441, -13.485807, -1495.7615),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.705, 0, -2.44, 0, 0, -1214.056, 0.38, 0, -0.335, -1.5, 0, -5.655, -0.026, 0, -1222.094, 0, 0, 0, 0, 0, 0, -26.757181, 0, -1249.8007, 0, 0, 0, 0, 0, 0, -203.441, 0, -1426.033, 0, 0, 0, 0, 0, 0, -203.441, 0, -1465.863, 0, 0, 0, 0, 0, 0, -203.441, -8.894342, -1475.0282, 0, 0, 0, 0, 0, 0, -203.441, -8.833221, -1491.4408, 0, 0, 0, 0, 0, 0, -203.441, -13.66614, -1495.1328, 0, 0, 0, 0, 0, 0, -203.441, -13.685816, -1511.7483, 0, 0, 0, 0, 0, 0, -203.441, -18.408657, -1515.8827, 0, 0, 0, 0, 0, 0, -203.441, -18.467672, -1531.7115, 0, 0, 0, 0, 0, 0, -203.441, -23.280088, -1536.1815, 0, 0, 0, 0, 0, 0, -203.441, -23.34754, -1659.5083, 0, 0, 0, 40, 0, 0, -203.441, -23.34754, -1670.8696, 40, 0, 0, -8.365, 0, 0, -203.441, -23.14611, -1719.921, 8.225, 0, 0, 0, 0, 0, -236.9741, -23.14611, -1705.1157, 0, 0, 0, 0, 0, 0, -510.0286, -23.14611, -1705.1157),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
-point_count = 9
+point_count = 18
 
 [sub_resource type="MultiMesh" id="MultiMesh_n3qho"]
 transform_format = 1
@@ -93,7 +94,7 @@ libraries = {
 }
 
 [node name="Timer" type="Timer" parent="Label"]
-wait_time = 5.5
+wait_time = 1.5
 one_shot = true
 
 [node name="PauseMenu" parent="." instance=ExtResource("4_l8mww")]
@@ -119,13 +120,21 @@ environment = SubResource("Environment_crgrh")
 curve = SubResource("Curve3D_7xwpo")
 
 [node name="PuntoMovible" type="PathFollow3D" parent="CaminoPrincipal"]
-transform = Transform3D(0.9999976, 0, 0, 0, 0.99999875, 0, 0, 0, 0.99999636, 0, 0, 0)
+transform = Transform3D(0.99999726, 0, 0, 0, 0.9999997, 0, 0, 0, 0.9999961, 0, 0, -4.9992166)
+progress = 5.0
+loop = false
 
 [node name="Nica" parent="CaminoPrincipal/PuntoMovible" instance=ExtResource("4_7xwpo")]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CaminoPrincipal/PuntoMovible"]
-transform = Transform3D(1.0000024, 0, 0, 0, 0.9177699, 0.39711556, 0, -0.3971165, 0.9177721, 0, 7.027391, 7.8078723)
+transform = Transform3D(1.0000027, 0, 0, 0, 0.91776925, 0.39711478, 0, -0.3971162, 0.91777253, 0, 7.027391, 7.807872)
 current = true
+
+[node name="PuntoMovibleYagui" type="PathFollow3D" parent="CaminoPrincipal"]
+loop = false
+
+[node name="Yagui" parent="CaminoPrincipal/PuntoMovibleYagui" instance=ExtResource("9_nyv6x")]
 
 [node name="MarkFarol" type="Node3D" parent="."]
 

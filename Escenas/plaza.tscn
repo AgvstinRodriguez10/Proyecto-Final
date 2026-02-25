@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://b3l2siot8juh" path="res://Assets/EDIFICIOS/Plaza/C/edificio 2.fbx" id="19_owiik"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lshnb"]
-size = Vector3(43.687, 0.345, 43.453)
+size = Vector3(43.687, 0.345, 43.72116)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qewuc"]
 resource_name = "Camino"
@@ -340,7 +340,7 @@ shadow_mesh = SubResource("ArrayMesh_jfox4")
 collision_mask = 18
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.166, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.166, -0.13408089)
 shape = SubResource("BoxShape3D_lshnb")
 
 [node name="Plaza" parent="." instance=ExtResource("1_5m6p0")]
