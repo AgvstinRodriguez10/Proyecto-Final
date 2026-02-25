@@ -51,17 +51,12 @@ var frontalCamDuration = 7
 
 var posPostGiro:Vector3
 
-var puntoMovil:PathFollow3D
-
 func _ready() -> void:
 	super._ready()
 	animationPlayer = $"Nica-v1_0/AnimationPlayer"
 	velocity_forward = 20
 	#baseVelocity = velocity_z
 	#speedMax = velocity_z + (velocity_z * percentSpeedUp / 100)
-	
-	# Variable que contiene al punto que se mueve en el Path
-	puntoMovil = $".."
 
 func _physics_process(delta: float) -> void:
 	# Esto checkea que los colissionadores laterales no choquen contra nada

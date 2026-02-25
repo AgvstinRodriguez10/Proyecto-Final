@@ -15,6 +15,8 @@ var eje_local_x:Vector3
 
 var rayCastSuelo := RayCast3D.new()
 
+var puntoMovil:PathFollow3D
+
 func _ready() -> void:
 	position = position
 	eje_local_x = global_transform.basis.x.normalized()
@@ -26,6 +28,9 @@ func _ready() -> void:
 	rayCastSuelo.add_exception(self)
 	rayCastSuelo.enabled = true
 	add_child(rayCastSuelo)
+	
+	# Variable que contiene al punto que se mueve en el Path
+	puntoMovil = $".."
 
 #func movingToForward(delta: float):
 	#current_velocity_forward = velocity_forward
