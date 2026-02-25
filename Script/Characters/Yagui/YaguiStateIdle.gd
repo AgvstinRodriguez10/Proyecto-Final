@@ -3,7 +3,7 @@ extends StateBase
 func start():
 	controlled_node.current_velocity_forward = 0
 
-func on_process():
+func on_process(delta):
 	if true:
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(0.1).timeout
 		state_machine.change_to("YaguiStateRun")

@@ -8,7 +8,7 @@ var yagui: Yagui:
 
 func start():
 	yagui.current_velocity_forward = yagui.velocity_forward
+	
+func on_process(delta):
 	yagui.animationPlayer.play("anim_run")
-
-func on_procces(delta):
 	yagui.puntoMovil.progress += yagui.current_velocity_forward * delta
