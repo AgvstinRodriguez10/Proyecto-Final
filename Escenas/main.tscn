@@ -127,8 +127,8 @@ environment = SubResource("Environment_crgrh")
 curve = SubResource("Curve3D_7xwpo")
 
 [node name="PuntoMovible" type="PathFollow3D" parent="CaminoPrincipal"]
-transform = Transform3D(0.99999726, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999962, 0, 0, -1189.2137)
-progress = 1189.2135
+transform = Transform3D(0.99999726, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999962, 0, 0, -4.9992166)
+progress = 5.0
 rotation_mode = 1
 loop = false
 

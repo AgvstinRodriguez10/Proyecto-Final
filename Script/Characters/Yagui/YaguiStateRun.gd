@@ -24,6 +24,8 @@ func setVelocity():
 			if !flagToLostLife:
 				#print("pierde vida")
 				yagui.player_ref.lostLife(1)
+				if yagui.player_ref.life <= 0:
+					return
 				flagToLostLife = true
 		elif distanceToPlayer > 4 and distanceToPlayer < 10:
 			yagui.current_velocity_forward = yagui.velocity_forward * 1.01
