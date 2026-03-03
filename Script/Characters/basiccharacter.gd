@@ -32,9 +32,6 @@ func _ready() -> void:
 	# Variable que contiene al punto que se mueve en el Path
 	puntoMovil = $".."
 
-#func movingToForward(delta: float):
-	#current_velocity_forward = velocity_forward
-
 func jump():
 	y_velocity = jump_force
 

@@ -12,8 +12,6 @@ func _ready() -> void:
 		animationPlayer.play("label")
 		timer.start()
 
-
-
 func _on_timer_timeout() -> void:
 	get_tree().paused = false
 	hide()
