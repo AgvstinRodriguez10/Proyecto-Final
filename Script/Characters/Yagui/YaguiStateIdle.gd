@@ -4,6 +4,6 @@ func start():
 	controlled_node.current_velocity_forward = 0
 
 func on_process(delta):
-	if true:
+	if !controlled_node.is_movie:
 		await get_tree().create_timer(0.1).timeout
 		state_machine.change_to("YaguiStateRun")

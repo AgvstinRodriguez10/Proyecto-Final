@@ -15,7 +15,7 @@ func _ready() -> void:
 	
 	if mesh == null or mesh.mesh == null:
 		return
-	
+
 # Optimiza LOD , VisibilityRange , Luz en modo Estatico, Baja la escala del Ligthmap
 	#mesh.GIMode.GI_MODE_STATIC  # Actualmente, no se usa.
 	#mesh.gi_lightmap_texel_scale = 0.2 # Actualmente, no se usa.
