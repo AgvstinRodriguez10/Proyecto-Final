@@ -1,6 +1,9 @@
 extends BasicCharacter
 class_name Yagui
 
+@export var puntoMovilPlayer: PathFollow3D
+@export var player_ref: Player
+
 func _ready() -> void:
 	super._ready()
 	animationPlayer = $Yagui1/AnimationPlayer
