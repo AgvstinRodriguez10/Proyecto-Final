@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://700kl1fr0622"]
+[gd_scene load_steps=18 format=4 uid="uid://700kl1fr0622"]
 
 [ext_resource type="PackedScene" uid="uid://buovotbaulf4o" path="res://Assets/Costanera/Costanera.glb" id="1_k283u"]
 [ext_resource type="PackedScene" uid="uid://ctffdhacj4d75" path="res://Escenas/Objetos/Luz/luz_de_pared.tscn" id="2_lo2ox"]
@@ -78,6 +78,9 @@ size = Vector3(2.9165177, 0.16894531, 10.371948)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0hnao"]
 size = Vector3(2.9165177, 0.16894531, 10.371948)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4pw5b"]
+size = Vector3(51.787598, 0.16894531, 460.40594)
 
 [node name="Costanera" type="Node3D"]
 
@@ -202,19 +205,19 @@ omni_range = 16.453487
 [node name="Collision" type="StaticBody3D" parent="."]
 collision_mask = 18
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Collision"]
+[node name="ColisionPlana" type="CollisionShape3D" parent="Collision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.326172, -5.0952253, 0.5375366)
 shape = SubResource("BoxShape3D_radj1")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Collision"]
+[node name="ColisionPlana2" type="CollisionShape3D" parent="Collision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.676912, -3.0856364, 0.5375366)
 shape = SubResource("BoxShape3D_6xv5a")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Collision"]
+[node name="ColisionPlana3" type="CollisionShape3D" parent="Collision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.119707, -1.0955126, 0.5375366)
 shape = SubResource("BoxShape3D_my22t")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="Collision"]
+[node name="ColisionPlana4" type="CollisionShape3D" parent="Collision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.731726, 0.92118335, 0.5375366)
 shape = SubResource("BoxShape3D_my22t")
 
@@ -226,17 +229,21 @@ shape = SubResource("BoxShape3D_skf6g")
 transform = Transform3D(0.72645473, -0.6872143, 0, 0.6872143, 0.72645473, 0, 0, 0, 1, 36.34782, 2.3803592, 0.5375366)
 shape = SubResource("BoxShape3D_3hedo")
 
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="Collision"]
+[node name="ColisionEscalera2" type="CollisionShape3D" parent="Collision"]
 transform = Transform3D(0.72645473, -0.6872143, 0, 0.6872143, 0.72645473, 0, 0, 0, 1, 27.121206, -0.1166742, 0.5375366)
 shape = SubResource("BoxShape3D_i6puo")
 
-[node name="CollisionShape3D7" type="CollisionShape3D" parent="Collision"]
+[node name="ColisionEscalera3" type="CollisionShape3D" parent="Collision"]
 transform = Transform3D(0.72645473, -0.6872143, 0, 0.6872143, 0.72645473, 0, 0, 0, 1, 18.715845, -2.1075757, 0.5375366)
 shape = SubResource("BoxShape3D_8qvsn")
 
-[node name="CollisionShape3D8" type="CollisionShape3D" parent="Collision"]
+[node name="ColisionEscalera4" type="CollisionShape3D" parent="Collision"]
 transform = Transform3D(0.72645473, -0.6872143, 0, 0.6872143, 0.72645473, 0, 0, 0, 1, 10.114501, -4.4177275, 0.5375366)
 shape = SubResource("BoxShape3D_0hnao")
+
+[node name="ColisionCalle" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.627, -5.095, 213.873)
+shape = SubResource("BoxShape3D_4pw5b")
 
 [editable path="Costanera"]
 [editable path="Costanera/FalsaLuzSuelo/LuzSuelo7"]
