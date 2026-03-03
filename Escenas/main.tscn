@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://be7usem7eilfm"]
+[gd_scene load_steps=25 format=3 uid="uid://be7usem7eilfm"]
 
 [ext_resource type="PackedScene" uid="uid://c0pkqpdadxqa7" path="res://Escenas/san_nicolas.tscn" id="1_6lbni"]
 [ext_resource type="Script" uid="uid://csd5oih1wy128" path="res://Script/GUI/label.gd" id="1_ktoa8"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://hvchutnmp4k8" path="res://Script/MMeshInstancerController/multi_instance_controller.gd" id="10_n3qho"]
 [ext_resource type="ArrayMesh" uid="uid://bo2rls0pboqwo" path="res://Resource/Meshs/Bala.tres" id="11_l8mww"]
 [ext_resource type="ArrayMesh" uid="uid://deve3ju60qbgd" path="res://Resource/Meshs/Banco.tres" id="12_b1m0k"]
+[ext_resource type="ArrayMesh" uid="uid://774ic0agwyrt" path="res://Resource/Meshs/ArbolPlaza.tres" id="14_i4rd6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_b1m0k"]
 font = ExtResource("2_1md0r")
@@ -56,6 +57,12 @@ transform_format = 1
 instance_count = 18
 mesh = ExtResource("12_b1m0k")
 buffer = PackedFloat32Array(0.1, 0, 0, -134.73755, 0, 0.1, 0, 0.5223004, 0, 0, 0.1, -1261.3236, 0.1, 0, 0, -104.745705, 0, 0.1, 0, 0.5223004, 0, 0, 0.1, -1261.3236, 0.1, 0, 0, -65.745705, 0, 0.1, 0, 0.5223004, 0, 0, 0.1, -1261.3236, -4.371139e-09, 0, 0.1, -39.796356, 0, 0.1, 0, 0.5223004, -0.1, 0, -4.371139e-09, -1290.2568, -4.371139e-09, 0, 0.1, -39.796356, 0, 0.1, 0, 0.5223004, -0.1, 0, -4.371139e-09, -1327.2568, -4.371139e-09, 0, 0.1, -39.796356, 0, 0.1, 0, 0.5223004, -0.1, 0, -4.371139e-09, -1369.2568, -0.1, 0, -8.742278e-09, -69.17601, 0, 0.1, 0, 0.5223004, 8.742278e-09, 0, -0.1, -1387.4747, -0.1, 0, -8.742278e-09, -102.17601, 0, 0.1, 0, 0.5223004, 8.742278e-09, 0, -0.1, -1387.4747, -0.1, 0, -8.742278e-09, -144.17601, 0, 0.1, 0, 0.5223004, 8.742278e-09, 0, -0.1, -1387.4747, -0.1, 0, -8.742278e-09, -144.17601, 0, 0.1, 0, 0.5223004, 8.742278e-09, 0, -0.1, -1387.4747, 1.1924881e-09, 0, -0.1, -165.17601, 0, 0.1, 0, 0.5223004, 0.1, 0, 1.1924881e-09, -1360.4747, 1.1924881e-09, 0, -0.1, -165.17601, 0, 0.1, 0, 0.5223004, 0.1, 0, 1.1924881e-09, -1322.0553, 1.1924881e-09, 0, -0.1, -165.17601, 0, 0.1, 0, 0.5223004, 0.1, 0, 1.1924881e-09, -1284.4747, 0.07071068, 0, 0.07071068, -138.70082, 0, 0.1, 0, 0.5223004, -0.07071068, 0, 0.07071068, -1296.6611, 0.07071068, 0, 0.07071068, -91.70082, 0, 0.1, 0, 0.5223004, -0.07071068, 0, 0.07071068, -1344.6611, 0.07071068, 0, 0.07071068, -63.70082, 0, 0.1, 0, 0.5223004, -0.07071068, 0, 0.07071068, -1372.6611, -0.07071068, 0, -0.07071068, -73.42265, 0, 0.1, 0, 0.5223004, 0.07071068, 0, -0.07071068, -1345.0604, -0.07071068, 0, -0.07071068, -112.42265, 0, 0.1, 0, 0.5223004, 0.07071068, 0, -0.07071068, -1305.0604)
+
+[sub_resource type="MultiMesh" id="MultiMesh_7ndum"]
+transform_format = 1
+instance_count = 10
+mesh = ExtResource("14_i4rd6")
+buffer = PackedFloat32Array(0.5, 0, 0, -117.792816, 0, 0.5, 0, 0, 0, 0, 0.5, -1280.9524, 0.5, 0, 0, -82.792816, 0, 0.5, 0, 0, 0, 0, 0.5, -1280.9524, 0.5, 0, 0, -139.20912, 0, 0.5, 0, 0, 0, 0, 0.5, -1308.6124, 0.5, 0, 0, -139.20912, 0, 0.5, 0, 0, 0, 0, 0.5, -1341.6124, 0.5, 0, 0, -106.20912, 0, 0.5, 0, 0, 0, 0, 0.5, -1341.6124, 0.5, 0, 0, -106.20912, 0, 0.5, 0, 0, 0, 0, 0.5, -1375.6124, 0.5, 0, 0, -76.20912, 0, 0.5, 0, 0, 0, 0, 0.5, -1375.6124, 0.5, 0, 0, -76.20912, 0, 0.5, 0, 0, 0, 0, 0.5, -1325.6124, 0.5, 0, 0, -55.20912, 0, 0.5, 0, 0, 0, 0, 0.5, -1309.6124, 0.5, 0, 0, -55.20912, 0, 0.5, 0, 0, 0, 0, 0.5, -1348.6124)
 
 [node name="Main" type="Node3D"]
 
@@ -131,6 +138,7 @@ transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 [node name="Camera3D" type="Camera3D" parent="CaminoPrincipal/PuntoMovible"]
 transform = Transform3D(1.0000027, 0, 0, 0, 0.91776925, 0.39711478, 0, -0.3971162, 0.91777253, 0, 7.027391, 7.807872)
 current = true
+far = 300.0
 
 [node name="PuntoMovibleYagui" type="PathFollow3D" parent="CaminoPrincipal"]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
@@ -549,6 +557,38 @@ transform = Transform3D(-0.07071068, 0, -0.07071068, 0, 0.1, 0, 0.07071068, 0, -
 [node name="Marker3D18" type="Marker3D" parent="MarkBancos"]
 transform = Transform3D(-0.07071068, 0, -0.07071068, 0, 0.1, 0, 0.07071068, 0, -0.07071068, -14.431435, 0.47502774, 29.299194)
 
+[node name="MarkArbolPlaza" type="Node3D" parent="."]
+
+[node name="arbol" type="Marker3D" parent="MarkArbolPlaza"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -117.792816, 0, -1280.9524)
+
+[node name="arbol2" type="Marker3D" parent="MarkArbolPlaza"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -82.792816, 0, -1280.9524)
+
+[node name="arbol3" type="Marker3D" parent="MarkArbolPlaza"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -139.20912, 0, -1308.6124)
+
+[node name="arbol4" type="Marker3D" parent="MarkArbolPlaza"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -139.20912, 0, -1341.6124)
+
+[node name="arbol5" type="Marker3D" parent="MarkArbolPlaza"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -106.20912, 0, -1341.6124)
+
+[node name="arbol6" type="Marker3D" parent="MarkArbolPlaza"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -106.20912, 0, -1375.6124)
+
+[node name="arbol7" type="Marker3D" parent="MarkArbolPlaza"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -76.20912, 0, -1375.6124)
+
+[node name="arbol8" type="Marker3D" parent="MarkArbolPlaza"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -76.20912, 0, -1325.6124)
+
+[node name="arbol9" type="Marker3D" parent="MarkArbolPlaza"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -55.20912, 0, -1309.6124)
+
+[node name="arbol10" type="Marker3D" parent="MarkArbolPlaza"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -55.20912, 0, -1348.6124)
+
 [node name="FarolMultiInstance" type="MultiMeshInstance3D" parent="." node_paths=PackedStringArray("markers_parent")]
 multimesh = SubResource("MultiMesh_n3qho")
 script = ExtResource("10_n3qho")
@@ -563,5 +603,10 @@ markers_parent = NodePath("../MarkBalas")
 multimesh = SubResource("MultiMesh_nyv6x")
 script = ExtResource("10_n3qho")
 markers_parent = NodePath("../MarkBancos")
+
+[node name="ArbolPlazaMultiInstance" type="MultiMeshInstance3D" parent="." node_paths=PackedStringArray("markers_parent")]
+multimesh = SubResource("MultiMesh_7ndum")
+script = ExtResource("10_n3qho")
+markers_parent = NodePath("../MarkArbolPlaza")
 
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_timer_timeout"]
