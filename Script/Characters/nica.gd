@@ -22,7 +22,7 @@ var collideL : bool = false
 var collideR : bool = false
 # Variable que se usa para la animacion del up de vide
 var life_plus : bool = false
-var life = 3
+var life = 1
 var snficha = 0
 #var speedMax:float
 
