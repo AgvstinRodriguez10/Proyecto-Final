@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=4 uid="uid://700kl1fr0622"]
+[gd_scene load_steps=19 format=4 uid="uid://700kl1fr0622"]
 
 [ext_resource type="PackedScene" uid="uid://buovotbaulf4o" path="res://Assets/Costanera/Costanera.glb" id="1_k283u"]
 [ext_resource type="PackedScene" uid="uid://ctffdhacj4d75" path="res://Escenas/Objetos/Luz/luz_de_pared.tscn" id="2_lo2ox"]
 [ext_resource type="PackedScene" uid="uid://ci0wswrhx76d8" path="res://Escenas/Objetos/Luz/luz_suelo.tscn" id="3_ut0a1"]
 [ext_resource type="Shader" uid="uid://5vvrcak7pcvv" path="res://Resource/Shader/LuzSuelo.gdshader" id="4_radj1"]
+[ext_resource type="PackedScene" uid="uid://cho0g4xb1k0r0" path="res://Escenas/Objetos/Luz/luz_costanera.tscn" id="5_6xv5a"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_6xv5a"]
 _surfaces = [{
@@ -244,6 +245,42 @@ shape = SubResource("BoxShape3D_0hnao")
 [node name="ColisionCalle" type="CollisionShape3D" parent="Collision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.627, -5.095, 213.873)
 shape = SubResource("BoxShape3D_4pw5b")
+
+[node name="LuzCalle" type="Node3D" parent="."]
+
+[node name="LuzCostanera" parent="LuzCalle" instance=ExtResource("5_6xv5a")]
+transform = Transform3D(-2.6226832e-07, 0, -6, 0, 6, 0, 6, 0, -2.6226832e-07, -65.32569, -5.1594143, 34.58969)
+
+[node name="LuzCostanera2" parent="LuzCalle" instance=ExtResource("5_6xv5a")]
+transform = Transform3D(-2.6226832e-07, 0, -6, 0, 6, 0, 6, 0, -2.6226832e-07, -65.32569, -5.1594143, 68.58969)
+
+[node name="LuzCostanera3" parent="LuzCalle" instance=ExtResource("5_6xv5a")]
+transform = Transform3D(-2.6226832e-07, 0, -6, 0, 6, 0, 6, 0, -2.6226832e-07, -65.32569, -5.1594143, 102.45165)
+
+[node name="LuzCostanera4" parent="LuzCalle" instance=ExtResource("5_6xv5a")]
+transform = Transform3D(-2.6226832e-07, 0, -6, 0, 6, 0, 6, 0, -2.6226832e-07, -65.32569, -5.1594143, 142.45166)
+
+[node name="LuzAmbienteCalle" type="Node3D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="LuzAmbienteCalle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.98275, 0, 50.34323)
+light_energy = 10.0
+omni_range = 25.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="LuzAmbienteCalle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.98275, 0, 83.34323)
+light_energy = 10.0
+omni_range = 25.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="LuzAmbienteCalle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.98275, 0, 123.34323)
+light_energy = 10.0
+omni_range = 25.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="LuzAmbienteCalle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.98275, 0, 163.34323)
+light_energy = 10.0
+omni_range = 25.0
 
 [editable path="Costanera"]
 [editable path="Costanera/FalsaLuzSuelo/LuzSuelo7"]
