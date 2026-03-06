@@ -10,6 +10,7 @@ resource_name = "leaves"
 transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_43oby")
+albedo_texture_force_srgb = true
 roughness = 0.6800991
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_suv57"]
