@@ -1,22 +1,22 @@
-[gd_resource type="ArrayMesh" load_steps=6 format=4 uid="uid://cot3jjbp13nor"]
+[gd_resource type="ArrayMesh" load_steps=6 format=4 uid="uid://cg0mdy6j8vdym"]
 
-[ext_resource type="Texture2D" uid="uid://dn4jh4oc8q4u8" path="res://Assets/Objetos/ArbolLigth_Tree_Bark.jpg" id="1_w16wv"]
-[ext_resource type="Texture2D" uid="uid://bs4deiu2gbsq8" path="res://Assets/Objetos/ArbolLigth_Birch_Leaves_Green.png" id="2_makv3"]
+[ext_resource type="Texture2D" uid="uid://dn4jh4oc8q4u8" path="res://Assets/Objetos/ArbolLigth_Tree_Bark.jpg" id="1_kqv0l"]
+[ext_resource type="Texture2D" uid="uid://bs4deiu2gbsq8" path="res://Assets/Objetos/ArbolLigth_Birch_Leaves_Green.png" id="2_7434e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5p1ls"]
 resource_name = "Bark"
 cull_mode = 2
-albedo_texture = ExtResource("1_w16wv")
+albedo_texture = ExtResource("1_kqv0l")
 metallic = 1.0
 roughness = 0.5527864
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_76o2h"]
 resource_name = "Tree_Leaves"
-transparency = 3
-alpha_hash_scale = 1.0
-alpha_antialiasing_mode = 0
-albedo_texture = ExtResource("2_makv3")
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("2_7434e")
 metallic = 1.0
+roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_duh5m"]
 _surfaces = [{

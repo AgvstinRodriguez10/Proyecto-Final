@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://be7usem7eilfm"]
+[gd_scene load_steps=27 format=3 uid="uid://be7usem7eilfm"]
 
 [ext_resource type="PackedScene" uid="uid://c0pkqpdadxqa7" path="res://Escenas/san_nicolas.tscn" id="1_6lbni"]
 [ext_resource type="Script" uid="uid://csd5oih1wy128" path="res://Script/GUI/label.gd" id="1_ktoa8"]
@@ -14,6 +14,7 @@
 [ext_resource type="ArrayMesh" uid="uid://bo2rls0pboqwo" path="res://Resource/Meshs/Bala.tres" id="11_l8mww"]
 [ext_resource type="ArrayMesh" uid="uid://deve3ju60qbgd" path="res://Resource/Meshs/Banco.tres" id="12_b1m0k"]
 [ext_resource type="ArrayMesh" uid="uid://774ic0agwyrt" path="res://Resource/Meshs/ArbolPlaza.tres" id="14_i4rd6"]
+[ext_resource type="ArrayMesh" uid="uid://cot3jjbp13nor" path="res://Resource/Meshs/ArbolCity.tres" id="15_7ndum"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_b1m0k"]
 font = ExtResource("2_1md0r")
@@ -62,7 +63,13 @@ buffer = PackedFloat32Array(0.1, 0, 0, -134.73755, 0, 0.1, 0, 0.5223004, 0, 0, 0
 transform_format = 1
 instance_count = 10
 mesh = ExtResource("14_i4rd6")
-buffer = PackedFloat32Array(0.5, 0, 0, -117.792816, 0, 0.5, 0, 0, 0, 0, 0.5, -1280.9524, 0.5, 0, 0, -82.792816, 0, 0.5, 0, 0, 0, 0, 0.5, -1280.9524, 0.5, 0, 0, -139.20912, 0, 0.5, 0, 0, 0, 0, 0.5, -1308.6124, 0.5, 0, 0, -139.20912, 0, 0.5, 0, 0, 0, 0, 0.5, -1341.6124, 0.5, 0, 0, -106.20912, 0, 0.5, 0, 0, 0, 0, 0.5, -1341.6124, 0.5, 0, 0, -106.20912, 0, 0.5, 0, 0, 0, 0, 0.5, -1375.6124, 0.5, 0, 0, -76.20912, 0, 0.5, 0, 0, 0, 0, 0.5, -1375.6124, 0.5, 0, 0, -76.20912, 0, 0.5, 0, 0, 0, 0, 0.5, -1325.6124, 0.5, 0, 0, -55.20912, 0, 0.5, 0, 0, 0, 0, 0.5, -1309.6124, 0.5, 0, 0, -55.20912, 0, 0.5, 0, 0, 0, 0, 0.5, -1348.6124)
+buffer = PackedFloat32Array(0.55, 0, 0, -117.792816, 0, 0.55, 0, 0, 0, 0, 0.55, -1280.9524, 0.5, 0, 0, -82.792816, 0, 0.5, 0, 0, 0, 0, 0.5, -1280.9524, 0.48, 0, 0, -139.20912, 0, 0.48, 0, 0, 0, 0, 0.48, -1308.6124, 0.55, 0, 0, -139.20912, 0, 0.55, 0, 0, 0, 0, 0.55, -1341.6124, 0.6, 0, 0, -106.20912, 0, 0.6, 0, 0, 0, 0, 0.6, -1341.6124, 0.44, 0, 0, -106.20912, 0, 0.44, 0, 0, 0, 0, 0.44, -1375.6124, 0.51, 0, 0, -76.20912, 0, 0.51, 0, 0, 0, 0, 0.51, -1375.6124, 0.47, 0, 0, -76.20912, 0, 0.47, 0, 0, 0, 0, 0.47, -1325.6124, 0.57, 0, 0, -55.20912, 0, 0.57, 0, 0, 0, 0, 0.57, -1309.6124, 0.5, 0, 0, -55.20912, 0, 0.5, 0, 0, 0, 0, 0.5, -1348.6124)
+
+[sub_resource type="MultiMesh" id="MultiMesh_c7rjx"]
+transform_format = 1
+instance_count = 24
+mesh = ExtResource("15_7ndum")
+buffer = PackedFloat32Array(1.4, 0, 0, -8.398116, 0, 1.4, 0, 0, 0, 0, 1.4, -46.42105, 0.74999994, 0, 1.2990382, -8.398116, 0, 1.5, 0, 0, -1.2990382, 0, 0.74999994, -232.23607, 1.2124355, 0, 0.7, -8.398116, 0, 1.4, 0, 0, -0.7, 0, 1.2124355, -367.23605, -6.775265e-08, 0, 1.55, 7.6137514, 0, 1.55, 0, 0, -1.55, 0, -6.775265e-08, -336.09305, 1.5974774, 0, 0.58143425, 7.6137514, 0, 1.7, 0, 0, -0.58143425, 0, 1.5974774, -249.69305, 1.4722432, 0, 0.85, 7.6137514, 0, 1.7, 0, 0, -0.85, 0, 1.4722432, -445.76163, 0.84999996, 0, 1.4722433, 7.6137514, 0, 1.7, 0, 0, -1.4722433, 0, 0.84999996, -569.86163, 1.6420739, 0, 0.4399924, -7.686249, 0, 1.7, 0, 0, -0.4399924, 0, 1.6420739, -539.26166, 1.7, 0, 0, -7.686249, 0, 1.7, 0, 0, 0, 0, 1.7, -489.96167, 1.7, 0, 0, -7.686249, 0, 1.7, 0, 0, 0, 0, 1.7, -636.1617, 0.295202, 0, 1.6741732, -7.686249, 0, 1.7, 0, 0, -1.6741732, 0, 0.295202, -726.2617, 0.84999996, 0, 1.4722433, -7.686249, 0, 1.7, 0, 0, -1.4722433, 0, 0.84999996, -789.16174, 1.4722432, 0, 0.85, 7.035953, 0, 1.7, 0, 0, -0.85, 0, 1.4722432, -683.7617, 1.6741732, 0, 0.2952019, 7.035953, 0, 1.7, 0, 0, -0.2952019, 0, 1.6741732, -851.9959, 1.7, 0, 0, 7.035953, 0, 1.7, 0, 0, 0, 0, 1.7, -948.89594, 1.6808859, 0, -0.25421008, -7.7148995, 0, 1.7, 0, 0, 0.25421008, 0, 1.6808859, -977.21564, 1.7, 0, 0, -7.7148995, 0, 1.7, 0, 0, 0, 0, 1.7, -897.3156, 1.2020816, 0, 1.2020816, -7.7148995, 0, 1.7, 0, 0, -1.2020816, 0, 1.2020816, -1042.7345, 1.5974774, 0, 0.58143425, -7.7148995, 0, 1.7, 0, 0, -0.58143425, 0, 1.5974774, -1185.5345, 1.7, 0, 0, 8.449825, 0, 1.7, 0, 0, 0, 0, 1.7, -1156.5906, 1.7, 0, 0, 8.449825, 0, 1.7, 0, 0, 0, 0, 1.7, -1076.6906, 1.5, 0, 0, 7.8018827, 0, 1.5, 0, 0, 0, 0, 1.5, -62.621048, 1.66, 0, 0, 7.8018827, 0, 1.66, 0, 0, 0, 0, 1.66, -145.42104, 1.2256712, 0, 1.0284601, -8.398116, 0, 1.6, 0, 0, -1.0284601, 0, 1.2256712, -174.22104)
 
 [node name="Main" type="Node3D"]
 
@@ -238,6 +245,7 @@ transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07,
 
 [node name="BalasLeft3" type="Marker3D" parent="MarkBalas"]
 transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -55.253887)
+visible = false
 
 [node name="BalasLeft4" type="Marker3D" parent="MarkBalas"]
 transform = Transform3D(12, 0, 0, 0, -5.2453663e-07, 12, 0, -12, -5.2453663e-07, -8.2, 0.211, -71.25389)
@@ -560,34 +568,108 @@ transform = Transform3D(-0.07071068, 0, -0.07071068, 0, 0.1, 0, 0.07071068, 0, -
 [node name="MarkArbolPlaza" type="Node3D" parent="."]
 
 [node name="arbol" type="Marker3D" parent="MarkArbolPlaza"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -117.792816, 0, -1280.9524)
+transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, -117.792816, 0, -1280.9524)
 
 [node name="arbol2" type="Marker3D" parent="MarkArbolPlaza"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -82.792816, 0, -1280.9524)
 
 [node name="arbol3" type="Marker3D" parent="MarkArbolPlaza"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -139.20912, 0, -1308.6124)
+transform = Transform3D(0.48, 0, 0, 0, 0.48, 0, 0, 0, 0.48, -139.20912, 0, -1308.6124)
 
 [node name="arbol4" type="Marker3D" parent="MarkArbolPlaza"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -139.20912, 0, -1341.6124)
+transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, -139.20912, 0, -1341.6124)
 
 [node name="arbol5" type="Marker3D" parent="MarkArbolPlaza"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -106.20912, 0, -1341.6124)
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -106.20912, 0, -1341.6124)
 
 [node name="arbol6" type="Marker3D" parent="MarkArbolPlaza"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -106.20912, 0, -1375.6124)
+transform = Transform3D(0.44, 0, 0, 0, 0.44, 0, 0, 0, 0.44, -106.20912, 0, -1375.6124)
 
 [node name="arbol7" type="Marker3D" parent="MarkArbolPlaza"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -76.20912, 0, -1375.6124)
+transform = Transform3D(0.51, 0, 0, 0, 0.51, 0, 0, 0, 0.51, -76.20912, 0, -1375.6124)
 
 [node name="arbol8" type="Marker3D" parent="MarkArbolPlaza"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -76.20912, 0, -1325.6124)
+transform = Transform3D(0.47, 0, 0, 0, 0.47, 0, 0, 0, 0.47, -76.20912, 0, -1325.6124)
 
 [node name="arbol9" type="Marker3D" parent="MarkArbolPlaza"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -55.20912, 0, -1309.6124)
+transform = Transform3D(0.57, 0, 0, 0, 0.57, 0, 0, 0, 0.57, -55.20912, 0, -1309.6124)
 
 [node name="arbol10" type="Marker3D" parent="MarkArbolPlaza"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -55.20912, 0, -1348.6124)
+
+[node name="MarkArbolCity" type="Node3D" parent="."]
+
+[node name="Marker3D" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -8.398116, 0, -46.42105)
+
+[node name="Marker3D7" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(0.74999994, 0, 1.2990382, 0, 1.5, 0, -1.2990382, 0, 0.74999994, -8.398116, 0, -232.23607)
+
+[node name="Marker3D9" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.2124355, 0, 0.7, 0, 1.4, 0, -0.7, 0, 1.2124355, -8.398116, 0, -367.23605)
+
+[node name="Marker3D10" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(-6.775265e-08, 0, 1.55, 0, 1.55, 0, -1.55, 0, -6.775265e-08, 7.6137514, 0, -336.09305)
+
+[node name="Marker3D12" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.5974774, 0, 0.58143425, 0, 1.7, 0, -0.58143425, 0, 1.5974774, 7.6137514, 0, -249.69305)
+
+[node name="Marker3D13" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.4722432, 0, 0.85, 0, 1.7, 0, -0.85, 0, 1.4722432, 7.6137514, 0, -445.76163)
+
+[node name="Marker3D14" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(0.84999996, 0, 1.4722433, 0, 1.7, 0, -1.4722433, 0, 0.84999996, 7.6137514, 0, -569.86163)
+
+[node name="Marker3D15" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.6420739, 0, 0.4399924, 0, 1.7, 0, -0.4399924, 0, 1.6420739, -7.686249, 0, -539.26166)
+
+[node name="Marker3D16" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -7.686249, 0, -489.96167)
+
+[node name="Marker3D17" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -7.686249, 0, -636.1617)
+
+[node name="Marker3D18" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(0.295202, 0, 1.6741732, 0, 1.7, 0, -1.6741732, 0, 0.295202, -7.686249, 0, -726.2617)
+
+[node name="Marker3D19" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(0.84999996, 0, 1.4722433, 0, 1.7, 0, -1.4722433, 0, 0.84999996, -7.686249, 0, -789.16174)
+
+[node name="Marker3D20" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.4722432, 0, 0.85, 0, 1.7, 0, -0.85, 0, 1.4722432, 7.035953, 0, -683.7617)
+
+[node name="Marker3D21" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.6741732, 0, 0.2952019, 0, 1.7, 0, -0.2952019, 0, 1.6741732, 7.035953, 0, -851.9959)
+
+[node name="Marker3D22" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 7.035953, 0, -948.89594)
+
+[node name="Marker3D23" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.6808859, 0, -0.25421008, 0, 1.7, 0, 0.25421008, 0, 1.6808859, -7.7148995, 0, -977.21564)
+
+[node name="Marker3D24" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -7.7148995, 0, -897.3156)
+
+[node name="Marker3D25" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.2020816, 0, 1.2020816, 0, 1.7, 0, -1.2020816, 0, 1.2020816, -7.7148995, 0, -1042.7345)
+
+[node name="Marker3D26" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.5974774, 0, 0.58143425, 0, 1.7, 0, -0.58143425, 0, 1.5974774, -7.7148995, 0, -1185.5345)
+
+[node name="Marker3D27" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 8.449825, 0, -1156.5906)
+
+[node name="Marker3D28" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 8.449825, 0, -1076.6906)
+
+[node name="Marker3D5" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 7.8018827, 0, -62.621048)
+
+[node name="Marker3D6" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.66, 0, 0, 0, 1.66, 0, 0, 0, 1.66, 7.8018827, 0, -145.42104)
+
+[node name="Marker3D4" type="Marker3D" parent="MarkArbolCity"]
+transform = Transform3D(1.2256712, 0, 1.0284601, 0, 1.6, 0, -1.0284601, 0, 1.2256712, -8.398116, 0, -174.22104)
 
 [node name="FarolMultiInstance" type="MultiMeshInstance3D" parent="." node_paths=PackedStringArray("markers_parent")]
 multimesh = SubResource("MultiMesh_n3qho")
@@ -608,5 +690,11 @@ markers_parent = NodePath("../MarkBancos")
 multimesh = SubResource("MultiMesh_7ndum")
 script = ExtResource("10_n3qho")
 markers_parent = NodePath("../MarkArbolPlaza")
+
+[node name="ArbolesCityMultiInstance" type="MultiMeshInstance3D" parent="." node_paths=PackedStringArray("markers_parent")]
+multimesh = SubResource("MultiMesh_c7rjx")
+script = ExtResource("10_n3qho")
+markers_parent = NodePath("../MarkArbolCity")
+refresh_editor = true
 
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_timer_timeout"]
