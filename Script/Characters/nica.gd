@@ -224,7 +224,8 @@ func lostLife(dmg:int):
 
 	life -= dmg
 	if life <= 0:
-		get_tree().change_scene_to_file("res://Escenas/main.tscn")
+		#get_tree().change_scene_to_file("res://Escenas/main.tscn")
+		get_tree().reload_current_scene()
 
 func collectSnFicha():
 	if life < 3:
