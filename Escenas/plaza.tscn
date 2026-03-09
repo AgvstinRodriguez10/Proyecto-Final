@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://balf5bk056eec"]
+[gd_scene load_steps=27 format=4 uid="uid://balf5bk056eec"]
 
 [ext_resource type="PackedScene" uid="uid://c25aytjirlka" path="res://Assets/Plaza/Plaza.glb" id="1_5m6p0"]
 [ext_resource type="Texture2D" uid="uid://bn25ktpbfy6r0" path="res://Assets/Plaza/Plaza_Poliigon_ConcretePaversSquare_7100_BaseColor.jpg" id="2_qewuc"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://1q2pxq15ouif" path="res://Assets/EDIFICIOS/Plaza/B/edificio 2.fbx" id="16_y4bvj"]
 [ext_resource type="PackedScene" uid="uid://d21dyoe8o3uqr" path="res://Assets/EDIFICIOS/Plaza/B/edificio 3.fbx" id="17_lshnb"]
 [ext_resource type="PackedScene" uid="uid://cc0goxoaev0ui" path="res://Assets/EDIFICIOS/Plaza/C/edificio 1.fbx" id="18_lshnb"]
+[ext_resource type="PackedScene" uid="uid://btjvsqojclj4m" path="res://Escenas/Objetos/FarolCalle.tscn" id="19_lshnb"]
 [ext_resource type="PackedScene" uid="uid://b3l2siot8juh" path="res://Assets/EDIFICIOS/Plaza/C/edificio 2.fbx" id="19_owiik"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lshnb"]
@@ -508,6 +509,63 @@ visibility_range_end = 300.0
 [node name="Ventanas y Puertas2" parent="Edificios/C/edificio 2/Casa-Duplicable-V4/BASE2/Base2" index="0"]
 lod_bias = 0.001
 visibility_range_end = 300.0
+
+[node name="FalsaLuzCalle" type="Node3D" parent="."]
+
+[node name="Ligth" parent="FalsaLuzCalle" instance=ExtResource("19_lshnb")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 11.210784, -0.023719788, 14.36612)
+
+[node name="Ligth2" parent="FalsaLuzCalle" instance=ExtResource("19_lshnb")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 14.330776, 0, 11.371094)
+
+[node name="Ligth3" parent="FalsaLuzCalle" instance=ExtResource("19_lshnb")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 6.963035, 0, 8.588261)
+
+[node name="Ligth4" parent="FalsaLuzCalle" instance=ExtResource("19_lshnb")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 5.310431, 0, 3.0278177)
+
+[node name="Ligth5" parent="FalsaLuzCalle" instance=ExtResource("19_lshnb")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.07886362, 0, 2.0192614)
+
+[node name="Ligth6" parent="FalsaLuzCalle" instance=ExtResource("19_lshnb")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -1.053122, 0, -2.6011224)
+
+[node name="Ligth7" parent="FalsaLuzCalle" instance=ExtResource("19_lshnb")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -5.9741163, 0, -4.5171385)
+
+[node name="Ligth8" parent="FalsaLuzCalle" instance=ExtResource("19_lshnb")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -6.877991, 0, -8.5171385)
+
+[node name="Ligth9" parent="FalsaLuzCalle" instance=ExtResource("19_lshnb")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -14.667418, 0, -11.995514)
+
+[node name="Ligth10" parent="FalsaLuzCalle" instance=ExtResource("19_lshnb")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -11.746283, 0, -14.785668)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="FalsaLuzCalle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.478945, 1.1752892, 17.187233)
+light_energy = 3.0
+omni_range = 10.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="FalsaLuzCalle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.478945, 1.1752892, 9.187233)
+light_energy = 3.0
+omni_range = 10.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="FalsaLuzCalle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7089906, 1.1752892, 2.286262)
+light_energy = 3.0
+omni_range = 10.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="FalsaLuzCalle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2910094, 1.1752892, -4.713738)
+light_energy = 3.0
+omni_range = 10.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="FalsaLuzCalle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.29101, 1.1752892, -14.386044)
+light_energy = 3.0
+omni_range = 10.0
 
 [editable path="Plaza"]
 [editable path="Edificios/A/edificio 1"]
