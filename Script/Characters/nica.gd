@@ -40,11 +40,11 @@ enum POWERUPSTATE {
 var currentPowerUp: POWERUPSTATE = POWERUPSTATE.NOTHING
 
 var powerUpDuration:Dictionary = {
-	"SPEEDUP" : 4,
+	"SPEEDUP" : 3,
 	"ABOSRBCOIN": 2
 }
 
-const percentSpeedUp:int = 60
+const percentSpeedUp:int = 40
 
 var frontalCamIsActive = false
 var frontalCamDuration = 7
@@ -145,61 +145,21 @@ func changeLine(dire) -> void:
 
 		await get_tree().process_frame
 
-#func camera_follow(delta:float):
-	## Obtenemos el eje local del personaje
-	#var forward_dir = global_transform.basis.z.normalized()
-	#var up_dir = global_transform.basis.y.normalized()
-	#var right_dir = global_transform.basis.x.normalized()
-#
-	## Actualizamos la posición sin el componente lateral (usamos proyección)
-	## Le quitamos el componente de X (right_dir)
-	#var world_pos = position
-	#var lateral_component = right_dir * (world_pos - lateral_free_position).dot(right_dir)
-	#lateral_free_position = world_pos - lateral_component
-	#
-	## La cámara mira al personaje
-	##camera_focus.rotation = -camera_focus.rotation.lerp(rotation, 0 * delta)
-	#
-	## Calculamos la posición destino del camera_focus
-	#var target_position = lateral_free_position - forward_dir * camera_distance + up_dir * camera_height
-#
-	## Limitar el seguimiento en Y para que no suba cuando el personaje salta
-	#var current_cam_pos = camera_focus.position
-#
-	## Si el personaje está en el aire y subiendo, no actualizar Y
-	##if not is_on_floor() and velocity.y > 0:
-	#if not estaTocandoSuelo() and velocity.y > 0:
-		#target_position.y = current_cam_pos.y
-	## Pero si está bajando (por caída o escalera), permitir que la cámara lo siga
-	##elif not is_on_floor() and velocity.y < 0:
-	#elif not estaTocandoSuelo() and velocity.y < 0:
-		## Suavizamos el descenso
-		#var vertical_gap = current_cam_pos.y - target_position.y
-		#var descent_speed = clamp(vertical_gap * 3.0, 1.0, 10.0)
-		#target_position.y = lerp(current_cam_pos.y, target_position.y, delta * descent_speed)
-	## Si está en el suelo, seguirlo normalmente
-	##elif is_on_floor():
-	#elif estaTocandoSuelo():
-		#target_position.y = lerp(current_cam_pos.y, target_position.y, delta * 30)
-#
-	## Interpolar toda la posición suavemente
-	#camera_focus.position = camera_focus.position.lerp(target_position, 5 * delta)
-
 func get_coin(type_coin: CoinTypes.ListTypesCoin):
 	if !type_coin:
 		print("tipo de coin incorrecta: ", type_coin)
 		return
 	match type_coin:
-		CoinTypes.ListTypesCoin.EcoFicha:
-			print("agarro ecoficha")
+		#CoinTypes.ListTypesCoin.EcoFicha:
+			#print("agarro ecoficha")
 		CoinTypes.ListTypesCoin.SNFicha:
-			print("agarro snficha")
+			#print("agarro snficha")
 			collectSnFicha()
 		CoinTypes.ListTypesCoin.YaguiFicha:
-			print("agarro yaguificha")
+			#print("agarro yaguificha")
 			lostLife(1)
 		CoinTypes.ListTypesCoin.RDFicha:
-			print("agarro rdficha")
+			#print("agarro rdficha")
 			setPower(POWERUPSTATE.SPEEDUP)
 
 func setPower(power:POWERUPSTATE):
@@ -213,8 +173,9 @@ func powerUpActive():
 			#velocity_z = baseVelocity
 			current_velocity_forward = velocity_forward
 		POWERUPSTATE.SPEEDUP:
+			#current_velocity_forward = velocity_forward * 2
+			current_velocity_forward = velocity_forward + (velocity_forward * percentSpeedUp / 100)
 			#velocity_z = speedMax
-			current_velocity_forward = velocity_forward * 2
 			durationPowerUp += powerUpDuration.SPEEDUP
 		POWERUPSTATE.ABOSRBCOIN:
 			durationPowerUp = powerUpDuration.ABOSRBCOIN
