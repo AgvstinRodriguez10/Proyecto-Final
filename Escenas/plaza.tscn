@@ -513,7 +513,7 @@ visibility_range_end = 300.0
 [node name="FalsaLuzCalle" type="Node3D" parent="."]
 
 [node name="Ligth" parent="FalsaLuzCalle" instance=ExtResource("19_lshnb")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 11.210784, -0.023719788, 14.36612)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 11.211, 0, 14.366)
 
 [node name="Ligth2" parent="FalsaLuzCalle" instance=ExtResource("19_lshnb")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 14.330776, 0, 11.371094)
@@ -543,28 +543,28 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -14.667418, 0, -11.9955
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -11.746283, 0, -14.785668)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="FalsaLuzCalle"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.478945, 1.1752892, 17.187233)
-light_energy = 3.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.478945, 2.1639805, 17.187233)
+light_energy = 6.0
 omni_range = 10.0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="FalsaLuzCalle"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.478945, 1.1752892, 9.187233)
-light_energy = 3.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.478945, 2.1639805, 9.187233)
+light_energy = 6.0
 omni_range = 10.0
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="FalsaLuzCalle"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7089906, 1.1752892, 2.286262)
-light_energy = 3.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7089906, 2.1639805, 2.286262)
+light_energy = 6.0
 omni_range = 10.0
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="FalsaLuzCalle"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2910094, 1.1752892, -4.713738)
-light_energy = 3.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2910094, 2.1639805, -4.713738)
+light_energy = 6.0
 omni_range = 10.0
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="FalsaLuzCalle"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.29101, 1.1752892, -14.386044)
-light_energy = 3.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.29101, 2.1639805, -14.386044)
+light_energy = 6.0
 omni_range = 10.0
 
 [editable path="Plaza"]
