@@ -16,7 +16,7 @@ shader_parameter/albedo_color = Color(0.84313726, 0.8509804, 0, 1)
 shader_parameter/metallic = 0.7
 shader_parameter/roughness = 0.1
 shader_parameter/specular = 0.5
-shader_parameter/amplitude = 0.02
+shader_parameter/amplitude = 0.01
 shader_parameter/speed = 2.0
 shader_parameter/phase_offset = 0.0
 
@@ -53,7 +53,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_obdpv")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_euhe5"]
-size = Vector3(0.81933594, 1.0466309, 0.15234375)
+size = Vector3(0.9807129, 1.5024109, 0.15234375)
 
 [node name="RDFicha" type="Node3D" node_paths=PackedStringArray("ModelAnimatable")]
 script = ExtResource("1_ouj85")
@@ -64,6 +64,7 @@ coin_type = 4
 transform = Transform3D(-1.3113417e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.3113417e-08, 0, 0.39803964, 0)
 
 [node name="Plane" parent="RDFicha" index="0"]
+transform = Transform3D(1.509958e-05, 4.4408924e-14, 200, 0, 200, -4.4408924e-14, -200, 3.3527807e-21, 1.509958e-05, 0, 1.159431, 0)
 mesh = SubResource("ArrayMesh_gt7dm")
 
 [node name="Area3D" type="Area3D" parent="."]
@@ -71,7 +72,7 @@ collision_layer = 16
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.72906005, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95695007, 0)
 shape = SubResource("BoxShape3D_euhe5")
 
 [node name="StateMachine" parent="." node_paths=PackedStringArray("default_state") instance=ExtResource("5_r6ay4")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c0pkqpdadxqa7"]
+[gd_scene load_steps=13 format=3 uid="uid://c0pkqpdadxqa7"]
 
 [ext_resource type="PackedScene" uid="uid://oxxsms5fe8t7" path="res://Escenas/Cuadras/Cuadra-1/b_mitre_400___350.tscn" id="1_vbwru"]
 [ext_resource type="PackedScene" uid="uid://dk7hwxp4sitgn" path="res://Escenas/Cuadras/Cuadra-2/b_mitre_350___300.tscn" id="2_87odv"]
@@ -8,7 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://diubi06d2lk1r" path="res://Escenas/Cuadras/Cuadra-6/b_mitre_150___100.tscn" id="6_0wxlc"]
 [ext_resource type="PackedScene" uid="uid://sh51nj3ah1jb" path="res://Escenas/Obstaculos/valla.tscn" id="7_ykf1x"]
 [ext_resource type="PackedScene" uid="uid://ippnpcty674w" path="res://Escenas/Monedas/eco_ficha.tscn" id="8_fdxyp"]
+[ext_resource type="PackedScene" uid="uid://gbsx8ge7kiiu" path="res://Escenas/Monedas/rd_ficha.tscn" id="9_4q31u"]
 [ext_resource type="PackedScene" uid="uid://btjvsqojclj4m" path="res://Escenas/Objetos/FarolCalle.tscn" id="9_bmck3"]
+[ext_resource type="PackedScene" uid="uid://dgib6vpab8rua" path="res://Escenas/Monedas/sn_ficha.tscn" id="10_3g1fq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_foa6o"]
 size = Vector3(22.5234, 0.344727, 802.618)
@@ -43,30 +45,365 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4, 0, 40.85)
 [node name="Obstaculos" type="Node3D" parent="."]
 
 [node name="Valla" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 183.70123)
-
-[node name="Valla5" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 124.14697)
-
-[node name="Valla4" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 77.16018)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 70.94682)
 
 [node name="Valla2" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 183.7015)
-
-[node name="Valla6" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 89.570114)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 95.71)
 
 [node name="Valla3" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 183.7015)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 130.9309)
+
+[node name="Valla4" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 160.32959)
+
+[node name="Valla5" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 207.71144)
+
+[node name="Valla6" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 275.12305)
+
+[node name="Valla7" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 317.55872)
+
+[node name="Valla8" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 352.8682)
+
+[node name="Valla9" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 383.93054)
+
+[node name="Valla10" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 383.931)
+
+[node name="Valla11" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 417.23633)
+
+[node name="Valla12" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 417.236)
+
+[node name="Valla13" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 441.70828)
+
+[node name="Valla14" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 488.1626)
+
+[node name="Valla15" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 523.72)
+
+[node name="Valla16" parent="Obstaculos" instance=ExtResource("7_ykf1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 570.42883)
 
 [node name="Monedas" type="Node3D" parent="."]
 
-[node name="EcoFicha" parent="Monedas" instance=ExtResource("8_fdxyp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 40)
+[node name="EcoFichas" type="Node3D" parent="Monedas"]
 
-[node name="EcoFicha2" parent="Monedas" instance=ExtResource("8_fdxyp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 105.095245)
+[node name="EcoFicha" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 75)
+
+[node name="EcoFicha2" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 76.5)
+
+[node name="EcoFicha3" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 78)
+
+[node name="EcoFicha4" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 88.38491)
+
+[node name="EcoFicha5" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 89.88491)
+
+[node name="EcoFicha6" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 91.38491)
+
+[node name="EcoFicha7" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 121.04969)
+
+[node name="EcoFicha8" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 122.54969)
+
+[node name="EcoFicha9" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 124.04969)
+
+[node name="EcoFicha10" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 135.35191)
+
+[node name="EcoFicha11" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 136.85191)
+
+[node name="EcoFicha12" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 138.35191)
+
+[node name="EcoFicha13" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 139.85152)
+
+[node name="EcoFicha14" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 141.35152)
+
+[node name="EcoFicha15" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 142.85152)
+
+[node name="EcoFicha16" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 152.23901)
+
+[node name="EcoFicha17" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 153.73901)
+
+[node name="EcoFicha18" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 155.23901)
+
+[node name="EcoFicha19" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 165.55804)
+
+[node name="EcoFicha20" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 167.05804)
+
+[node name="EcoFicha21" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 168.55804)
+
+[node name="EcoFicha22" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 189.23315)
+
+[node name="EcoFicha23" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 190.73315)
+
+[node name="EcoFicha24" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 192.23315)
+
+[node name="EcoFicha25" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 216.78612)
+
+[node name="EcoFicha26" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 218.28612)
+
+[node name="EcoFicha27" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 219.78612)
+
+[node name="EcoFicha28" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 233.29492)
+
+[node name="EcoFicha29" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 234.79492)
+
+[node name="EcoFicha30" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 236.29492)
+
+[node name="EcoFicha31" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 251.92845)
+
+[node name="EcoFicha32" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 253.42845)
+
+[node name="EcoFicha33" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 254.92845)
+
+[node name="EcoFicha34" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 256.42896)
+
+[node name="EcoFicha35" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 257.92896)
+
+[node name="EcoFicha36" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 259.42896)
+
+[node name="EcoFicha37" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 301.43588)
+
+[node name="EcoFicha38" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 302.93588)
+
+[node name="EcoFicha39" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 304.43588)
+
+[node name="EcoFicha40" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 305.93637)
+
+[node name="EcoFicha41" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 307.43637)
+
+[node name="EcoFicha42" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 308.93637)
+
+[node name="EcoFicha43" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 334.46802)
+
+[node name="EcoFicha44" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 335.96802)
+
+[node name="EcoFicha45" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 337.46802)
+
+[node name="EcoFicha46" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 338.9685)
+
+[node name="EcoFicha47" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 340.4685)
+
+[node name="EcoFicha48" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 360.16153)
+
+[node name="EcoFicha49" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 361.66153)
+
+[node name="EcoFicha50" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 363.16153)
+
+[node name="EcoFicha51" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 366.12152)
+
+[node name="EcoFicha52" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 367.62152)
+
+[node name="EcoFicha53" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 369.12125)
+
+[node name="EcoFicha54" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 391.9568)
+
+[node name="EcoFicha55" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 393.4568)
+
+[node name="EcoFicha56" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 394.9565)
+
+[node name="EcoFicha57" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 397.1131)
+
+[node name="EcoFicha58" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 398.6131)
+
+[node name="EcoFicha59" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 400.1131)
+
+[node name="EcoFicha60" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 436.29132)
+
+[node name="EcoFicha61" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 437.79132)
+
+[node name="EcoFicha62" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 439.29132)
+
+[node name="EcoFicha63" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 447.59824)
+
+[node name="EcoFicha64" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 449.09824)
+
+[node name="EcoFicha65" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 450.59824)
+
+[node name="EcoFicha66" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 462.70926)
+
+[node name="EcoFicha67" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 464.20926)
+
+[node name="EcoFicha68" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 465.70926)
+
+[node name="EcoFicha69" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 480.19427)
+
+[node name="EcoFicha70" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 481.69427)
+
+[node name="EcoFicha71" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 483.19427)
+
+[node name="EcoFicha72" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 496.98846)
+
+[node name="EcoFicha73" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 498.48846)
+
+[node name="EcoFicha74" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 499.98846)
+
+[node name="EcoFicha75" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 516.2264)
+
+[node name="EcoFicha76" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 517.7264)
+
+[node name="EcoFicha77" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 519.2264)
+
+[node name="EcoFicha78" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 520.726)
+
+[node name="EcoFicha79" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 522.226)
+
+[node name="EcoFicha80" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 523.726)
+
+[node name="EcoFicha81" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 545.7947)
+
+[node name="EcoFicha82" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 547.2947)
+
+[node name="EcoFicha83" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 548.7947)
+
+[node name="EcoFicha84" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 550.2943)
+
+[node name="EcoFicha85" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 551.7943)
+
+[node name="EcoFicha86" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 553.2943)
+
+[node name="EcoFicha87" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 570.2784)
+
+[node name="EcoFicha88" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 571.7784)
+
+[node name="EcoFicha89" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 573.2784)
+
+[node name="EcoFicha90" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 580.8956)
+
+[node name="EcoFicha91" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 582.3956)
+
+[node name="EcoFicha92" parent="Monedas/EcoFichas" instance=ExtResource("8_fdxyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 583.8956)
+
+[node name="RdFichas" type="Node3D" parent="Monedas"]
+
+[node name="RDFicha" parent="Monedas/RdFichas" instance=ExtResource("9_4q31u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 81.5)
+
+[node name="RDFicha2" parent="Monedas/RdFichas" instance=ExtResource("9_4q31u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 200)
+
+[node name="RDFicha3" parent="Monedas/RdFichas" instance=ExtResource("9_4q31u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 292)
+
+[node name="RDFicha4" parent="Monedas/RdFichas" instance=ExtResource("9_4q31u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 425)
+
+[node name="RDFicha5" parent="Monedas/RdFichas" instance=ExtResource("9_4q31u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 530)
+
+[node name="SnFichas" type="Node3D" parent="Monedas"]
+
+[node name="SNFicha" parent="Monedas/SnFichas" instance=ExtResource("10_3g1fq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 148.23009)
+
+[node name="SNFicha2" parent="Monedas/SnFichas" instance=ExtResource("10_3g1fq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 245.12665)
+
+[node name="SNFicha3" parent="Monedas/SnFichas" instance=ExtResource("10_3g1fq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 407.65408)
+
+[node name="SNFicha4" parent="Monedas/SnFichas" instance=ExtResource("10_3g1fq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 562.38116)
+
+[node name="YaguiFichas" type="Node3D" parent="Monedas"]
 
 [node name="FalsaLuzCalle" type="Node3D" parent="."]
 

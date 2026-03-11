@@ -29,13 +29,13 @@ func setVelocity():
 			state_machine.change_to("YaguiStateHit")
 			flagKillCorutine = true
 			break
-		elif distanceToPlayer > 4 and distanceToPlayer < 15:
+		elif distanceToPlayer > 4 and distanceToPlayer < 12:
 			yagui.current_velocity_forward = yagui.velocity_forward * 1.02
-			print("va en primera")
-		elif distanceToPlayer > 15 and distanceToPlayer < 25:
-			yagui.current_velocity_forward = yagui.velocity_forward * 1.3
-			print("va en 2da")
+			#print("va en primera")
+		elif distanceToPlayer > 12 and distanceToPlayer < 25:
+			yagui.current_velocity_forward = yagui.velocity_forward * 1.4
+			#print("va en 2da")
 		elif distanceToPlayer > 25 and distanceToPlayer < 100:
 			yagui.current_velocity_forward = yagui.velocity_forward * 1.7
-			print("va en 3ra")
-		await get_tree().create_timer(.5).timeout
+			#print("va en 3ra")
+		await get_tree().create_timer(.3).timeout
