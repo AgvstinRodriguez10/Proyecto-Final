@@ -21,7 +21,7 @@ func fade_in():
 	pass
 
 func fade_out():
-	print("borrado")
+	#print("borrado")
 	queue_free()
 
 func start_distance_check():
