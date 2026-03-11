@@ -18,7 +18,7 @@ func end():
 	flagOnlyOneStart = false
 
 func on_process(delta):
-	yagui.animationPlayer.play("anim_idle")
+	yagui.animationPlayer.play("anim_run")
 	yagui.puntoMovil.progress += yagui.current_velocity_forward * 0.2 * delta
 	
 	var distanceToPlayer = yagui.puntoMovilPlayer.progress - yagui.puntoMovil.progress
