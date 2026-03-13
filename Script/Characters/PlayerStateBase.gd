@@ -7,7 +7,8 @@ var player: Player:
 		return controlled_node
 
 func start():
-	player.current_velocity_forward = player.velocity_forward
+	if !player.current_velocity_forward:
+		player.current_velocity_forward = player.velocity_forward
 
 func on_process(delta: float) -> void:
 	player.puntoMovil.progress += player.current_velocity_forward * delta

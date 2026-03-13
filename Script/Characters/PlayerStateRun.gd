@@ -10,6 +10,7 @@ func on_process(delta: float) -> void:
 	if Input.is_key_label_pressed(KEY_M):
 		#esto deberia cambiar una vez tengamos cuando se activa, llamando directamente a la funcion siguiente
 		player.changeVisionCam()
+
 	if player.is_movie_idle:
 		state_machine.change_to(player.States.idle)
 	elif player.y_velocity < 0:
