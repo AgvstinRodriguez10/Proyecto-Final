@@ -2,15 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciqyst0iia47l"
+uid="uid://dwpq271pygboh"
 path.s3tc="res://.godot/imported/cartel_calles_sn_nombresCalles-06.png-3e86d624724f92e53a903bb082dd9340.s3tc.ctex"
 path.etc2="res://.godot/imported/cartel_calles_sn_nombresCalles-06.png-3e86d624724f92e53a903bb082dd9340.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "f0ac6e4431dc101910c63c4692bc2105"
 }
 
 [deps]
