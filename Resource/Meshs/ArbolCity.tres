@@ -12,9 +12,7 @@ roughness = 0.5527864
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_76o2h"]
 resource_name = "Tree_Leaves"
-transparency = 3
-alpha_hash_scale = 1.0
-alpha_antialiasing_mode = 0
+transparency = 1
 albedo_texture = ExtResource("2_makv3")
 metallic = 1.0
 

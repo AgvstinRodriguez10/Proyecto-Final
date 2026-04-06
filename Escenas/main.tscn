@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://be7usem7eilfm"]
+[gd_scene load_steps=30 format=3 uid="uid://be7usem7eilfm"]
 
 [ext_resource type="PackedScene" uid="uid://c0pkqpdadxqa7" path="res://Escenas/san_nicolas.tscn" id="1_6lbni"]
 [ext_resource type="Script" uid="uid://csd5oih1wy128" path="res://Script/GUI/label.gd" id="1_ktoa8"]
@@ -40,6 +40,17 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 18
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7ndum"]
+sky_top_color = Color(0.41568628, 0.49803922, 0.58431375, 1)
+
+[sub_resource type="Sky" id="Sky_c7rjx"]
+sky_material = SubResource("ProceduralSkyMaterial_7ndum")
+
+[sub_resource type="Environment" id="Environment_3pd83"]
+background_mode = 2
+sky = SubResource("Sky_c7rjx")
+ambient_light_source = 3
 
 [sub_resource type="MultiMesh" id="MultiMesh_n3qho"]
 transform_format = 1
@@ -144,6 +155,7 @@ transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CaminoPrincipal/PuntoMovible"]
 transform = Transform3D(1.0000027, 0, 0, 0, 0.91776925, 0.39711478, 0, -0.3971162, 0.91777253, 0, 7.027391, 7.807872)
+environment = SubResource("Environment_3pd83")
 current = true
 far = 300.0
 
